@@ -1,0 +1,689 @@
+{
+  "continue_perform_functions": -1,
+  "corruption_affected": 2,
+  "data": {
+    "step_0": {
+      "data": {
+        "declaration_type": "Кандидата на посаду",
+        "declaration_period": "2019",
+        "declaration_year": 2019
+      }
+    },
+    "step_1": {
+      "data": {
+        "birthday": "[Конфіденційна інформація]",
+        "cityType": "Жмеринка / Вінницька область / Україна",
+        "workPost": "Директор комерційний, кандидат у депутати міської ради ",
+        "country": "1",
+        "postCategory": "[Не застосовується]",
+        "firstname": "КОСТЯНТИН",
+        "corruptionAffected": "Ні",
+        "changedName": "0",
+        "passport": "[Конфіденційна інформація]",
+        "responsiblePosition": "Ні",
+        "street": "[Конфіденційна інформація]",
+        "sameRegLivingAddress": "1",
+        "workPlace": "ТОВ Жмеринський металообробний завод, Жмеринська міська рада Вінницької області",
+        "streetType": "[Конфіденційна інформація]",
+        "postType": "[Не застосовується]",
+        "unzr": "[Конфіденційна інформація]",
+        "taxNumber": "[Конфіденційна інформація]",
+        "middlename": "ВАСИЛЬОВИЧ",
+        "public_person": "Ні",
+        "lastname": "ПІДКАПКА",
+        "housePartNum_extendedstatus": 0,
+        "postCategory_extendedstatus": "1",
+        "cityPath": "[Конфіденційна інформація]",
+        "postType_extendedstatus": "1",
+        "district": "1.2.5.1.3",
+        "postCode": "[Конфіденційна інформація]",
+        "apartmentsNum": "[Конфіденційна інформація]",
+        "region": "1.2.5",
+        "housePartNum": "[Конфіденційна інформація]",
+        "houseNum": "[Конфіденційна інформація]",
+        "region_txt": "Вінницька область",
+        "district_txt": "Жмеринка"
+      },
+      "isNotApplicable": 0
+    },
+    "step_2": {
+      "data": [
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "cityType": "Жмеринка / Вінницька область / Україна",
+          "country": "1",
+          "firstname": "Олена",
+          "city": "[Не застосовується]",
+          "usage": [3, 6, 11, 8, 9, 12, 13],
+          "changedName": "0",
+          "district_extendedstatus": "0",
+          "houseNum_extendedstatus": 0,
+          "passport": "[Конфіденційна інформація]",
+          "street": "[Конфіденційна інформація]",
+          "id": 1606983862848,
+          "subjectRelation": "дружина",
+          "streetType": "[Конфіденційна інформація]",
+          "unzr": "[Конфіденційна інформація]",
+          "citizenship": "1",
+          "taxNumber": "[Конфіденційна інформація]",
+          "middlename": "Анатоліївна",
+          "city_extendedstatus": "1",
+          "lastname": "Підкапка",
+          "housePartNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "district": "1.2.5.1.3",
+          "postCode": "[Конфіденційна інформація]",
+          "apartmentsNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "housePartNum": "[Конфіденційна інформація]",
+          "houseNum": "[Конфіденційна інформація]",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "cityType": "Жмеринка / Вінницька область / Україна",
+          "country": "1",
+          "firstname": "Макар",
+          "city": "[Не застосовується]",
+          "changedName": "0",
+          "district_extendedstatus": "0",
+          "passport": "[Конфіденційна інформація]",
+          "street": "[Конфіденційна інформація]",
+          "id": 1606984203087,
+          "subjectRelation": "син",
+          "streetType": "[Конфіденційна інформація]",
+          "unzr": "[Конфіденційна інформація]",
+          "citizenship": "1",
+          "taxNumber": "[Конфіденційна інформація]",
+          "middlename": "Костянтинович",
+          "city_extendedstatus": "1",
+          "lastname": "Підкапка",
+          "housePartNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "district": "1.2.5.1.3",
+          "postCode": "[Конфіденційна інформація]",
+          "apartmentsNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "housePartNum": "[Конфіденційна інформація]",
+          "houseNum": "[Конфіденційна інформація]",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "cityType": "Жмеринка / Вінницька область / Україна",
+          "country": "1",
+          "firstname": "Платон",
+          "city": "[Не застосовується]",
+          "changedName": "0",
+          "district_extendedstatus": "0",
+          "passport": "[Конфіденційна інформація]",
+          "street": "[Конфіденційна інформація]",
+          "id": 1606984442823,
+          "subjectRelation": "син",
+          "streetType": "[Конфіденційна інформація]",
+          "unzr": "[Конфіденційна інформація]",
+          "citizenship": "1",
+          "taxNumber": "[Конфіденційна інформація]",
+          "middlename": "Костянтинович",
+          "city_extendedstatus": "1",
+          "lastname": "Підкапка",
+          "housePartNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "district": "1.2.5.1.3",
+          "postCode": "[Конфіденційна інформація]",
+          "apartmentsNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "housePartNum": "[Конфіденційна інформація]",
+          "houseNum": "[Конфіденційна інформація]",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        }
+      ],
+      "isNotApplicable": 0
+    },
+    "step_3": {
+      "data": [
+        {
+          "country": "1",
+          "city": "[Не застосовується]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "district_extendedstatus": "0",
+          "objectType": "Земельна ділянка",
+          "regNumber": "[Конфіденційна інформація]",
+          "owningDate": "20.12.2017",
+          "ua_apartmentsNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "district": "1.2.5.1.3",
+          "iteration": "1606984870371",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "ua_cityType": "Жмеринка / Вінницька область / Україна",
+          "totalArea": "1800",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "30146",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "country": "1",
+          "city": "[Не застосовується]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "district_extendedstatus": "0",
+          "objectType": "Житловий будинок",
+          "regNumber": "[Конфіденційна інформація]",
+          "owningDate": "20.12.2017",
+          "ua_apartmentsNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "district": "1.2.5.1.3",
+          "iteration": "1606985552711",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "ua_cityType": "Жмеринка / Вінницька область / Україна",
+          "totalArea": "67,3",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "93446",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "country": "1",
+          "city": "1.2.5.2.10.8.42.1.3",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "ua_housePartNum_extendedstatus": 0,
+          "cost_date_assessment_extendedstatus": "1",
+          "district_extendedstatus": "0",
+          "objectType": "Земельна ділянка",
+          "regNumber": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "iteration": "1606985957971",
+          "ua_houseNum_extendedstatus": 0,
+          "ua_cityType": "Носківці / Жмеринський район / Вінницька область / Україна",
+          "city_extendedstatus": "0",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "owningDate": "25.12.2012",
+          "ua_apartmentsNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "district": "1.2.5.2.10",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "totalArea": "17500",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "[Не застосовується]",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринський район",
+          "city_txt": "Носківці"
+        },
+        {
+          "country": "1",
+          "city": "[Не застосовується]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "cost_date_assessment_extendedstatus": "1",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "district_extendedstatus": "0",
+          "objectType": "Квартира",
+          "regNumber": "[Конфіденційна інформація]",
+          "owningDate": "11.12.2003",
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "district": "1.2.5.1.3",
+          "iteration": "1606986481001",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "ua_cityType": "Жмеринка / Вінницька область / Україна",
+          "totalArea": "65",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "[Не застосовується]",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "country": "1",
+          "city": "[Не застосовується]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "district_extendedstatus": "0",
+          "objectType": "Квартира",
+          "regNumber": "[Конфіденційна інформація]",
+          "owningDate": "20.09.2002",
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "district": "1.2.5.1.3",
+          "iteration": "1606987462820",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.5",
+          "ua_cityType": "Жмеринка / Вінницька область / Україна",
+          "totalArea": "73,8",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "20590",
+          "region_txt": "Вінницька область",
+          "district_txt": "Жмеринка",
+          "city_txt": "[Не застосовується]"
+        }
+      ],
+      "isNotApplicable": 0
+    },
+    "step_4": {
+      "data": [],
+      "isNotApplicable": 1
+    },
+    "step_5": {
+      "isNotApplicable": 1
+    },
+    "step_6": {
+      "data": [
+        {
+          "owningDate": "16.10.2012",
+          "costDate": "[Не застосовується]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "iteration": "1606988491802",
+          "object_identificationNumber": "[Конфіденційна інформація]",
+          "model": "AURIS 1.6L",
+          "graduationYear": "2012",
+          "brand": "TOYOTA",
+          "costDate_extendedstatus": "1",
+          "objectType": "Автомобіль легковий"
+        },
+        {
+          "owningDate": "01.09.2015",
+          "costDate": "[Не застосовується]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "iteration": "1606989179158",
+          "object_identificationNumber": "[Конфіденційна інформація]",
+          "model": "HIGHLANDER",
+          "graduationYear": "2011",
+          "brand": "TOYOTA",
+          "costDate_extendedstatus": "1",
+          "objectType": "Автомобіль легковий"
+        }
+      ]
+    },
+    "step_7": {
+      "isNotApplicable": 1
+    },
+    "step_8": {
+      "data": [
+        {
+          "country": "1",
+          "owningDate": "20.05.2011",
+          "cost": "2100000",
+          "is_transferred": "Не передано",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "cost_percent": "100",
+          "name": "ТОВ ЖМЕРИНСЬКИЙ МЕТАЛООБРОБНИЙ ЗАВОД",
+          "corporate_rights_company_code": "37424820",
+          "iteration": "1606989498440",
+          "legalForm": "ТОВ"
+        },
+        {
+          "country": "1",
+          "owningDate": "29.08.2011",
+          "cost": "250000",
+          "is_transferred": "Не передано",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "cost_percent": "12.5",
+          "owningDate_extendedstatus": "0",
+          "name": "ПП КОРУНД",
+          "corporate_rights_company_code": "31163806",
+          "iteration": "1607089511916",
+          "legalForm": "ПП"
+        }
+      ]
+    },
+    "step_9": {
+      "data": [
+        {
+          "address_beneficial_owner": "23100 Україна, Вінницька область, місто Жмеринка, вулиця Свободи, 112",
+          "fax_extendedstatus": "1",
+          "ua_company_code_beneficial_owner": "37424820",
+          "mail": "tov.zmz.co.ua@gmail.com",
+          "company_name_beneficial_owner": "ТОВ ЖМЕРИНСЬКИЙ МЕТАЛООБРОБНИЙ ЗАВОД",
+          "phone": "0980808818",
+          "person_who_care": [
+            {
+              "person": "1606983862848"
+            }
+          ],
+          "country_beneficial_owner": "1",
+          "iteration": "1606990170406",
+          "fax": "[Не застосовується]",
+          "legalForm": "ТОВ"
+        },
+        {
+          "address_beneficial_owner": "23100, УКРАЇНА ВІННИЦЬКА ОБЛАСТЬ, МІСТО ЖМЕРИНКА, ВУЛИЦЯ СВОБОДИ 112",
+          "fax_extendedstatus": "1",
+          "ua_company_code_beneficial_owner": "31163806",
+          "mail": "korund.pp@gmail.com",
+          "mail_extendedstatus": "0",
+          "company_name_beneficial_owner": "ПП КОРУНД",
+          "phone": "0679742327",
+          "person_who_care": [
+            {
+              "person": "1606983862848"
+            }
+          ],
+          "country_beneficial_owner": "1",
+          "iteration": "1607089746638",
+          "fax": "[Не застосовується]",
+          "legalForm": "ПП"
+        }
+      ]
+    },
+    "step_10": {
+      "isNotApplicable": 1
+    },
+    "step_11": {
+      "data": [
+        {
+          "person_who_care": [
+            {
+              "person": "1"
+            }
+          ],
+          "sizeIncome": "57965",
+          "iteration": "1607090563456",
+          "source_ua_company_name": "ТОВ ЖМЗ",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Заробітна плата отримана за основним місцем роботи",
+          "source_ua_company_code": "37424820"
+        },
+        {
+          "person_who_care": [
+            {
+              "person": "1"
+            }
+          ],
+          "sizeIncome": "157",
+          "iteration": "1607090643630",
+          "source_ua_company_name": "КБ ПРИВАТБАНК",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Проценти",
+          "source_ua_company_code": "14360570"
+        },
+        {
+          "person_who_care": [
+            {
+              "person": "1606983862848"
+            }
+          ],
+          "sizeIncome": "57068",
+          "iteration": "1607091812582",
+          "source_ua_company_name": "ТОВ ЖМЗ",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Заробітна плата отримана за основним місцем роботи",
+          "source_ua_company_code": "37424820"
+        },
+        {
+          "person_who_care": [
+            {
+              "person": "1606983862848"
+            }
+          ],
+          "sizeIncome": "986830",
+          "iteration": "1607092148611",
+          "incomeSource": "1606983862848",
+          "objectType": "Дохід від зайняття підприємницькою діяльністю"
+        },
+        {
+          "person_who_care": [
+            {
+              "person": "1606983862848"
+            }
+          ],
+          "sizeIncome": "1251",
+          "iteration": "1607092183091",
+          "source_ua_company_name": "КБ ПРИВАТБАНК",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Проценти",
+          "source_ua_company_code": "14360570"
+        }
+      ]
+    },
+    "step_12": {
+      "data": [
+        {
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1606990686911",
+          "assetsCurrency": "UAH",
+          "sizeAssets": "1050000",
+          "objectType": "Готівкові кошти"
+        },
+        {
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1606991057562",
+          "assetsCurrency": "UAH",
+          "sizeAssets": "2500000",
+          "objectType": "Готівкові кошти"
+        },
+        {
+          "organization_extendedstatus": "0",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "organization": "Інша юридична особа",
+          "iteration": "1607092931881",
+          "organization_ua_company_name": "КБ ПРИВАТБАНК",
+          "assetsCurrency": "UAH",
+          "sizeAssets": "18627",
+          "objectType": "Кошти, розміщені на банківських рахунках",
+          "organization_type1": "Юридична особа, зареєстрована в Україні",
+          "organization_ua_company_code": "14360570"
+        },
+        {
+          "organization_extendedstatus": "0",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "organization": "Інша юридична особа",
+          "iteration": "1607093006963",
+          "organization_ua_company_name": "КБ ПРИВАТБАНК",
+          "assetsCurrency": "UAH",
+          "sizeAssets": "29923",
+          "objectType": "Кошти, розміщені на банківських рахунках",
+          "organization_type1": "Юридична особа, зареєстрована в Україні",
+          "organization_ua_company_code": "14360570"
+        },
+        {
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1607372874636",
+          "assetsCurrency": "USD",
+          "sizeAssets": "15000",
+          "objectType": "Готівкові кошти"
+        },
+        {
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1607372956418",
+          "assetsCurrency": "EUR",
+          "sizeAssets": "5000",
+          "objectType": "Готівкові кошти"
+        },
+        {
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1607372984565",
+          "assetsCurrency": "USD",
+          "sizeAssets": "25000",
+          "objectType": "Готівкові кошти"
+        },
+        {
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1606983862848"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1607373009248",
+          "assetsCurrency": "EUR",
+          "sizeAssets": "10000",
+          "objectType": "Готівкові кошти"
+        }
+      ]
+    },
+    "step_13": {
+      "data": [
+        {
+          "emitent_citizen": "Юридична особа, зареєстрована в Україні",
+          "emitent_ua_company_code": "31163806",
+          "guarantor_exist_": "0",
+          "sizeObligation": "190000",
+          "dateOrigin_extendedstatus": "0",
+          "objectType": "Інше",
+          "person_who_care": [
+            {
+              "person": "1606983862848"
+            }
+          ],
+          "dateOrigin": "29.08.2011",
+          "iteration": "1607093243290",
+          "emitent_ua_company_name": "ПП КОРУНД",
+          "currency": "UAH",
+          "margin-emitent": "j",
+          "otherObjectType": "неоплачений статутний капітал",
+          "guarantor_realty_exist_": "0"
+        }
+      ]
+    },
+    "step_14": {
+      "isNotApplicable": 1
+    },
+    "step_15": {
+      "isNotApplicable": 1
+    },
+    "step_16": {
+      "isNotApplicable": 1
+    },
+    "step_17": {
+      "isNotApplicable": 1
+    }
+  },
+  "declaration_type": 4,
+  "declaration_year": 2019,
+  "id": "4eb0256f-0b3a-4533-9231-878167be421e",
+  "post_category": 0,
+  "post_type": 0,
+  "responsible_position": 0,
+  "schema_version": 3,
+  "type": 1,
+  "user_declarant_id": 1525473,
+  "date": "2020-12-07T22:40:35+02:00"
+}

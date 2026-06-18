@@ -1,0 +1,328 @@
+{
+    "continue_perform_functions": 0,
+    "corruption_affected": 2,
+    "data": {
+        "step_0": {
+            "data": {
+                "declaration_type": "1",
+                "declaration_period": "2025",
+                "declaration_year": 2025,
+                "continue_perform_functions": "0"
+            }
+        },
+        "step_1": {
+            "data": {
+                "cityType": "Село",
+                "actual_community_extendedstatus": "1",
+                "country": "1",
+                "community_extendedstatus": "0",
+                "region_extendedstatus": "0",
+                "districtPath": "1.UA59000000000057109.UA59060000000086008",
+                "district_extendedstatus": "0",
+                "responsiblePosition": "Ні",
+                "actual_cityType_extendedstatus": "1",
+                "actual_district_extendedstatus": "1",
+                "communityPath": "1.UA59000000000057109.UA59060000000086008.UA59060050000060884",
+                "cityTypePath": "C",
+                "community": "Коровинська",
+                "city_extendedstatus": "0",
+                "lastname": "ЛАВРИК",
+                "postCategory_extendedstatus": "1",
+                "postType_extendedstatus": "1",
+                "cityArea_extendedstatus": 0,
+                "actual_city_extendedstatus": "1",
+                "district": "Роменський",
+                "region": "Сумська",
+                "workPost": "Інспектор ",
+                "firstname": "МИКОЛА",
+                "corruptionAffected": "Ні",
+                "city": "Мухувате",
+                "changedName": "0",
+                "sameRegLivingAddress": "1",
+                "workPlaceEdrpou": "40108777",
+                "cityType_extendedstatus": "0",
+                "nui_no_citizenship": "1",
+                "workPlace": "ГОЛОВНЕ УПРАВЛІННЯ НАЦІОНАЛЬНОЇ ПОЛІЦІЇ В СУМСЬКІЙ ОБЛАСТІ",
+                "regionPath": "1.UA59000000000057109",
+                "middlename": "АНАТОЛІЙОВИЧ",
+                "actual_cityArea_extendedstatus": 0,
+                "actual_region": "",
+                "public_person": "Ні",
+                "housePartNum_extendedstatus": 0,
+                "apartmentsNum_extendedstatus": 0,
+                "actual_country": "1",
+                "nui_info_exists": "0",
+                "actual_region_extendedstatus": "0"
+            },
+            "isNotApplicable": 0
+        },
+        "step_2": {
+            "data": [
+                {
+                    "cityType": "Село",
+                    "country": "1",
+                    "firstname": "Вікторія",
+                    "city": "Мухувате",
+                    "changedName": "0",
+                    "community_extendedstatus": "0",
+                    "region_extendedstatus": "0",
+                    "districtPath": "1.UA59000000000057109.UA59060000000086008",
+                    "district_extendedstatus": "0",
+                    "postCode_extendedstatus": 0,
+                    "eng_postCode_extendedstatus": 0,
+                    "cityType_extendedstatus": "0",
+                    "id": 1709296888258,
+                    "subjectRelation": "дружина",
+                    "regionPath": "1.UA59000000000057109",
+                    "communityPath": "1.UA59000000000057109.UA59060000000086008.UA59060050000060884",
+                    "cityTypePath": "C",
+                    "citizenship": "1",
+                    "middlename": "Вікторівна",
+                    "community": "Коровинська",
+                    "city_extendedstatus": "0",
+                    "lastname": "Лаврик",
+                    "housePartNum_extendedstatus": 0,
+                    "apartmentsNum_extendedstatus": 0,
+                    "cityArea_extendedstatus": 0,
+                    "district": "Роменський",
+                    "nui_info_exists": "0",
+                    "region": "Сумська"
+                }
+            ],
+            "isNotApplicable": 0
+        },
+        "step_3": {
+            "data": [
+                {
+                    "cityType": "Село",
+                    "country": "1",
+                    "regNumber_extendedstatus": 0,
+                    "city": "Мухувате",
+                    "community_extendedstatus": "0",
+                    "region_extendedstatus": "0",
+                    "ua_housePartNum_extendedstatus": 0,
+                    "districtPath": "1.UA59000000000057109.UA59060000000086008",
+                    "district_extendedstatus": "0",
+                    "objectType": "Житловий будинок",
+                    "rights": [
+                        {
+                            "ownershipType": "Інше право користування",
+                            "rights_id": 1,
+                            "rightBelongs": "1",
+                            "otherOwnership": "користування"
+                        },
+                        {
+                            "ownershipType": "Власність",
+                            "citizen": "Громадянин України",
+                            "rights_id": "1625057419719",
+                            "ua_regAddressFull_extendedstatus": 0,
+                            "ua_middlename": "Андрійович",
+                            "ua_sameRegLivingAddress": "0",
+                            "ua_livingAddressFull_extendedstatus": 0,
+                            "ua_taxNumber_extendedstatus": 0,
+                            "ua_lastname": "Лаврик",
+                            "ua_firstname": "Анатолій",
+                            "rightBelongs": "j"
+                        }
+                    ],
+                    "iteration": "1624440715917",
+                    "cityType_extendedstatus": "0",
+                    "regionPath": "1.UA59000000000057109",
+                    "communityPath": "1.UA59000000000057109.UA59060000000086008.UA59060050000060884",
+                    "cityTypePath": "C",
+                    "community": "Коровинська",
+                    "city_extendedstatus": "0",
+                    "object_cost_type": "це вартість на дату набуття права",
+                    "owningDate": "11.10.2000",
+                    "ua_apartmentsNum_extendedstatus": 0,
+                    "cityArea_extendedstatus": 0,
+                    "district": "Роменський",
+                    "region": "Сумська",
+                    "totalArea": "46",
+                    "cost_date_assessment": "5000"
+                }
+            ],
+            "isNotApplicable": 0
+        },
+        "step_4": {
+            "data": [
+            ],
+            "isNotApplicable": 1
+        },
+        "step_5": {
+            "isNotApplicable": 1
+        },
+        "step_6": {
+            "isNotApplicable": 1
+        },
+        "step_7": {
+            "isNotApplicable": 1
+        },
+        "step_8": {
+            "isNotApplicable": 1
+        },
+        "step_9": {
+            "isNotApplicable": 1
+        },
+        "step_10": {
+            "isNotApplicable": 1
+        },
+        "step_11": {
+            "data": [
+                {
+                    "sources": [
+                        {
+                            "source_ua_company_code_extendedstatus": "1",
+                            "iteration": "1770814045490",
+                            "source_ua_company_name": "Служба за контрактом",
+                            "incomeSource": "j",
+                            "source_citizen": "Юридична особа, зареєстрована в Україні",
+                            "source_ua_company_code": "[Не застосовується]"
+                        }
+                    ],
+                    "person_who_care": [
+                        {
+                            "person": "1"
+                        }
+                    ],
+                    "sizeIncome": "763439",
+                    "iteration": "1740897814729",
+                    "otherObjectType": "Грошове забезпечення",
+                    "objectType": "Інше"
+                },
+                {
+                    "sources": [
+                        {
+                            "iteration": "1770814391289",
+                            "source_ua_company_name": "ГОЛОВНЕ УПРАВЛІННЯ НАЦІОНАЛЬНОЇ ПОЛІЦІЇ В СУМСЬКІЙ ОБЛАСТІ",
+                            "incomeSource": "j",
+                            "source_citizen": "Юридична особа, зареєстрована в Україні",
+                            "source_ua_company_code": "40108777"
+                        }
+                    ],
+                    "person_who_care": [
+                        {
+                            "person": "1"
+                        }
+                    ],
+                    "sizeIncome": "289749",
+                    "iteration": "1770814391232",
+                    "objectType": "Заробітна плата (грошове забезпечення)"
+                },
+                {
+                    "sources": [
+                        {
+                            "source_ua_company_code_extendedstatus": "1",
+                            "iteration": "1770814420294",
+                            "source_ua_company_name": "Кабінет Міністрів України",
+                            "incomeSource": "j",
+                            "source_citizen": "Юридична особа, зареєстрована в Україні",
+                            "source_ua_company_code": "[Не застосовується]"
+                        }
+                    ],
+                    "person_who_care": [
+                        {
+                            "person": "1"
+                        }
+                    ],
+                    "sizeIncome": "1000",
+                    "iteration": "1770814420232",
+                    "objectType": "Зимова Підтримка"
+                },
+                {
+                    "sources": [
+                        {
+                            "source_ua_birthday_extendedstatus": 0,
+                            "source_ua_firstname": "Олександр",
+                            "source_ua_taxNumber_extendedstatus": 0,
+                            "source_ua_regAddress_extendedstatus": 0,
+                            "source_ua_middlename": "Анатолійович",
+                            "source_ua_sameRegLivingAddress": "0",
+                            "source_ua_lastname": "Сусіденко",
+                            "source_ua_actualAddress_extendedstatus": 0,
+                            "iteration": "1770814459675",
+                            "incomeSource": "j",
+                            "source_citizen": "Громадянин України"
+                        }
+                    ],
+                    "person_who_care": [
+                        {
+                            "person": "1"
+                        }
+                    ],
+                    "sizeIncome": "40000",
+                    "iteration": "1770814459566",
+                    "objectType": "Дохід від відчуження рухомого майна (крім цінних паперів та корпоративних прав)"
+                }
+            ]
+        },
+        "step_12": {
+            "isNotApplicable": 1
+        },
+        "step_13": {
+            "isNotApplicable": 1
+        },
+        "step_14": {
+            "isNotApplicable": 1
+        },
+        "step_15": {
+            "isNotApplicable": 1
+        },
+        "step_16": {
+            "isNotApplicable": 1
+        },
+        "step_17": {
+            "data": [
+                {
+                    "establishment_ua_company_name": "АКЦІОНЕРНЕ ТОВАРИСТВО КОМЕРЦІЙНИЙ БАНК \"ПРИВАТБАНК\"",
+                    "person_has_account_extendedstatus": "1",
+                    "establishment_type": "Юридична особа, зареєстрована в Україні",
+                    "person_open_account_extendedstatus": "1",
+                    "person_who_care": [
+                        {
+                            "person": "1"
+                        }
+                    ],
+                    "iteration": "1681909377928",
+                    "establishment_ua_company_code": "14360570",
+                    "persons_has_accounts": {
+                        "1681909377952": {
+                            "person_has_account_extendedstatus": "1",
+                            "iteration": "1681909377952"
+                        }
+                    },
+                    "person_open_account": "[Не застосовується]"
+                },
+                {
+                    "establishment_ua_company_name": "АКЦІОНЕРНЕ ТОВАРИСТВО \"УНІВЕРСАЛ БАНК\"",
+                    "establishment_type": "Юридична особа, зареєстрована в Україні",
+                    "person_open_account_extendedstatus": "1",
+                    "person_who_care": [
+                        {
+                            "person": "1"
+                        }
+                    ],
+                    "iteration": "1681909917894",
+                    "establishment_ua_company_code": "21133352",
+                    "persons_has_accounts": {
+                        "1681909917912": {
+                            "person_has_account_extendedstatus": "1",
+                            "iteration": "1681909917912"
+                        }
+                    },
+                    "person_open_account": "[Не застосовується]"
+                }
+            ]
+        }
+    },
+    "declaration_type": 1,
+    "declaration_year": 2025,
+    "id": "31f44ed5-9d90-465d-858f-7e182f27c745",
+    "post_category": 0,
+    "post_type": 0,
+    "responsible_position": 0,
+    "schema_version": 5,
+    "type": 1,
+    "user_declarant_id": 1180051,
+    "date": "2026-02-11T15:22:59+02:00"
+}

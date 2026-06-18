@@ -1,0 +1,469 @@
+{
+  "continue_perform_functions": -1,
+  "corruption_affected": 2,
+  "data": {
+    "step_0": {
+      "data": {
+        "declaration_type": "Після звільнення",
+        "declaration_period": "2019",
+        "declaration_year": 2019
+      }
+    },
+    "step_1": {
+      "data": {
+        "birthday": "[Конфіденційна інформація]",
+        "cityType": "Дніпро / Дніпропетровська область / Україна",
+        "workPost": "Завідувач сектору технічного супроводження",
+        "country": "1",
+        "actual_apartmentsNum": "[Конфіденційна інформація]",
+        "postCategory": "[Не застосовується]",
+        "firstname": "ЯРОСЛАВ",
+        "corruptionAffected": "Ні",
+        "actual_cityPath": "1.2.12.1.1",
+        "city": "[Не застосовується]",
+        "changedName": "0",
+        "actual_cityType": "Дніпро / Дніпропетровська область / Україна",
+        "passport": "[Конфіденційна інформація]",
+        "responsiblePosition": "Ні",
+        "street": "[Конфіденційна інформація]",
+        "sameRegLivingAddress": "0",
+        "workPlace": "Державне підприємство Національні інформаційні системи Дніпропетровська філія",
+        "streetType": "[Конфіденційна інформація]",
+        "postType": "Посадова особа юридичної особи публічного права",
+        "actual_district": "1.2.12.1.1",
+        "unzr": "[Конфіденційна інформація]",
+        "actual_street": "[Конфіденційна інформація]",
+        "taxNumber": "[Конфіденційна інформація]",
+        "middlename": "ОЛЕГОВИЧ",
+        "actual_postCode": "[Конфіденційна інформація]",
+        "actual_region": "1.2.12",
+        "actual_streetType": "[Конфіденційна інформація]",
+        "city_extendedstatus": "1",
+        "public_person": "Ні",
+        "lastname": "НІКОЛАЄВ",
+        "actual_houseNum": "[Конфіденційна інформація]",
+        "housePartNum_extendedstatus": 0,
+        "postCategory_extendedstatus": "1",
+        "cityPath": "[Конфіденційна інформація]",
+        "actual_country": "1",
+        "district": "1.2.12.1.1",
+        "actual_housePartNum_extendedstatus": 0,
+        "postCode": "[Конфіденційна інформація]",
+        "apartmentsNum": "[Конфіденційна інформація]",
+        "actual_housePartNum": "[Конфіденційна інформація]",
+        "region": "1.2.12",
+        "housePartNum": "[Конфіденційна інформація]",
+        "houseNum": "[Конфіденційна інформація]",
+        "region_txt": "Дніпропетровська область",
+        "district_txt": "Дніпро",
+        "city_txt": "[Не застосовується]"
+      },
+      "isNotApplicable": 0
+    },
+    "step_2": {
+      "data": [
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "cityType": "Не зареєстрований",
+          "country": "0",
+          "firstname": "Вікторія",
+          "usage": [12, 11, 3],
+          "citizenship": "1",
+          "unzr": "[Конфіденційна інформація]",
+          "changedName": "0",
+          "taxNumber": "[Конфіденційна інформація]",
+          "middlename": "Миколаївна",
+          "lastname": "Ніколаєва",
+          "passport": "[Конфіденційна інформація]",
+          "id": 1490032137130,
+          "unzr_extendedstatus": 0,
+          "subjectRelation": "дружина"
+        }
+      ],
+      "isNotApplicable": 0
+    },
+    "step_3": {
+      "data": [
+        {
+          "country": "1",
+          "regNumber_extendedstatus": 0,
+          "city": "[Не застосовується]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "cost_date_assessment_extendedstatus": "2",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "district_extendedstatus": "1",
+          "objectType": "Квартира",
+          "owningDate": "27.09.2011",
+          "regNumber": "[Конфіденційна інформація]",
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "percent-ownership": "100",
+              "rightBelongs": "1"
+            }
+          ],
+          "district": "[Не застосовується]",
+          "iteration": "1490033593681",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.12",
+          "ua_cityType": "Дніпро / Дніпропетровська область / Україна",
+          "totalArea": "46,8",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "[Не відомо]",
+          "region_txt": "Дніпропетровська область",
+          "district_txt": "[Не застосовується]",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "country": "1",
+          "regNumber_extendedstatus": 0,
+          "city": "[Не застосовується]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "cost_date_assessment_extendedstatus": "2",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "objectType": "Квартира",
+          "owningDate": "07.09.1995",
+          "regNumber": "[Конфіденційна інформація]",
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_street_extendedstatus": 0,
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Спільна сумісна власність",
+              "rights_id": "1",
+              "rightBelongs": "1"
+            },
+            {
+              "ownershipType": "Спільна сумісна власність",
+              "citizen": "Громадянин України",
+              "rights_id": "1588258822950",
+              "ua_middlename": "Олексіївна",
+              "ua_birthday": "[Конфіденційна інформація]",
+              "ua_regAddressFull": "[Конфіденційна інформація]",
+              "ua_sameRegLivingAddress": "1",
+              "ua_livingAddressFull_extendedstatus": 0,
+              "ua_livingAddressFull": "[Конфіденційна інформація]",
+              "ua_taxNumber_extendedstatus": 0,
+              "ua_taxNumber": "[Конфіденційна інформація]",
+              "ua_lastname": "Ніколаєва",
+              "ua_firstname": "Віра",
+              "rightBelongs": "j"
+            }
+          ],
+          "district": "1.2.12.1.1",
+          "iteration": "1519905070638",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.12",
+          "ua_cityType": "Дніпро / Дніпропетровська область / Україна",
+          "totalArea": "42",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "[Не відомо]",
+          "region_txt": "Дніпропетровська область",
+          "district_txt": "Дніпро",
+          "city_txt": "[Не застосовується]"
+        },
+        {
+          "country": "1",
+          "regNumber_extendedstatus": 0,
+          "city": "[Не застосовується]",
+          "owningDate_extendedstatus": "3",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "city_extendedstatus": "1",
+          "ua_housePartNum_extendedstatus": 0,
+          "cost_date_assessment_extendedstatus": "2",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "objectType": "Квартира",
+          "owningDate": "[Член сім'ї не надав інформацію]",
+          "regNumber": "[Конфіденційна інформація]",
+          "cityPath": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Спільна сумісна власність",
+              "rights_id": "1490032137130",
+              "rightBelongs": "1490032137130"
+            },
+            {
+              "ownershipType": "Спільна сумісна власність",
+              "citizen": "Громадянин України",
+              "rights_id": "1588258951651",
+              "ua_regAddressFull_extendedstatus": 0,
+              "ua_middlename": "Володимирович",
+              "ua_birthday": "[Конфіденційна інформація]",
+              "ua_regAddressFull": "[Конфіденційна інформація]",
+              "ua_sameRegLivingAddress": "0",
+              "ua_birthday_extendedstatus": 0,
+              "ua_livingAddressFull_extendedstatus": 0,
+              "ua_livingAddressFull": "[Конфіденційна інформація]",
+              "ua_taxNumber_extendedstatus": 0,
+              "ua_taxNumber": "[Конфіденційна інформація]",
+              "ua_lastname": "Маловік",
+              "ua_firstname": "Ніколай",
+              "rightBelongs": "j"
+            },
+            {
+              "ownershipType": "Спільна сумісна власність",
+              "citizen": "Громадянин України",
+              "rights_id": "1563536932054",
+              "ua_regAddressFull_extendedstatus": 0,
+              "ua_middlename": "Маколаєвна",
+              "ua_birthday": "[Конфіденційна інформація]",
+              "ua_regAddressFull": "[Конфіденційна інформація]",
+              "ua_sameRegLivingAddress": "0",
+              "ua_birthday_extendedstatus": 0,
+              "ua_livingAddressFull_extendedstatus": 0,
+              "ua_livingAddressFull": "[Конфіденційна інформація]",
+              "ua_taxNumber_extendedstatus": 0,
+              "ua_taxNumber": "[Конфіденційна інформація]",
+              "ua_lastname": "Маловік ",
+              "ua_firstname": "Любовь",
+              "rightBelongs": "j"
+            }
+          ],
+          "district": "1.2.12.1.1",
+          "iteration": "1519905421180",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.12",
+          "ua_cityType": "Дніпро / Дніпропетровська область / Україна",
+          "totalArea": "43",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "cost_date_assessment": "[Не відомо]",
+          "region_txt": "Дніпропетровська область",
+          "district_txt": "Дніпро",
+          "city_txt": "[Не застосовується]"
+        }
+      ],
+      "isNotApplicable": 0
+    },
+    "step_4": {
+      "data": [],
+      "isNotApplicable": 1
+    },
+    "step_5": {
+      "isNotApplicable": 1
+    },
+    "step_6": {
+      "data": [
+        {
+          "object_identificationNumber_extendedstatus": 0,
+          "owningDate": "06.12.2012",
+          "costDate": "110000",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "iteration": "1490032799808",
+          "object_identificationNumber": "[Конфіденційна інформація]",
+          "model": "Avensis",
+          "graduationYear": "2008",
+          "brand": "Toyota",
+          "costDate_extendedstatus": "0",
+          "objectType": "Автомобіль легковий"
+        }
+      ]
+    },
+    "step_7": {
+      "isNotApplicable": 1
+    },
+    "step_8": {
+      "isNotApplicable": 1
+    },
+    "step_9": {
+      "isNotApplicable": 1
+    },
+    "step_10": {
+      "isNotApplicable": 1
+    },
+    "step_11": {
+      "data": [
+        {
+          "incomeSource_extendedstatus": "3",
+          "person_who_care": [
+            {
+              "person": "1490032137130"
+            }
+          ],
+          "sizeIncome_extendedstatus": "3",
+          "sizeIncome": "[Член сім'ї не надав інформацію]",
+          "iteration": "1492544142889",
+          "incomeSource": "[Член сім'ї не надав інформацію]",
+          "objectType": "Дохід від зайняття підприємницькою діяльністю"
+        },
+        {
+          "incomeSource_extendedstatus": "0",
+          "person_who_care": [
+            {
+              "person": "1"
+            }
+          ],
+          "sizeIncome": "114040",
+          "iteration": "1588256724782",
+          "source_ua_company_name": "НАІС",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Заробітна плата отримана за основним місцем роботи",
+          "source_ua_company_code": "39787008"
+        },
+        {
+          "incomeSource_extendedstatus": "0",
+          "source_ua_company_code_extendedstatus": "2",
+          "person_who_care": [
+            {
+              "person": "1"
+            }
+          ],
+          "sizeIncome": "39410",
+          "iteration": "1588256827405",
+          "otherObjectType": "соц.виплати",
+          "source_ua_company_name": "Виплати Соціального фонду, соц. виплата",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Інше",
+          "source_ua_company_code": "[Не відомо]"
+        }
+      ]
+    },
+    "step_12": {
+      "data": [
+        {
+          "person": "1",
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Спільна власність",
+              "percent-ownership": "50",
+              "rightBelongs": "1"
+            },
+            {
+              "ownershipType": "Спільна власність",
+              "percent-ownership": "50",
+              "rightBelongs": "1490032137130"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1490032566495",
+          "assetsCurrency": "UAH",
+          "sizeAssets": "100000",
+          "objectType": "Готівкові кошти"
+        },
+        {
+          "person": "1",
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Спільна власність",
+              "rights_id": "1",
+              "percent-ownership": "50",
+              "rightBelongs": "1"
+            },
+            {
+              "ownershipType": "Спільна власність",
+              "percent-ownership": "50",
+              "rightBelongs": "1490032137130"
+            }
+          ],
+          "organization": "[Не застосовується]",
+          "iteration": "1492545351288",
+          "assetsCurrency": "USD",
+          "sizeAssets": "10000",
+          "objectType": "Кошти, позичені третім особам"
+        },
+        {
+          "organization_eng_company_name": "",
+          "sizeAssets": "150000",
+          "organization_ukr_company_name_extendedstatus": "0",
+          "objectType": "Кошти, позичені третім особам",
+          "organization_ukr_company_address_extendedstatus": "0",
+          "otherObjectType_extendedstatus": "0",
+          "organization_eng_company_code_extendedstatus": "0",
+          "organization_eng_company_address_extendedstatus": "0",
+          "organization_extendedstatus": "1",
+          "rights": [
+            {
+              "ownershipType": "Спільна власність",
+              "percent-ownership": "50",
+              "rightBelongs": "1"
+            },
+            {
+              "ownershipType": "Спільна власність",
+              "percent-ownership": "50",
+              "rightBelongs": "1490032137130"
+            }
+          ],
+          "iteration": "1550590177844",
+          "organization_ua_company_code_extendedstatus": "0",
+          "organization_eng_company_name_extendedstatus": "0",
+          "organization_ua_company_code": "",
+          "assetsCurrency": "UAH",
+          "sizeAssets_extendedstatus": "0",
+          "organization_eng_company_code": "",
+          "organization_ukr_company_address": "",
+          "organization_ua_company_name_extendedstatus": "0",
+          "organization_eng_company_address": "",
+          "organization_ukr_company_name": "",
+          "person": "1",
+          "organization": "[Не застосовується]",
+          "assetsCurrency_extendedstatus": "0",
+          "otherObjectType": "",
+          "organization_ua_company_name": ""
+        }
+      ]
+    },
+    "step_13": {
+      "isNotApplicable": 1
+    },
+    "step_14": {
+      "isNotApplicable": 1
+    },
+    "step_15": {
+      "isNotApplicable": 1
+    },
+    "step_16": {
+      "isNotApplicable": 1
+    },
+    "step_17": {
+      "data": [
+        {
+          "person_has_account": "[Не застосовується]",
+          "account_number": "[Конфіденційна інформація]",
+          "account_type": "[Конфіденційна інформація]",
+          "establishment_type": "Юридична особа, зареєстрована в Україні",
+          "person_open_account_extendedstatus": "1",
+          "establishment_ua_company_code_extendedstatus": "2",
+          "person_open_account": "[Не застосовується]",
+          "establishment_ua_company_name": "МОНОБАНК",
+          "person_has_account_extendedstatus": "1",
+          "person_who_care": [
+            {
+              "person": "1"
+            }
+          ],
+          "bank_name": "МОНОБАНК",
+          "iteration": "1588257602950",
+          "establishment_ua_company_code": "[Не відомо]"
+        }
+      ]
+    }
+  },
+  "declaration_type": 3,
+  "declaration_year": 2019,
+  "id": "24852186-8989-464a-b74b-9bf6649866e6",
+  "post_category": 0,
+  "post_type": 4,
+  "responsible_position": 0,
+  "schema_version": 3,
+  "type": 1,
+  "user_declarant_id": 399,
+  "date": "2020-04-30T18:03:48+03:00"
+}

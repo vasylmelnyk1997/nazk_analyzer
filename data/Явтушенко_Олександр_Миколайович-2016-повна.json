@@ -1,0 +1,340 @@
+{
+  "continue_perform_functions": -1,
+  "corruption_affected": 0,
+  "data": {
+    "step_0": {
+      "data": {
+        "declaration_type": "Щорічна",
+        "declaration_period": "2016",
+        "declaration_year": 2016
+      }
+    },
+    "step_1": {
+      "data": {
+        "birthday": "[Конфіденційна інформація]",
+        "cityType": "Сари / Гадяцький район / Полтавська область / Україна",
+        "workPost": "начальник вілліу Гадяцького ВП ГУНП в Полтавській області",
+        "country": "1",
+        "postCategory": "[Не застосовується]",
+        "firstname": "Олександр",
+        "city": "1.2.53.2.4.8.69.1.1",
+        "actual_cityPath": "1",
+        "changedName": "0",
+        "actual_cityType": "Україна",
+        "houseNum_extendedstatus": 0,
+        "street": "[Конфіденційна інформація]",
+        "sameRegLivingAddress": "1",
+        "workPlace": "Гадяцький відділ поліції ГУНП в Полтавській області",
+        "streetType": "[Конфіденційна інформація]",
+        "postType": "[Не застосовується]",
+        "taxNumber": "[Конфіденційна інформація]",
+        "middlename": "Миколайович",
+        "lastname": "Явтушенко",
+        "housePartNum_extendedstatus": 0,
+        "postCategory_extendedstatus": "1",
+        "apartmentsNum_extendedstatus": 0,
+        "cityPath": "[Конфіденційна інформація]",
+        "postType_extendedstatus": "1",
+        "district": "1.2.53.2.4",
+        "postCode": "[Конфіденційна інформація]",
+        "apartmentsNum": "[Конфіденційна інформація]",
+        "region": "1.2.53",
+        "housePartNum": "[Конфіденційна інформація]",
+        "houseNum": "[Конфіденційна інформація]",
+        "region_txt": "Полтавська область",
+        "district_txt": "Гадяцький район",
+        "city_txt": "Сари"
+      },
+      "isNotApplicable": 0
+    },
+    "step_2": {
+      "data": [
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "firstname": "Ольга",
+          "citizenship": "1",
+          "changedName": "0",
+          "taxNumber": "[Конфіденційна інформація]",
+          "middlename": "Романівна",
+          "id": 1477644293124,
+          "subjectRelation": "дружина",
+          "lastname": "Явтушенко"
+        },
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "firstname": "Олександр",
+          "citizenship": "1",
+          "changedName": "0",
+          "middlename": "Олександрович",
+          "taxNumber": "[Конфіденційна інформація]",
+          "taxNumber_extendedstatus": 0,
+          "id": 1477644431035,
+          "subjectRelation": "син",
+          "lastname": "Явтушенко"
+        },
+        {
+          "birthday": "[Конфіденційна інформація]",
+          "firstname": "Наталія",
+          "citizenship": "1",
+          "changedName": "0",
+          "middlename": "Олександрвіна",
+          "taxNumber": "[Конфіденційна інформація]",
+          "taxNumber_extendedstatus": 0,
+          "id": 1477644510081,
+          "subjectRelation": "дочка",
+          "lastname": "Явтушенко"
+        }
+      ],
+      "isNotApplicable": 0
+    },
+    "step_3": {
+      "data": [
+        {
+          "country": "1",
+          "regNumber_extendedstatus": 0,
+          "city": "1.2.53.2.4.8.69.1.1",
+          "costAssessment": "[Не відомо]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "ua_housePartNum_extendedstatus": 0,
+          "costAssessment_extendedstatus": "2",
+          "objectType": "Житловий будинок",
+          "regNumber": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Власником є третя особа",
+              "percent-ownership": "[Не застосовується]",
+              "percent-ownership_extendedstatus": "1",
+              "rightBelongs": "1"
+            },
+            {
+              "ownershipType": "Власником є третя особа",
+              "citizen": "Громадянин України",
+              "percent-ownership": "[Не застосовується]",
+              "ua_regAddressFull_extendedstatus": 0,
+              "ua_middlename": "Миколаївна",
+              "ua_birthday": "[Конфіденційна інформація]",
+              "ua_regAddressFull": "[Конфіденційна інформація]",
+              "ua_sameRegLivingAddress": "0",
+              "ua_livingAddressFull_extendedstatus": 0,
+              "ua_livingAddressFull": "[Конфіденційна інформація]",
+              "percent-ownership_extendedstatus": "1",
+              "ua_taxNumber_extendedstatus": 0,
+              "ua_taxNumber": "[Конфіденційна інформація]",
+              "ua_lastname": "Явтушенко",
+              "ua_firstname": "Валентина",
+              "rightBelongs": "j"
+            }
+          ],
+          "iteration": "1477646160002",
+          "ua_houseNum_extendedstatus": 0,
+          "ua_cityType": "Сари / Гадяцький район / Полтавська область / Україна",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "owningDate": "01.01.2015",
+          "ua_apartmentsNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "costDate": "[Не відомо]",
+          "person": "1",
+          "district": "1.2.53.2.4",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.53",
+          "costDate_extendedstatus": "2",
+          "totalArea": "35",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "region_txt": "Полтавська область",
+          "district_txt": "Гадяцький район",
+          "city_txt": "Сари"
+        },
+        {
+          "country": "1",
+          "regNumber_extendedstatus": 0,
+          "city": "1.2.53.2.4.8.69.1.1",
+          "costAssessment": "[Не відомо]",
+          "ua_street": "[Конфіденційна інформація]",
+          "ua_apartmentsNum": "[Конфіденційна інформація]",
+          "ua_housePartNum_extendedstatus": 0,
+          "costAssessment_extendedstatus": "2",
+          "objectType": "Земельна ділянка",
+          "regNumber": "[Конфіденційна інформація]",
+          "ua_postCode": "[Конфіденційна інформація]",
+          "rights": [
+            {
+              "ownershipType": "Інше право користування",
+              "citizen": "Громадянин України",
+              "percent-ownership": "0,5",
+              "ua_regAddressFull_extendedstatus": 0,
+              "ua_middlename": "Миколаївна",
+              "ua_birthday": "[Конфіденційна інформація]",
+              "ua_regAddressFull": "[Конфіденційна інформація]",
+              "otherOwnership": "безоплатне користування",
+              "ua_sameRegLivingAddress": "1",
+              "ua_taxNumber_extendedstatus": 0,
+              "ua_taxNumber": "[Конфіденційна інформація]",
+              "ua_lastname": "Яктушенко",
+              "ua_firstname": "Валентина",
+              "rightBelongs": "j"
+            }
+          ],
+          "iteration": "1477744828589",
+          "ua_houseNum_extendedstatus": 0,
+          "ua_cityType": "Сари / Гадяцький район / Полтавська область / Україна",
+          "ua_houseNum": "[Конфіденційна інформація]",
+          "owningDate": "31.12.2014",
+          "ua_apartmentsNum_extendedstatus": 0,
+          "cityPath": "[Конфіденційна інформація]",
+          "costDate": "[Не відомо]",
+          "person": "1477644293124",
+          "district": "1.2.53.2.4",
+          "ua_housePartNum": "[Конфіденційна інформація]",
+          "region": "1.2.53",
+          "costDate_extendedstatus": "2",
+          "totalArea": "3300",
+          "ua_streetType": "[Конфіденційна інформація]",
+          "region_txt": "Полтавська область",
+          "district_txt": "Гадяцький район",
+          "city_txt": "Сари"
+        }
+      ],
+      "isNotApplicable": 0
+    },
+    "step_4": {
+      "data": [],
+      "isNotApplicable": 1
+    },
+    "step_5": {
+      "isNotApplicable": 1
+    },
+    "step_6": {
+      "data": [
+        {
+          "owningDate": "25.10.2014",
+          "costDate": "120000",
+          "person": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "iteration": "1477644671124",
+          "object_identificationNumber": "[Конфіденційна інформація]",
+          "model": "транспортер",
+          "graduationYear": "2006",
+          "brand": "фольксваген ",
+          "objectType": "Автомобіль легковий"
+        }
+      ]
+    },
+    "step_7": {
+      "isNotApplicable": 1
+    },
+    "step_8": {
+      "isNotApplicable": 1
+    },
+    "step_9": {
+      "isNotApplicable": 1
+    },
+    "step_10": {
+      "isNotApplicable": 1
+    },
+    "step_11": {
+      "data": [
+        {
+          "source_ua_company_code_extendedstatus": "0",
+          "person": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "sizeIncome": "23374",
+          "iteration": "1477645649651",
+          "source_ua_company_name": "ТДВ \"УНІВЕРСАЛЬНА ЕКЗАМЕНАЦІЙНА МЕРЕЖА\"",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Гонорари та інші виплати згідно з цивільно-правовим правочинами",
+          "source_ua_company_code": "38039799"
+        },
+        {
+          "person": "1",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1"
+            }
+          ],
+          "sizeIncome": "102568",
+          "iteration": "1477648178872",
+          "source_ua_company_name": "Головне управління Націрнальної полліції в Полтавській області",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Заробітна плата отримана за основним місцем роботи",
+          "source_ua_company_code": "40108630"
+        },
+        {
+          "source_ua_company_code_extendedstatus": "0",
+          "person": "1477644293124",
+          "source_ua_company_name_extendedstatus": "0",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1477644293124"
+            }
+          ],
+          "sizeIncome": "41688",
+          "iteration": "1477648248984",
+          "source_ua_company_name": "Відділ освіти Гадяцької РДА",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Заробітна плата отримана за основним місцем роботи",
+          "source_ua_company_code": "38319385"
+        },
+        {
+          "source_ua_company_code_extendedstatus": "0",
+          "person": "1477644293124",
+          "rights": [
+            {
+              "ownershipType": "Власність",
+              "rightBelongs": "1477644293124"
+            }
+          ],
+          "sizeIncome": "2050",
+          "iteration": "1477648404894",
+          "otherObjectType": "матеріальна допомога на оздоровлення",
+          "source_ua_company_name": "Гадяцький відділ освіти Гадяцької РДА",
+          "incomeSource": "j",
+          "source_citizen": "Юридична особа, зареєстрована в Україні",
+          "objectType": "Інше",
+          "source_ua_company_code": "38319385"
+        }
+      ]
+    },
+    "step_12": {
+      "isNotApplicable": 1
+    },
+    "step_13": {
+      "isNotApplicable": 1
+    },
+    "step_14": {
+      "isNotApplicable": 1
+    },
+    "step_15": {
+      "isNotApplicable": 1
+    },
+    "step_16": {
+      "isNotApplicable": 1
+    }
+  },
+  "declaration_type": 1,
+  "declaration_year": 2016,
+  "id": "7b267b2a-8866-4a3d-8d91-a11f3c7f2321",
+  "post_category": 0,
+  "post_type": 0,
+  "responsible_position": 0,
+  "schema_version": 2,
+  "type": 1,
+  "user_declarant_id": 101763,
+  "date": "2017-03-08T14:08:41+02:00"
+}

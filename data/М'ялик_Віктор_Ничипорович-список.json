@@ -1,0 +1,5542 @@
+{
+  "data": [
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1739214941355": {
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1739214941355",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2025",
+            "declaration_year": 2025
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2025,
+      "id": "3558db0c-9cdc-4bae-a5ea-8fc0aad89452",
+      "options": {
+        "has_changed_version": 0,
+        "parent_uuid": "2ce185b4-d478-4638-9e46-3f67bf7fdc7f",
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 5,
+      "type": 3,
+      "user_declarant_id": 1432475,
+      "date": "2026-04-27T15:07:56+03:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1739214941355": {
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1739214941355",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2025",
+            "declaration_year": 2025
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2025,
+      "id": "2ce185b4-d478-4638-9e46-3f67bf7fdc7f",
+      "options": {
+        "has_changed_version": 1,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 5,
+      "type": 1,
+      "user_declarant_id": 1432475,
+      "date": "2026-03-30T11:59:52+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2025"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2025,
+      "id": "ffcda23b-11e0-4110-b84b-d6315182f19d",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2025-11-27T12:05:35+02:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1739214941355": {
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1739214941355",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2024",
+            "declaration_year": 2024
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2024,
+      "id": "1db8cabb-320c-4f0b-b62e-bd9424a21397",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 5,
+      "type": 1,
+      "user_declarant_id": 1432475,
+      "date": "2025-03-28T10:08:19+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2025"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2025,
+      "id": "3c2cd3a2-5fcf-433c-be01-be4daab1f889",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2025-03-11T10:17:43+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2024"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2024,
+      "id": "e9eee9dd-a7ae-4c4b-b5a4-88d6e99d3e3b",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2024-11-12T16:22:46+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2024"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2024,
+      "id": "0ee267ab-4e5f-4499-8786-b5195afc65c0",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2024-08-01T12:42:55+03:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат Верховної ради України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1707210113530": {
+                "nui_identity_number_extendedstatus": 0,
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1707210113530",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_identity_number": "[Конфіденційна інформація]",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2023",
+            "declaration_year": 2023
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2023,
+      "id": "af96af38-4c11-40e4-a849-fc2abc31cb59",
+      "options": {
+        "has_changed_version": 0,
+        "parent_uuid": "05d8c453-22c5-44a3-9af1-0b16036faeb3",
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 3,
+      "user_declarant_id": 1432475,
+      "date": "2024-04-24T13:11:32+03:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат Верховної ради України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1707210113530": {
+                "nui_identity_number_extendedstatus": 0,
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1707210113530",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_identity_number": "[Конфіденційна інформація]",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2023",
+            "declaration_year": 2023
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2023,
+      "id": "05d8c453-22c5-44a3-9af1-0b16036faeb3",
+      "options": {
+        "has_changed_version": 1,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 1,
+      "user_declarant_id": 1432475,
+      "date": "2024-03-28T13:05:51+02:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат Верховної Ради України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1700649381443": {
+                "nui_identity_number_extendedstatus": 0,
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1700649381443",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_identity_number": "[Конфіденційна інформація]",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2021",
+            "declaration_year": 2021
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2021,
+      "id": "3cd3d089-6079-4059-b46c-792ddae35511",
+      "options": {
+        "has_changed_version": 0,
+        "parent_uuid": "bc9518e0-610c-4b8e-aaba-b2e17031681b",
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 3,
+      "user_declarant_id": 1432475,
+      "date": "2024-02-29T18:19:28+02:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "letter_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "0",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1704720448339": {
+                "nui_identity_number_extendedstatus": 0,
+                "nui_first_name": "VIKTOR",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1704720448339",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_identity_number": "[Конфіденційна інформація]",
+                "nui_document_country": "1",
+                "nui_last_name": "MIALYK",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "Політична посада",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2022",
+            "declaration_year": 2022
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2022,
+      "id": "9605851c-bb6b-43af-b483-f168194a5184",
+      "options": {
+        "has_changed_version": 0,
+        "parent_uuid": "a99c6b8a-a3a6-4484-b8a4-088967e543ed",
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 3,
+      "user_declarant_id": 1432475,
+      "date": "2024-02-29T15:28:15+02:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "letter_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "eng_actualPostCode_extendedstatus": 0,
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "eng_actualPostCode": "[Конфіденційна інформація]",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "0",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1704720448339": {
+                "nui_identity_number_extendedstatus": 0,
+                "nui_first_name": "VIKTOR",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1704720448339",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_identity_number": "[Конфіденційна інформація]",
+                "nui_document_country": "1",
+                "nui_last_name": "MIALYK",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "Політична посада",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2022",
+            "declaration_year": 2022
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2022,
+      "id": "a99c6b8a-a3a6-4484-b8a4-088967e543ed",
+      "options": {
+        "has_changed_version": 1,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 1,
+      "user_declarant_id": 1432475,
+      "date": "2024-01-31T18:38:04+02:00"
+    },
+    {
+      "continue_perform_functions": 1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "cityType": "Село",
+            "actual_community_extendedstatus": "0",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "actual_cityTypePath": "C",
+            "actual_cityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954.UA32140150140051832",
+            "actual_address_type": "living_address",
+            "community_extendedstatus": "0",
+            "region_extendedstatus": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "district_extendedstatus": "0",
+            "actual_cityType": "Село",
+            "passport": "[Конфіденційна інформація]",
+            "actual_cityArea": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "actual_cityType_extendedstatus": "0",
+            "actual_city": "Мотовилівка",
+            "actual_communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "actual_district_extendedstatus": "0",
+            "communityPath": "1.UA32000000000030281.UA32140000000020217.UA32140150000040954",
+            "streetType": "[Конфіденційна інформація]",
+            "cityTypePath": "C",
+            "cityArea": "[Конфіденційна інформація]",
+            "actual_district": "Фастівський",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_community": "Фастівська",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "actual_districtPath": "1.UA32000000000030281.UA32140000000020217",
+            "community": "Фастівська",
+            "city_extendedstatus": "0",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "postCategory_extendedstatus": "1",
+            "eng_reg_postCode_extendedstatus": 0,
+            "postType_extendedstatus": "1",
+            "cityArea_extendedstatus": 0,
+            "actual_city_extendedstatus": "0",
+            "eng_reg_postCode": "[Конфіденційна інформація]",
+            "district": "Фастівський",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "Київська",
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат Верховної Ради України",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "city": "Мотовилівка",
+            "changedName": "0",
+            "actual_regionPath": "1.UA32000000000030281",
+            "street": "[Конфіденційна інформація]",
+            "sameRegLivingAddress": "0",
+            "workPlaceEdrpou": "20064120",
+            "cityType_extendedstatus": "0",
+            "nui_no_citizenship": "1",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ",
+            "regionPath": "1.UA32000000000030281",
+            "non_ukraine_identity": {
+              "1700649381443": {
+                "nui_identity_number_extendedstatus": 0,
+                "nui_first_name": "Viktor",
+                "nui_document_type": "Паспорт громадянина України для виїзду за кордон",
+                "iteration": "1700649381443",
+                "nui_middle_name_extendedstatus": "1",
+                "nui_identity_number": "[Конфіденційна інформація]",
+                "nui_document_country": "1",
+                "nui_last_name": "Mialyk",
+                "nui_document_number": "[Конфіденційна інформація]",
+                "nui_middle_name": "[Не застосовується]"
+              }
+            },
+            "postType": "[Не застосовується]",
+            "actual_street": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_region": "Київська",
+            "actual_cityArea_extendedstatus": 0,
+            "public_person": "Народні депутати України",
+            "housePartNum_extendedstatus": 0,
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "actual_country": "1",
+            "nui_info_exists": "1",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_region_extendedstatus": "0"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "continue_perform_functions": 1,
+            "declaration_period": "2021",
+            "declaration_year": 2021
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2021,
+      "id": "bc9518e0-610c-4b8e-aaba-b2e17031681b",
+      "options": {
+        "has_changed_version": 1,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 1,
+      "user_declarant_id": 1432475,
+      "date": "2024-01-31T16:53:37+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат верховної ради України",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "20064120",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2024"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2024,
+      "id": "6577303c-b78f-4821-91fc-69eb1e31bb2c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2024-01-18T14:30:09+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "workPlaceCode_extendedstatus": "1",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "[Не застосовується]",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2023"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2023,
+      "id": "f750f065-58fd-4810-b30a-4705598a24d1",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2023-03-06T12:13:26+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "workPlaceCode_extendedstatus": "1",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "[Не застосовується]",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2023"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2023,
+      "id": "4bf350f0-be00-477a-adfa-8807c1a26e1a",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2023-02-22T11:02:15+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "ee76bc33-a769-44fb-9f76-5472caa4879b",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-12-29T20:51:34+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "6bd077c5-f1c5-417e-80c1-ea8e86dd43ef",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-12-29T20:46:02+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "0ad53c0b-db21-4e3e-a417-3b5b9c5a519d",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-12-29T20:39:39+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "61f7f21f-12ed-455b-9d4d-1191d454ec0c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-12-29T15:16:54+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "d568165a-296c-4e7d-a3f3-ae866fd31946",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-12-15T17:22:31+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "e44a958e-9e8e-4719-830a-975ed1949706",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-11-23T16:47:17+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "2be56316-b0b1-42d5-9e3b-6b46f8dde87c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-11-15T14:36:12+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "9c24730c-50a0-48d8-9390-6bc9fb8a133b",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-11-15T14:32:33+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "486c3093-e3d7-434d-a3b0-38681e4b2483",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-11-15T14:28:48+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "f3c732d7-057d-4aca-991b-4598ecfdf667",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-11-15T14:24:57+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "2a5d5d25-19bb-4377-8d05-eccaaf556936",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-11-15T14:15:34+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "Політична посада",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "20064120",
+            "workPlace": "УПРАВЛІННЯ СПРАВАМИ АПАРАТУ ВЕРХОВНОЇ РАДИ УКРАЇНИ"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "696bf2ec-78d7-4bde-8190-fa57b956cca7",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-08-29T14:41:00+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "490de241-5b0b-4c02-9f9b-355f16ca64d1",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-07-08T07:47:43+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "20064120",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "62a4e949-c23c-46c5-8d45-de5cc1235818",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-02-14T14:33:23+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Народний депутат України",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "20064120",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "172444ed-46ab-48a2-ab47-cb02e5e0ac0f",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-02-14T14:29:52+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "workPlaceCode_extendedstatus": "1",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "[Не застосовується]",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "f76f4ce2-36ed-4734-bad8-044e050f1254",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-01-19T17:08:47+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "workPlaceCode_extendedstatus": "1",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "[Не застосовується]",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2022"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2022,
+      "id": "5b02b335-94be-42ae-a9c1-30cf86b63f7d",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2022-01-13T16:26:07+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада України"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "8e3a4c37-e6cd-45ff-af67-cdfff350a77e",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-12-20T11:53:30+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlaceCode": "2898414536",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "5b568150-55e5-473b-aeba-5473faa28369",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 4,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-12-13T12:58:46+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "4e34d274-6079-4fc8-adc3-0116e3ad72ce",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-11-19T14:15:30+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "eb1fcffc-48ef-4b87-9f8c-e0a8416731c7",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-11-15T10:08:12+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "aff20baa-7704-4432-9d9b-432f76c5fdc9",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-10-12T11:29:31+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "347e7b1b-173d-46f6-848a-3e63c3f87a9c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-09-17T16:00:10+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "55a81e91-2a56-4896-b16c-62be196e2010",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-09-14T11:02:01+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "верховна рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "5aa90bd5-9a76-46e8-b6e7-4533734888df",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-09-03T14:18:11+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "e443f412-4285-4c93-a541-22d77d13e7f4",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-09-03T14:12:39+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "e92f7afc-6553-495c-8b17-310d2a870266",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-09-03T14:05:41+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "62ba48fc-9cf7-4552-9138-51c5e22cd547",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-08-31T14:23:16+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "1e3bc1c2-2ae4-46f3-bd6b-c6c0d498026a",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-08-31T14:19:28+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "4e0f220a-13f5-41b2-93b5-9d9b6df5e0f0",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-08-16T14:49:54+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "803f5d42-dd2d-4e5c-ada4-fcdd36d76753",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-08-16T10:52:16+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "60630b92-38ee-4706-8faa-67409d4d337d",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-07-20T16:05:25+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "a580165f-1189-4d20-a564-ee0480f55143",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-07-15T10:42:44+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "edb9fca6-8f63-4b63-887a-8b7d7294d13f",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-06-17T10:31:11+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "5a7339a4-e384-496b-b8e7-e23f225cf8d7",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-06-15T17:01:04+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "f855b53d-da19-4d90-806f-f055042ba5df",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-06-15T16:54:37+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "8c336079-6992-4e52-aa3b-5e26f3a0c635",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-05-27T18:17:17+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "b902102b-f838-424b-884f-0736ecad72bf",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-05-27T12:00:09+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "ce666efe-aa62-4895-8050-c523230ccc46",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-05-21T14:46:04+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "76b334e6-a992-4c31-afe1-363d4059f8bb",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-05-17T09:43:29+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "539bd940-bb72-48fe-b8e7-d60cb4768ec6",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-04-20T16:36:30+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "bb793f57-23ff-4348-b725-87eda8546001",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-04-20T14:21:38+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "cf59721c-f6e3-4eb5-bfc8-a08f6ea442c9",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-04-13T09:27:26+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "a7d31a57-5fc2-4b2e-bd02-4705d9cc4eeb",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-04-13T09:23:18+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "97ff18c2-1ba5-4e87-b6a9-bd31e92360a3",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-04-12T12:37:41+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "9d5ddf60-5f17-430e-a90f-49cd90951f32",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-04-07T19:08:17+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "1a24035b-f9ed-4936-8380-d14a53c8520c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T21:59:58+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "fdd37996-23c4-4c16-afe0-11713b5b4384",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T21:57:09+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "9be4e1ab-39a5-4660-b852-5b3253b3cec5",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T21:54:31+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "f9c60152-3edd-4beb-b879-368fcad91326",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T21:49:55+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "d1f9a748-3f8d-4918-ac93-e5fb26d07cd2",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T18:46:47+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "c6fdae2a-79af-4f64-bcbb-f8f44dbfd15b",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T18:41:40+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "1b2a93a1-8443-4799-8b64-cfb06c2f38e8",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T18:37:48+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "cityType": "Мотовилівка / Фастівський район / Київська область / Україна",
+            "workPost": "Депутат",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "city": "1.2.32.2.49.8.72.1.1",
+            "actual_cityPath": "1.2.32.2.49.8.72.1.1",
+            "changedName": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "actual_cityType": "Мотовилівка / Фастівський район / Київська область / Україна",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "street": "[Конфіденційна інформація]",
+            "actual_city": "1.2.32.2.49.8.72.1.1",
+            "sameRegLivingAddress": "0",
+            "workPlace": "Верховна Рада",
+            "streetType": "[Конфіденційна інформація]",
+            "postType": "[Не застосовується]",
+            "actual_district": "1.2.32.2.49",
+            "unzr": "[Конфіденційна інформація]",
+            "actual_street": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_region": "1.2.32",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "housePartNum_extendedstatus": 0,
+            "postCategory_extendedstatus": "1",
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "postType_extendedstatus": "1",
+            "actual_country": "1",
+            "district": "1.2.32.2.49",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "1.2.32",
+            "unzr_extendedstatus": 0,
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "region_txt": "Київська область",
+            "district_txt": "Фастівський район",
+            "city_txt": "Мотовилівка"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "declaration_period": "2020",
+            "declaration_year": 2020
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2020,
+      "id": "d75b6bd1-23f3-4657-8a08-3a967c872f0a",
+      "options": {
+        "has_changed_version": 0,
+        "parent_uuid": "677edc0e-44e5-48c3-9105-151e9364d346",
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 3,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T12:59:37+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "cityType": "Мотовилівка / Фастівський район / Київська область / Україна",
+            "workPost": "Депутат",
+            "country": "1",
+            "postCategory": "[Не застосовується]",
+            "actual_apartmentsNum": "[Конфіденційна інформація]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "city": "1.2.32.2.49.8.72.1.1",
+            "actual_cityPath": "1.2.32.2.49.8.72.1.1",
+            "changedName": "0",
+            "actual_apartmentsNum_extendedstatus": 0,
+            "actual_cityType": "Мотовилівка / Фастівський район / Київська область / Україна",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "street": "[Конфіденційна інформація]",
+            "actual_city": "1.2.32.2.49.8.72.1.1",
+            "sameRegLivingAddress": "0",
+            "workPlace": "Верховна Рада",
+            "streetType": "[Конфіденційна інформація]",
+            "postType": "[Не застосовується]",
+            "actual_district": "1.2.32.2.49",
+            "unzr": "[Конфіденційна інформація]",
+            "actual_street": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "actual_postCode": "[Конфіденційна інформація]",
+            "actual_region": "1.2.32",
+            "actual_streetType": "[Конфіденційна інформація]",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "actual_houseNum": "[Конфіденційна інформація]",
+            "housePartNum_extendedstatus": 0,
+            "postCategory_extendedstatus": "1",
+            "apartmentsNum_extendedstatus": 0,
+            "cityPath": "[Конфіденційна інформація]",
+            "postType_extendedstatus": "1",
+            "actual_country": "1",
+            "district": "1.2.32.2.49",
+            "actual_housePartNum_extendedstatus": 0,
+            "postCode": "[Конфіденційна інформація]",
+            "apartmentsNum": "[Конфіденційна інформація]",
+            "actual_housePartNum": "[Конфіденційна інформація]",
+            "region": "1.2.32",
+            "unzr_extendedstatus": 0,
+            "housePartNum": "[Конфіденційна інформація]",
+            "houseNum": "[Конфіденційна інформація]",
+            "region_txt": "Київська область",
+            "district_txt": "Фастівський район",
+            "city_txt": "Мотовилівка"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "declaration_type": "Щорічна",
+            "declaration_period": "2020",
+            "declaration_year": 2020
+          }
+        }
+      },
+      "declaration_type": 1,
+      "declaration_year": 2020,
+      "id": "677edc0e-44e5-48c3-9105-151e9364d346",
+      "options": {
+        "has_changed_version": 1,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 1,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-31T12:48:04+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "9f6fd406-5a97-42cb-a155-0a557103cc87",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-28T12:47:58+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "9b6a476d-4f03-4904-b28f-ab77c196dc20",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-22T19:13:20+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "da7e5a5c-c6de-402f-b029-61ddb1ee74f0",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-22T19:10:07+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "6b43d8ef-aae1-4d64-ac9e-2a0911de0f17",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-18T19:50:26+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "587cc6da-f463-4d03-8a81-91dbad932758",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-18T06:13:22+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "7cc9df57-1af0-4e5c-bac4-a88f0bd444d5",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-11T19:06:26+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Народні депутати України",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "210d05b0-65fd-4567-ba4b-f1e2542aca6d",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-10T10:08:45+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "37329cf6-82fb-484c-b0d9-bff219040d5c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-03-01T10:56:17+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "16ec35da-01d1-4d63-98e8-390cd8900293",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-02-17T14:57:03+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "d7e27abb-2ea0-4951-954e-0be9dcbd21b5",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-02-12T16:09:08+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "548f5942-98b7-4e60-962e-47125f7c3fc5",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-02-03T19:26:19+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "251669be-ab3c-46af-81be-a3e1a2ea5467",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-01-25T17:41:22+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "84f4cc2a-1a38-4912-b22d-01ccd53daafe",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-01-21T17:05:49+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "6f7e2a40-32c0-4861-b294-3834cdaec1fb",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-01-20T15:29:06+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2021"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2021,
+      "id": "9649d786-5d6a-431e-bac1-7fc6ff3bba87",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2021-01-16T14:09:30+02:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "196284f0-7d1e-401d-b5b8-00d924773ff3",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-23T16:46:08+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "2a39b726-9614-411b-8b0f-ee9e2c6c2e35",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-23T16:28:59+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "5f903edf-7d98-4123-89f0-bb3eedf09e88",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-16T19:00:02+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "e68057f0-f893-4375-8cc4-b88312ec2fe2",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-16T11:20:06+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "8a8f76a8-0dc1-472f-a71f-a2c0eccd8b05",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-16T11:10:44+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "dcc05c53-aaff-476e-94b6-61ec14ce7d1e",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-16T11:04:05+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "07ed66c8-ea21-4d96-abf6-113861552e48",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-16T10:59:23+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "de139680-b3b2-405b-81fd-ac44e1a89c0c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-16T10:53:56+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "10fa9bc5-5915-4c6b-b593-51701560fabe",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-08T19:09:22+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "784011e8-170e-4752-a551-c2ad8dff330a",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-05T13:55:12+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "6fe4e400-71f1-4f45-84fe-898f69dd834c",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-10-05T11:43:43+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "2938b46e-37ad-44bb-bbce-b05682458c06",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-09-25T11:46:04+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "c2b1adb5-abd5-4bdb-ae1a-ecd02f35d324",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-09-25T11:41:53+03:00"
+    },
+    {
+      "continue_perform_functions": -1,
+      "corruption_affected": 2,
+      "data": {
+        "step_1": {
+          "data": {
+            "birthday": "[Конфіденційна інформація]",
+            "workPost": "Депутат",
+            "postCategory": "[Не застосовується]",
+            "firstname": "ВІКТОР",
+            "corruptionAffected": "Ні",
+            "postType": "[Не застосовується]",
+            "unzr": "[Конфіденційна інформація]",
+            "taxNumber": "[Конфіденційна інформація]",
+            "middlename": "НИЧИПОРОВИЧ",
+            "public_person": "Так",
+            "lastname": "М’ЯЛИК",
+            "postCategory_extendedstatus": "1",
+            "postType_extendedstatus": "1",
+            "passport": "[Конфіденційна інформація]",
+            "responsiblePosition": "Народний депутат України",
+            "unzr_extendedstatus": 0,
+            "workPlace": "Верховна Рада"
+          },
+          "isNotApplicable": 0
+        },
+        "step_0": {
+          "data": {
+            "changesYear": "2020"
+          }
+        }
+      },
+      "declaration_type": 0,
+      "declaration_year": 2020,
+      "id": "0b347a9d-3817-49bd-85a7-057ff504a373",
+      "options": {
+        "has_changed_version": 0,
+        "auto_full_check": 0,
+        "based_on_full_check": 0
+      },
+      "post_category": 0,
+      "post_type": 0,
+      "responsible_position": 52,
+      "schema_version": 3,
+      "type": 2,
+      "user_declarant_id": 1432475,
+      "date": "2020-09-19T20:01:55+03:00"
+    }
+  ],
+  "count": 309
+}
