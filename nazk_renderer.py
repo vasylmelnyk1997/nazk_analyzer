@@ -47,10 +47,16 @@ th{background:#f0f0f0}
 .tab-panel{display:none;border:1px solid #ccc;padding:12px}
 .tab-panel.active{display:block}
 details{margin:8px 0}
-summary{cursor:pointer;user-select:none}
-summary.asset-summary{display:flex;align-items:center;justify-content:space-between;gap:12px}
-details ol{margin:6px 0 6px 18px;padding:0}
-details li{margin:3px 0}
+summary{cursor:pointer;user-select:none;list-style:none}
+summary::-webkit-details-marker{display:none}
+.asum{display:inline-flex;align-items:baseline;gap:6px}
+.asum-arrow{font-size:10px;transition:transform .15s;display:inline-block}
+details[open] .asum-arrow{transform:rotate(90deg)}
+table.dt{border-collapse:collapse;width:auto;margin:6px 0 4px 18px}
+table.dt td{border:none;padding:1px 0;vertical-align:top}
+table.dt .dl{white-space:nowrap;text-align:left}
+table.dt .ds{width:15px}
+table.dt .da{white-space:nowrap;text-align:right}
 .stub{color:#999;font-style:italic;margin:6px 0}
 </style>"""
 
@@ -91,10 +97,6 @@ def _proper_name(raw: str) -> str:
     return " ".join(part.capitalize() for part in parts)
 
 
-def _owner_name(person_id: str, owners: dict[str, str]) -> str:
-    return owners.get(person_id, person_id)
-
-
 def _build_owners(s1: dict, s2_items: list) -> dict[str, str]:
     d = s1.get("data", {})
     name = _proper_name(
@@ -127,16 +129,39 @@ def _area_str(item: dict) -> tuple[str, str]:
     except ValueError:
         return "площа", raw
     if obj_type in _AREA_M2_TYPES:
-        return "загальна площа", f"{val:g} м²"
+        return "загальна площа", f"{val:g} м²"
     ha = val / 10_000
-    return "площа", f"{ha:g} га"
+    return "площа", f"{ha:g} га"
+
+
+def _detail_table(rows: list[tuple[str, str]]) -> str:
+    """3-column table: label | 15 px spacer | amount. Both data columns fit their widest content."""
+    trs = "".join(
+        f'<tr><td class="dl">{n}.&nbsp;{label}</td>'
+        f'<td class="ds"></td>'
+        f'<td class="da">{amount}</td></tr>'
+        for n, (label, amount) in enumerate(rows, 1)
+    )
+    return f'<table class="dt">{trs}</table>'
+
+
+def _expandable(title: str, total_str: str, rows: list[tuple[str, str]]) -> str:
+    table = _detail_table(rows)
+    return (
+        f'<details>'
+        f'<summary><span class="asum">'
+        f'<span class="asum-arrow">&#9658;</span>'
+        f'<span>{title}</span>'
+        f'<strong>{total_str}</strong>'
+        f'</span></summary>'
+        f'{table}</details>'
+    )
 
 
 # ── section renderers ──────────────────────────────────────────────────────────
 
 def _realty_html(items: list, owner_id: str) -> str:
     rows = []
-    n = 1
     for item in items:
         owners_list = _rights_owners(item)
         if owner_id not in owners_list:
@@ -150,11 +175,10 @@ def _realty_html(items: list, owner_id: str) -> str:
         otype = item.get("objectType", "")
         share = f", частка 1/{len(owners_list)}" if len(owners_list) > 1 else ""
         rows.append(
-            f"<li>{n}. {otype}, {label}: {area}, "
-            f"за адресою {region} обл., {district} р-н, "
-            f"{prefix} {city}, у власності з {date}{share}</li>"
+            f"<li>{otype}, {label}: {area}, "
+            f"за адресою {region} обл., {district} р-н, "
+            f"{prefix} {city}, у власності з {date}{share}</li>"
         )
-        n += 1
     if not rows:
         return ""
     return "<h3>Об'єкти нерухомості</h3><ol>" + "".join(rows) + "</ol>"
@@ -162,7 +186,6 @@ def _realty_html(items: list, owner_id: str) -> str:
 
 def _vehicles_html(items: list, owner_id: str) -> str:
     rows = []
-    n = 1
     for item in items:
         if owner_id not in _rights_owners(item):
             continue
@@ -171,8 +194,7 @@ def _vehicles_html(items: list, owner_id: str) -> str:
         model = item.get("model", "")
         year = item.get("graduationYear", "")
         date = item.get("owningDate", "")
-        rows.append(f"<li>{n}. {otype} {brand} {model} {year} р.в., у власності з {date}</li>")
-        n += 1
+        rows.append(f"<li>{otype} {brand} {model} {year} р.в., у власності з {date}</li>")
     if not rows:
         return ""
     return "<h3>Транспортні засоби</h3><ol>" + "".join(rows) + "</ol>"
@@ -183,14 +205,11 @@ def _income_html(items: list, owner_id: str) -> str:
     if not own:
         return ""
     total = sum(float(i.get("sizeIncome", 0)) for i in own)
-    detail = "".join(
-        f"<li>{n}. {i.get('objectType','')}: {_fmt(float(i.get('sizeIncome',0)))} грн</li>"
-        for n, i in enumerate(own, 1)
-    )
-    return (
-        f"<details><summary class=\"asset-summary\"><span>Доходи:</span>"
-        f"<strong>{_fmt(total)} грн</strong></summary><ol>{detail}</ol></details>"
-    )
+    rows = [
+        (i.get("objectType", ""), f"{_fmt(float(i.get('sizeIncome', 0)))} грн")
+        for i in own
+    ]
+    return _expandable("Доходи:", f"{_fmt(total)} грн", rows)
 
 
 def _cash_html(items: list, owner_id: str, year: int) -> str:
@@ -206,16 +225,15 @@ def _cash_html(items: list, owner_id: str, year: int) -> str:
             all_converted = False
         else:
             total_uah += float(item.get("sizeAssets", 0)) * rate
-    total_str = (_fmt(total_uah) + " грн") if all_converted else "сума н/д"
-    detail = "".join(
-        f"<li>{n}. {_CASH_TYPE_LABEL.get(i.get('objectType',''), i.get('objectType',''))}: "
-        f"{_fmt(float(i.get('sizeAssets',0)))} {_currency_code(i.get('assetsCurrency','UAH'))}</li>"
-        for n, i in enumerate(own, 1)
-    )
-    return (
-        f"<details><summary class=\"asset-summary\"><span>Грошові активи:</span>"
-        f"<strong>{total_str}</strong></summary><ol>{detail}</ol></details>"
-    )
+    total_str = f"{_fmt(total_uah)} грн" if all_converted else "сума н/д"
+    rows = [
+        (
+            _CASH_TYPE_LABEL.get(i.get("objectType", ""), i.get("objectType", "")),
+            f"{_fmt(float(i.get('sizeAssets', 0)))} {_currency_code(i.get('assetsCurrency', 'UAH'))}",
+        )
+        for i in own
+    ]
+    return _expandable("Грошові активи:", total_str, rows)
 
 
 def _corporate_html(items: list, owner_id: str) -> str:
@@ -223,15 +241,14 @@ def _corporate_html(items: list, owner_id: str) -> str:
     if not own:
         return ""
     total = sum(float(i.get("cost", 0)) for i in own)
-    detail = "".join(
-        f"<li>{n}. {i.get('name','')}"
-        f" ({i.get('cost_percent','')}%): {_fmt(float(i.get('cost',0)))} грн</li>"
-        for n, i in enumerate(own, 1)
-    )
-    return (
-        f"<details><summary class=\"asset-summary\"><span>Корпоративні права:</span>"
-        f"<strong>{_fmt(total)} грн</strong></summary><ol>{detail}</ol></details>"
-    )
+    rows = [
+        (
+            f"{i.get('name', '')} ({i.get('cost_percent', '')}%)",
+            f"{_fmt(float(i.get('cost', 0)))} грн",
+        )
+        for i in own
+    ]
+    return _expandable("Корпоративні права:", f"{_fmt(total)} грн", rows)
 
 
 def _obligations_html(items: list, owner_id: str) -> str:
@@ -242,24 +259,22 @@ def _obligations_html(items: list, owner_id: str) -> str:
     all_converted = True
     for item in own:
         raw_cur = item.get("currency", "UAH")
-        rate = _nbu_rate(raw_cur, 0)  # obligations use nominal year-end rate
+        rate = _nbu_rate(raw_cur, 0)
         if rate is None:
-            # fallback: try to parse year from context or just treat as UAH
             rate = 1.0 if _currency_code(raw_cur) == "UAH" else None
         if rate is None:
             all_converted = False
         else:
             total_uah += float(item.get("credit_rest", 0)) * rate
-    total_str = (_fmt(total_uah) + " грн") if all_converted else "сума н/д"
-    detail = "".join(
-        f"<li>{n}. {i.get('objectType','')}: "
-        f"{_fmt(float(i.get('credit_rest',0)))} {_currency_code(i.get('currency','UAH'))}</li>"
-        for n, i in enumerate(own, 1)
-    )
-    return (
-        f"<details><summary class=\"asset-summary\"><span>Фінансові зобов'язання:</span>"
-        f"<strong>{total_str}</strong></summary><ol>{detail}</ol></details>"
-    )
+    total_str = f"{_fmt(total_uah)} грн" if all_converted else "сума н/д"
+    rows = [
+        (
+            i.get("objectType", ""),
+            f"{_fmt(float(i.get('credit_rest', 0)))} {_currency_code(i.get('currency', 'UAH'))}",
+        )
+        for i in own
+    ]
+    return _expandable("Фінансові зобов'язання:", total_str, rows)
 
 
 def _has_any_owner_assets(
@@ -271,16 +286,14 @@ def _has_any_owner_assets(
     s8: list,
     s13: list,
 ) -> bool:
-    return any(
-        [
-            any(owner_id in _rights_owners(item) for item in s3),
-            any(owner_id in _rights_owners(item) for item in s6),
-            any(owner_id in _care_owners(item) for item in s11),
-            any(owner_id in _rights_owners(item) for item in s12),
-            any(owner_id in _rights_owners(item) for item in s8),
-            any(owner_id in _care_owners(item) for item in s13),
-        ]
-    )
+    return any([
+        any(owner_id in _rights_owners(item) for item in s3),
+        any(owner_id in _rights_owners(item) for item in s6),
+        any(owner_id in _care_owners(item) for item in s11),
+        any(owner_id in _rights_owners(item) for item in s12),
+        any(owner_id in _rights_owners(item) for item in s8),
+        any(owner_id in _care_owners(item) for item in s13),
+    ])
 
 
 # ── main renderer ──────────────────────────────────────────────────────────────
@@ -324,11 +337,11 @@ def render_declaration(data: dict) -> str:
         family_rows.append(
             f"<tr><td>{m.get('subjectRelation', '')}</td><td>{family_name}</td></tr>"
         )
-    rows = "".join(family_rows)
+    frows = "".join(family_rows)
     family_body = (
         f"<table><thead><tr><th>Родинний зв'язок</th><th>ПІБ</th></tr></thead>"
-        f"<tbody>{rows}</tbody></table>"
-        if rows else "<p>Немає відомостей</p>"
+        f"<tbody>{frows}</tbody></table>"
+        if frows else "<p>Немає відомостей</p>"
     )
     b2 = f"<section><h2>Склад сім'ї</h2>{family_body}</section>"
 
@@ -359,7 +372,10 @@ def render_declaration(data: dict) -> str:
             '<p class="stub">Видатки: не застосовується</p>',
         ]
         content = "".join(p for p in parts if p)
-        panels.append(f'<div id="{tid}" class="tab-panel{active}">{content or "<p>Немає активів</p>"}</div>')
+        panels.append(
+            f'<div id="{tid}" class="tab-panel{active}">'
+            f'{content or "<p>Немає активів</p>"}</div>'
+        )
 
     b3 = (
         "<section>"
