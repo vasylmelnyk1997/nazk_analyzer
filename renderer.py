@@ -24,21 +24,24 @@ table{border-collapse:collapse;width:100%}
 th,td{border:1px solid #ccc;padding:5px 10px;text-align:left}
 th{background:#f0f0f0}
 
-/* year tabs (outer, horizontal) */
-.year-tab-btns{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:-1px}
-.year-btn{padding:5px 16px;border:1px solid #ccc;background:#f5f5f5;cursor:pointer;
-          border-radius:4px 4px 0 0;border-bottom:none;font-size:13px;font-weight:bold}
-.year-btn.active{background:#fff}
-.year-panel{display:none;border:1px solid #ccc}
-.year-panel.active{display:flex;min-height:200px}
+/* year tabs (outer, vertical — left column) */
+.year-tabs{display:flex;border:1px solid #ccc;min-height:200px}
+.year-tab-btns{display:flex;flex-direction:column;min-width:72px;border-right:1px solid #ccc;
+               background:#fafafa;flex-shrink:0}
+.year-btn{padding:10px 14px;border:none;background:transparent;cursor:pointer;text-align:center;
+          font-size:14px;font-weight:bold;border-left:3px solid transparent;white-space:nowrap}
+.year-btn:hover{background:#f0f0f0}
+.year-btn.active{background:#fff;border-left-color:#0066cc}
+.year-panel{display:none;flex:1;flex-direction:column}
+.year-panel.active{display:flex}
 
-/* owner tabs (inner, vertical) */
-.owner-tab-btns{display:flex;flex-direction:column;min-width:180px;border-right:1px solid #ccc;
-                background:#fafafa;padding:6px 0;flex-shrink:0}
-.owner-btn{padding:7px 14px;border:none;background:transparent;cursor:pointer;text-align:left;
-           font-size:13px;white-space:nowrap;border-left:3px solid transparent}
-.owner-btn:hover{background:#f0f0f0}
-.owner-btn.active{background:#fff;font-weight:bold;border-left-color:#0066cc}
+/* owner tabs (inner, horizontal — top of panel) */
+.owner-tab-btns{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 0;border-bottom:1px solid #ccc;
+                flex-shrink:0;margin-bottom:-1px}
+.owner-btn{padding:5px 12px;border:1px solid #ccc;background:#f5f5f5;cursor:pointer;
+           border-radius:4px 4px 0 0;border-bottom:none;font-size:13px}
+.owner-btn:hover{background:#eee}
+.owner-btn.active{background:#fff;font-weight:bold;border-bottom:1px solid #fff;position:relative;z-index:1;margin-bottom:-1px}
 .owner-panels{flex:1;padding:12px;overflow:auto}
 .owner-panel{display:none}
 .owner-panel.active{display:block}
@@ -212,8 +215,10 @@ def render_all_declarations(docs: list[dict]) -> str:
     b3 = (
         "<section>"
         "<h2>Активи</h2>"
+        '<div class="year-tabs">'
         f'<div class="year-tab-btns">{"".join(year_btns)}</div>'
         + "".join(year_panels)
+        + "</div>"
         + "</section>"
     )
 
