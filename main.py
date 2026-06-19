@@ -6,7 +6,7 @@ import webbrowser
 
 from api_client import ApiSource
 from config import API_ROOT, STORAGE_DIR
-from parser import extract_meta
+from parser import extract_meta, map_document
 from renderer import render_all_declarations
 from storage import Storage
 
@@ -34,7 +34,7 @@ def _get_or_fetch_document(
     storage.save_cache_document(doc_id, doc)
     meta = extract_meta(doc)
     if meta["user_declarant_id"]:
-        storage.save_document(doc_id, meta["user_declarant_id"], doc)
+        storage.save_document(doc_id, meta["user_declarant_id"], map_document(doc))
     return doc
 
 

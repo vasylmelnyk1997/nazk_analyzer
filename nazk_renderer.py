@@ -160,6 +160,17 @@ def _expandable(title: str, total_str: str, rows: list[tuple[str, str]]) -> str:
 
 # ── section renderers ──────────────────────────────────────────────────────────
 
+def _addr_field(primary: str, txt: str, strip: str = "") -> str:
+    val = primary
+    if not val or val[0] in "1[":
+        t = txt.strip()
+        if t and not t.startswith("["):
+            val = t
+    if strip:
+        val = val.replace(strip, "").strip()
+    return val
+
+
 def _realty_html(items: list, owner_id: str) -> str:
     rows = []
     for item in items:
@@ -167,9 +178,9 @@ def _realty_html(items: list, owner_id: str) -> str:
         if owner_id not in owners_list:
             continue
         label, area = _area_str(item)
-        region = item.get("region", "")
-        district = item.get("district", "")
-        city = item.get("city", "")
+        region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
+        district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+        city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
         prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
         date = item.get("owningDate", "")
         otype = item.get("objectType", "")
