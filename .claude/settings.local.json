@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python3 -)",
       "Bash(.venv/Scripts/python.exe -)",
-      "Bash(.venv/Scripts/python.exe nazk_renderer.py)"
+      "Bash(.venv/Scripts/python.exe nazk_renderer.py)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\" -File | Where-Object { $_.Extension -in '.py', '.html', '.md', '.txt', '.cfg', '.toml', '.ini' } | Select-Object Name)"
     ]
   }
 }

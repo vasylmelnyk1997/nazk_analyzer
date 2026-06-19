@@ -225,7 +225,12 @@ def _cash_html(items: list, owner_id: str, year: int) -> str:
             all_converted = False
         else:
             total_uah += float(item.get("sizeAssets", 0)) * rate
-    total_str = f"{_fmt(total_uah)} грн" if all_converted else "сума н/д"
+    if all_converted:
+        total_str = f"{_fmt(total_uah)} грн"
+    elif total_uah > 0:
+        total_str = f"{_fmt(total_uah)} грн (курс недоступний)"
+    else:
+        total_str = "(курс недоступний)"
     rows = [
         (
             _CASH_TYPE_LABEL.get(i.get("objectType", ""), i.get("objectType", "")),
@@ -266,7 +271,12 @@ def _obligations_html(items: list, owner_id: str) -> str:
             all_converted = False
         else:
             total_uah += float(item.get("credit_rest", 0)) * rate
-    total_str = f"{_fmt(total_uah)} грн" if all_converted else "сума н/д"
+    if all_converted:
+        total_str = f"{_fmt(total_uah)} грн"
+    elif total_uah > 0:
+        total_str = f"{_fmt(total_uah)} грн (курс недоступний)"
+    else:
+        total_str = "(курс недоступний)"
     rows = [
         (
             i.get("objectType", ""),
@@ -395,13 +405,10 @@ def render_declaration(data: dict) -> str:
 
 
 if __name__ == "__main__":
-    data_path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)),
-        "data",
-        "Підкапка_Костянтин_Васильович-2025-повна.json",
-    )
-    with open(data_path, encoding="utf-8-sig") as f:
-        declaration = json.load(f)
+    from source import FileSource
+
+    src = FileSource()
+    declaration = src.get_document("c28ec29a-31ea-4d83-9d15-589270f20931")
 
     html = render_declaration(declaration)
 
