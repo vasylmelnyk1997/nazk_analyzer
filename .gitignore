@@ -24,3 +24,6 @@ htmlcov/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Storage folder and files
+storage/

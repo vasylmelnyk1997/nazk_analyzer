@@ -149,7 +149,7 @@ def _expandable(title: str, total_str: str, rows: list[tuple[str, str]]) -> str:
     table = _detail_table(rows)
     return (
         f'<details>'
-        f'<summary><span class="asum">'
+        f'<summary class="summary-toggle"><span class="asum">'
         f'<span class="asum-arrow">&#9658;</span>'
         f'<span>{title}</span>'
         f'<strong>{total_str}</strong>'

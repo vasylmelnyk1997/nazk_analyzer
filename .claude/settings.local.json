@@ -4,7 +4,11 @@
       "Bash(python3 -)",
       "Bash(.venv/Scripts/python.exe -)",
       "Bash(.venv/Scripts/python.exe nazk_renderer.py)",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\" -File | Where-Object { $_.Extension -in '.py', '.html', '.md', '.txt', '.cfg', '.toml', '.ini' } | Select-Object Name)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\" -File | Where-Object { $_.Extension -in '.py', '.html', '.md', '.txt', '.cfg', '.toml', '.ini' } | Select-Object Name)",
+      "PowerShell(cd \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\"; Start-Job -ScriptBlock { Set-Location \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\"; .\\\\.venv\\\\Scripts\\\\python.exe api\\\\api_server.py } | Out-Null; Start-Sleep -Seconds 2; .\\\\.venv\\\\Scripts\\\\python.exe main.py -u 1525473)",
+      "PowerShell(cd \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\"; $p = Start-Process -FilePath \".\\\\.venv\\\\Scripts\\\\python.exe\" -ArgumentList \"api\\\\api_server.py\" -WorkingDirectory \\(Get-Location\\) -PassThru -WindowStyle Hidden; Start-Sleep -Seconds 2; Write-Host \"Server PID: $\\($p.Id\\)\"; .\\\\.venv\\\\Scripts\\\\python.exe -c \"import urllib.request; r=urllib.request.urlopen\\('http://127.0.0.1:8000/v2/documents/767bf293-a574-4ede-ace7-c0e3f33bbd54',timeout=3\\); print\\('OK:', r.status\\)\")",
+      "PowerShell(cd \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\"; .\\\\.venv\\\\Scripts\\\\python.exe main.py -u 1525473 -r 2>&1 | ForEach-Object { [System.Text.Encoding]::UTF8.GetString\\([System.Text.Encoding]::Default.GetBytes\\($_\\)\\) })",
+      "PowerShell(cd \"C:\\\\Users\\\\dmytr\\\\Documents\\\\NGU\\\\source\\\\nazk_analyzer\"; .\\\\.venv\\\\Scripts\\\\python.exe main.py -u 1525473 2>&1 | ForEach-Object { [System.Text.Encoding]::UTF8.GetString\\([System.Text.Encoding]::Default.GetBytes\\($_\\)\\) })"
     ]
   }
 }
