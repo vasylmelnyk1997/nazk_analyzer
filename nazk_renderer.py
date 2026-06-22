@@ -166,6 +166,8 @@ def _addr_field(primary: str, txt: str, strip: str = "") -> str:
         t = txt.strip()
         if t and not t.startswith("["):
             val = t
+        else:
+            val = ""
     if strip:
         val = val.replace(strip, "").strip()
     return val
@@ -182,13 +184,19 @@ def _realty_html(items: list, owner_id: str) -> str:
         district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
         city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
         prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
+        if not city:
+            city = district;
+            district = "";
         date = item.get("owningDate", "")
         otype = item.get("objectType", "")
         share = f", частка 1/{len(owners_list)}" if len(owners_list) > 1 else ""
+        region_ex = f" {region} обл.,";
+        district_ex = "" if district == "" else f" {district} р-н,";
+        city_ex = f"{"" if prefix == "" else f" {prefix}"} {city},"
         rows.append(
             f"<li>{otype}, {label}: {area}, "
-            f"за адресою {region} обл., {district} р-н, "
-            f"{prefix} {city}, у власності з {date}{share}</li>"
+            f"за адресою {region_ex}{district_ex}"
+            f"{city_ex} у власності з {date}{share}</li>"
         )
     if not rows:
         return ""

@@ -52,8 +52,12 @@ def main() -> None:
         help="UUID декларації НАЗК"
     )
     arg_parser.add_argument(
-        "-r", action="store_true",
-        help="Перезавантажити дані (ігноруючи кеш) та перегенерувати HTML"
+        "-rd", action="store_true",
+        help="Перезавантажити дані (ігноруючи кеш) і перегенерувати HTML"
+    )
+    arg_parser.add_argument(
+        "-rv", action="store_true",
+        help="Перегенерувати HTML"
     )
     args = arg_parser.parse_args()
 
@@ -76,15 +80,18 @@ def main() -> None:
             )
             sys.exit(1)
 
-    # step 1.1: serve existing HTML if available and -r not set
-    if not args.r:
+    if args.rd:
+        args.rv = True
+    
+    # step 1.1: serve existing HTML if available and -rd & -rv not set
+    if not args.rd and not args.rv:
         html_path = storage.find_html(user_declarant_id)
         if html_path:
             webbrowser.open(f"file:///{html_path}")
             return
 
     # step 1.2: get list of doc_ids
-    doc_ids: list[str] | None = None if args.r else storage.find_doc_ids(user_declarant_id)
+    doc_ids: list[str] | None = None if args.rd else storage.find_doc_ids(user_declarant_id)
     if doc_ids is None:
         try:
             raw_list = api.fetch_list_raw(user_declarant_id)
@@ -101,7 +108,7 @@ def main() -> None:
     # step 1.3: fetch all documents
     docs: list[dict] = []
     for doc_id in doc_ids:
-        doc = _get_or_fetch_document(doc_id, storage, api, force_reload=args.r)
+        doc = _get_or_fetch_document(doc_id, storage, api, force_reload=args.rd)
         if doc is not None:
             docs.append(doc)
 
