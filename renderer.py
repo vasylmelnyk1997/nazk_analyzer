@@ -59,7 +59,7 @@ table.dt .dl{white-space:nowrap;text-align:left}
 table.dt .ds{width:15px}
 table.dt .da{white-space:nowrap;text-align:right}
 .stub{color:#999;font-style:italic;margin:6px 0}
-ol{margin:6px 0;padding-left:20px}
+ol{margin:6px 0 4px 18px;padding-left:20px}
 ol li{margin:3px 0}
 </style>"""
 

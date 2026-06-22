@@ -58,6 +58,8 @@ table.dt .dl{white-space:nowrap;text-align:left}
 table.dt .ds{width:15px}
 table.dt .da{white-space:nowrap;text-align:right}
 .stub{color:#999;font-style:italic;margin:6px 0}
+ol{margin:6px 0 4px 18px;padding-left:20px}
+ol li{margin:3px 0}
 </style>"""
 
 _JS = """\
@@ -172,6 +174,16 @@ def _addr_field(primary: str, txt: str, strip: str = "") -> str:
         val = val.replace(strip, "").strip()
     return val
 
+def _details_html(title: str, info: str, inner: str) -> str:
+    return (
+        f'<details>'
+        f'<summary class="summary-toggle"><span class="asum">'
+        f'<span class="asum-arrow">&#9658;</span>'
+        f"<span>{title} <strong>[&nbsp;{info}&nbsp;]</strong></span>"
+        f'</span></summary>'
+        f'{inner}</details>'
+    )
+
 
 def _realty_html(items: list, owner_id: str) -> str:
     rows = []
@@ -185,13 +197,13 @@ def _realty_html(items: list, owner_id: str) -> str:
         city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
         prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
         if not city:
-            city = district;
-            district = "";
+            city = district
+            district = ""
         date = item.get("owningDate", "")
         otype = item.get("objectType", "")
         share = f", частка 1/{len(owners_list)}" if len(owners_list) > 1 else ""
-        region_ex = f" {region} обл.,";
-        district_ex = "" if district == "" else f" {district} р-н,";
+        region_ex = f" {region} обл.,"
+        district_ex = "" if district == "" else f" {district} р-н,"
         city_ex = f"{"" if prefix == "" else f" {prefix}"} {city},"
         rows.append(
             f"<li>{otype}, {label}: {area}, "
@@ -200,7 +212,8 @@ def _realty_html(items: list, owner_id: str) -> str:
         )
     if not rows:
         return ""
-    return "<h3>Об'єкти нерухомості</h3><ol>" + "".join(rows) + "</ol>"
+    inner = "<ol>" + "".join(rows) + "</ol>"
+    return _details_html("Об'єкти нерухомості", f"{len(rows)}", inner)
 
 
 def _vehicles_html(items: list, owner_id: str) -> str:
@@ -216,7 +229,8 @@ def _vehicles_html(items: list, owner_id: str) -> str:
         rows.append(f"<li>{otype} {brand} {model} {year} р.в., у власності з {date}</li>")
     if not rows:
         return ""
-    return "<h3>Транспортні засоби</h3><ol>" + "".join(rows) + "</ol>"
+    inner = "<ol>" + "".join(rows) + "</ol>"
+    return _details_html("Транспортні засоби", f"{len(rows)}", inner)
 
 
 def _income_html(items: list, owner_id: str) -> str:
