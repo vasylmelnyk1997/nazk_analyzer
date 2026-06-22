@@ -61,6 +61,10 @@ table.dt .da{white-space:nowrap;text-align:right}
 .stub{color:#999;font-style:italic;margin:6px 0}
 ol{margin:6px 0 4px 18px;padding-left:20px}
 ol li{margin:3px 0}
+ol.cl{cursor:pointer;position:relative}
+ol.cl:hover::after{content:'клікніть щоб скопіювати';position:absolute;top:-22px;left:0;
+  background:#333;color:#fff;font-size:11px;padding:2px 7px;border-radius:3px;
+  white-space:nowrap;pointer-events:none}
 </style>"""
 
 _JS = """\
@@ -77,6 +81,12 @@ function showOwnerTab(yearId, ownerId) {
   yp.querySelectorAll('.owner-btn').forEach(function(b){b.classList.remove('active')});
   document.getElementById(ownerId).classList.add('active');
   yp.querySelector('[data-tab="'+ownerId+'"]').classList.add('active');
+}
+function copyList(ol){
+  var text=Array.from(ol.querySelectorAll('li')).map(function(li,i){
+    return (i+1)+'. '+li.textContent.trim();
+  }).join('\\n');
+  navigator.clipboard.writeText(text);
 }
 </script>"""
 
