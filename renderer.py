@@ -65,6 +65,11 @@ ol.cl{cursor:pointer;position:relative}
 ol.cl:hover::after{content:'клікніть щоб скопіювати';position:absolute;top:-22px;left:0;
   background:#333;color:#fff;font-size:11px;padding:2px 7px;border-radius:3px;
   white-space:nowrap;pointer-events:none}
+.cl-box-blinking{background-color: transparent}
+.cl-box-blinking.animate-blink{animation: blink 0.5s ease-in-out}
+@keyframes blink{0%{background-color: transparent}
+50%{background-color: #d1dee9}
+100%{background-color: transparent}}
 </style>"""
 
 _JS = """\
@@ -87,6 +92,8 @@ function copyList(ol){
     return (i+1)+'. '+li.textContent.trim();
   }).join('\\n');
   navigator.clipboard.writeText(text);
+  ol.addEventListener('animationend', () => ol.classList.remove('animate-blink'), {once: true});
+  ol.classList.add('animate-blink');
 }
 </script>"""
 
