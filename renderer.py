@@ -22,6 +22,7 @@ _CSS = """\
 *{box-sizing:border-box}
 body{font-family:Arial,sans-serif;font-size:14px;color:#222;max-width:1100px;margin:0 auto;padding:16px}
 h2{font-size:15px;font-weight:bold;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px}
+.user-declarant-id{font-size:75%;color:#777}
 h3{font-size:13px;font-weight:bold;margin:12px 0 4px}
 p{margin:4px 0}
 table{border-collapse:collapse;width:100%}
@@ -46,12 +47,13 @@ th{background:#f0f0f0}
            border-radius:4px 4px 0 0;border-bottom:none;font-size:13px}
 .owner-btn:hover{background:#eee}
 .owner-btn.active{background:#fff;font-weight:bold;border-bottom:1px solid #fff;position:relative;z-index:1;margin-bottom:-1px}
-.owner-panels{flex:1;padding:12px;overflow:auto}
-.owner-panel{display:none}
+.owner-panels{flex:1;padding:12px;overflow:auto;display:grid}
+.owner-panel{display:none;position:relative}
 .owner-panel.active{display:block}
+.doc-id{font-size:75%;color:#999;width:100%;text-align:right;position:absolute;bottom:0;right:0}
 
 /* assets */
-details{margin:8px 0}
+details{margin:16px 0;border:1px solid #eee;padding:8px;border-radius:4px}
 summary.summary-toggle{cursor:pointer;user-select:none;list-style:none}
 summary.summary-toggle::-webkit-details-marker{display:none}
 .asum{display:inline-flex;align-items:baseline;gap:6px}
@@ -223,7 +225,7 @@ def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
     )
 
 
-def render_all_declarations(docs: list[dict]) -> str:
+def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
     sorted_docs = sorted(
         docs, key=lambda d: d.get("declaration_year", 0), reverse=True
     )
@@ -237,7 +239,7 @@ def render_all_declarations(docs: list[dict]) -> str:
     )
     b1 = (
         "<section>"
-        "<h2>Інформація про декларанта</h2>"
+        f"<h2>Інформація про декларанта <span class='user-declarant-id'>[id: {user_declarant_id}]</span></h2>"
         f"<p><b>ПІБ:</b> {full_name}</p>"
         f"<p><b>Місце роботи:</b> {d1.get('workPlace','')}</p>"
         f"<p><b>Посада:</b> {d1.get('workPost','')}</p>"

@@ -124,7 +124,7 @@ def main() -> None:
     meta = extract_meta(sorted_docs[0])
     fullname = meta["fullname"]
 
-    html = render_all_declarations(sorted_docs)
+    html = render_all_declarations(user_declarant_id, sorted_docs)
     html_path = storage.save_html(user_declarant_id, fullname, html)
 
     print(f"Збережено: {html_path}")

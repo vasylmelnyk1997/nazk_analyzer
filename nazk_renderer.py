@@ -457,6 +457,7 @@ def general_tab_html(
 ) -> str:
     """HTML-вміст вкладки 'Загальна'."""
     steps = doc.get("data", {})
+    doc_id = doc.get("id", "")
     year: int = doc.get("declaration_year", 0)
     s1 = steps.get("step_1", {})
     s2 = _step_data(steps.get("step_2"))
@@ -558,6 +559,8 @@ def general_tab_html(
 
     if not any([realty_rows, vehicle_rows, income_h, cash_h, corp_h, obl_h]):
         parts.append('<p>Немає активів</p>')
+
+    parts.append(f"<div class='doc-id'>[ doc-id: {doc_id} ]</div>")
 
     return "".join(parts)
 
