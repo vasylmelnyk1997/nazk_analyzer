@@ -7,6 +7,7 @@ from nazk_renderer import (
     _family_ids,
     _has_any_owner_assets,
     _income_html,
+    _normalize_income_item,
     _obligations_html,
     _proper_name,
     _realty_html,
@@ -161,6 +162,9 @@ def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
     s11 = _step_data(steps.get("step_11"))
     s12 = _step_data(steps.get("step_12"))
     s13 = _step_data(steps.get("step_13"))
+
+    s11 = [_normalize_income_item(i) for i in s11]
+    s13 = [_normalize_income_item(i) for i in s13]
 
     owners = _build_owners(s1, s2)
     sorted_owners = _sort_owners(owners, s2)

@@ -315,6 +315,16 @@ def _obligations_html(items: list, owner_id: str, year: int = 0) -> str:
     return _expandable("Фінансові зобов'язання:", total_str, rows)
 
 
+def _normalize_income_item(item: dict) -> dict:
+    """Для stored файлів до v.2.5: заповнити rights з person_who_care якщо поле відсутнє або порожнє."""
+    if not item.get("rights") and item.get("person_who_care"):
+        return {**item, "rights": [
+            {"rightBelongs": str(p.get("person", "")), "percentOwnership": None}
+            for p in item["person_who_care"] if p.get("person")
+        ]}
+    return item
+
+
 def _has_any_owner_assets(
     owner_id: str,
     s3: list,
@@ -458,6 +468,8 @@ def general_tab_html(
     s13 = _step_data(steps.get("step_13"))
 
     fids = _family_ids(s1, s2)
+    s11 = [_normalize_income_item(i) for i in s11]
+    s13 = [_normalize_income_item(i) for i in s13]
 
     total_income = sum(
         (lambda raw: float(raw) if _try_float(raw) else 0.0)(i.get("sizeIncome", 0))
@@ -492,24 +504,38 @@ def general_tab_html(
         family_rights = [r for r in rights if str(r.get("rightBelongs", "")) in fids]
         non_family = len(rights) - len(family_rights)
         share_note = f", частка родини {int(_family_share(rights, fids)*100)}%" if non_family > 0 else ""
+        if len(family_rights) == 1:
+            oname = owners.get(str(family_rights[0].get("rightBelongs", "")), "")
+            owner_suffix = f", власник: {oname}" if oname else ""
+        else:
+            onames = [n for r in family_rights if (n := owners.get(str(r.get("rightBelongs", "")), ""))]
+            owner_suffix = f", власники: {', '.join(onames)}" if onames else ""
         region_ex = f" {region} обл.," if region else ""
         district_ex = "" if not district else f" {district} р-н,"
         city_ex = f"{'  ' if not prefix else f' {prefix}'} {city}," if city else ""
-        realty_rows.append(f"<li>{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}{share_note}</li>")
+        realty_rows.append(f"<li>{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}{share_note}{owner_suffix}</li>")
     if realty_rows:
         parts.append(_details_html("Об'єкти нерухомості", realty_rows))
 
     # ── транспорт ─────────────────────────────────────────────────────────────
     vehicle_rows = []
     for item in s6:
-        if _family_share(item.get("rights", []), fids) == 0.0:
+        v_rights = item.get("rights", [])
+        if _family_share(v_rights, fids) == 0.0:
             continue
         otype = item.get("objectType", "")
         brand = item.get("brand", "")
         model = item.get("model", "")
         yr = item.get("graduationYear", "")
         date = item.get("owningDate", "")
-        vehicle_rows.append(f"<li>{otype} {brand} {model} {yr} р.в., у власності з {date}</li>")
+        family_v_rights = [r for r in v_rights if str(r.get("rightBelongs", "")) in fids]
+        if len(family_v_rights) == 1:
+            oname = owners.get(str(family_v_rights[0].get("rightBelongs", "")), "")
+            v_owner_suffix = f", власник: {oname}" if oname else ""
+        else:
+            onames = [n for r in family_v_rights if (n := owners.get(str(r.get("rightBelongs", "")), ""))]
+            v_owner_suffix = f", власники: {', '.join(onames)}" if onames else ""
+        vehicle_rows.append(f"<li>{otype} {brand} {model} {yr} р.в., у власності з {date}{v_owner_suffix}</li>")
     if vehicle_rows:
         parts.append(_details_html("Транспортні засоби", vehicle_rows))
 

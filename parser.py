@@ -37,6 +37,16 @@ def map_document(raw: dict) -> dict:
             for r in items
         ]
 
+    def _income_rights(item: dict) -> list:
+        """Підтримка двох форматів: 'rights' (старіші декларації) і 'person_who_care' (реальний API)."""
+        if item.get("rights"):
+            return _rights(item["rights"])
+        return [
+            {"rightBelongs": str(p.get("person", "")), "percentOwnership": None}
+            for p in item.get("person_who_care", [])
+            if p.get("person")
+        ]
+
     s1_data = steps.get("step_1", {}).get("data", {})
 
     step2 = [
@@ -93,7 +103,7 @@ def map_document(raw: dict) -> dict:
         {
             "objectType": i.get("objectType", ""),
             "sizeIncome": i.get("sizeIncome", 0),
-            "rights": _rights(i.get("rights", [])),
+            "rights": _income_rights(i),
         }
         for i in _get_list("step_11")
     ]
@@ -113,7 +123,7 @@ def map_document(raw: dict) -> dict:
             "objectType": i.get("objectType", ""),
             "credit_rest": i.get("credit_rest", 0),
             "currency": i.get("currency", "UAH"),
-            "rights": _rights(i.get("rights", [])),
+            "rights": _income_rights(i),
         }
         for i in _get_list("step_13")
     ]
