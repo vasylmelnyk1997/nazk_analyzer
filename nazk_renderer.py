@@ -73,8 +73,49 @@ def _rights_owners(item: dict) -> list[str]:
     return [str(r.get("rightBelongs", "")) for r in item.get("rights", [])]
 
 
-def _care_owners(item: dict) -> list[str]:
-    return [str(p.get("person", "")) for p in item.get("person_who_care", [])]
+def _family_ids(s1: dict, s2_items: list) -> set[str]:
+    ids = {"1"}
+    for m in s2_items:
+        mid = str(m.get("id", ""))
+        if mid:
+            ids.add(mid)
+    return ids
+
+
+def _family_share(rights: list[dict], fids: set[str]) -> float:
+    """Частка сумарної власності родини в активі (0.0–1.0)."""
+    family = [r for r in rights if str(r.get("rightBelongs", "")) in fids]
+    if not family:
+        return 0.0
+    if any(r.get("percentOwnership") is not None for r in family):
+        return sum(float(r["percentOwnership"]) for r in family if r.get("percentOwnership") is not None) / 100.0
+    return len(family) / len(rights) if rights else 1.0
+
+
+def _member_share(rights: list[dict], member_id: str) -> float:
+    """Частка конкретного члена родини в активі (0.0–1.0)."""
+    for r in rights:
+        if str(r.get("rightBelongs", "")) == member_id:
+            if r.get("percentOwnership") is not None:
+                return float(r["percentOwnership"]) / 100.0
+            family_count = sum(1 for x in rights if str(x.get("rightBelongs", "")) != "j")
+            return 1.0 / family_count if family_count else 0.0
+    return 0.0
+
+
+def _total_cash_uah(items: list, year: int, fids: set[str]) -> float:
+    """Загальна сума грошових активів родини в UAH з урахуванням частки."""
+    total = 0.0
+    for item in items:
+        rights = item.get("rights", [])
+        share = _family_share(rights, fids)
+        if share == 0.0:
+            continue
+        rate = _nbu_rate(item.get("assetsCurrency", "UAH"), year)
+        if rate is None:
+            rate = 1.0
+        total += float(item.get("sizeAssets", 0)) * rate * share
+    return total
 
 
 def _area_str(item: dict) -> tuple[str, str]:
@@ -185,14 +226,19 @@ def _vehicles_html(items: list, owner_id: str) -> str:
 
 
 def _income_html(items: list, owner_id: str) -> str:
-    own = [i for i in items if owner_id in _care_owners(i)]
+    own = [i for i in items if owner_id in _rights_owners(i)]
     if not own:
         return ""
-    total = sum(float(i.get("sizeIncome", 0)) for i in own)
-    rows = [
-        (i.get("objectType", ""), f"{_fmt(float(i.get('sizeIncome', 0)))} грн")
-        for i in own
-    ]
+    rows = []
+    total = 0.0
+    for i in own:
+        raw = i.get("sizeIncome", 0)
+        try:
+            val = float(raw)
+        except (TypeError, ValueError):
+            val = 0.0
+        total += val
+        rows.append((i.get("objectType", ""), f"{_fmt(val)} грн"))
     return _expandable("Доходи:", f"{_fmt(total)} грн", rows)
 
 
@@ -240,17 +286,15 @@ def _corporate_html(items: list, owner_id: str) -> str:
     return _expandable("Корпоративні права:", f"{_fmt(total)} грн", rows)
 
 
-def _obligations_html(items: list, owner_id: str) -> str:
-    own = [i for i in items if owner_id in _care_owners(i)]
+def _obligations_html(items: list, owner_id: str, year: int = 0) -> str:
+    own = [i for i in items if owner_id in _rights_owners(i)]
     if not own:
         return ""
     total_uah = 0.0
     all_converted = True
     for item in own:
         raw_cur = item.get("currency", "UAH")
-        rate = _nbu_rate(raw_cur, 0)
-        if rate is None:
-            rate = 1.0 if _currency_code(raw_cur) == "UAH" else None
+        rate = _nbu_rate(raw_cur, year)
         if rate is None:
             all_converted = False
         else:
@@ -283,8 +327,218 @@ def _has_any_owner_assets(
     return any([
         any(owner_id in _rights_owners(item) for item in s3),
         any(owner_id in _rights_owners(item) for item in s6),
-        any(owner_id in _care_owners(item) for item in s11),
+        any(owner_id in _rights_owners(item) for item in s11),
         any(owner_id in _rights_owners(item) for item in s12),
         any(owner_id in _rights_owners(item) for item in s8),
-        any(owner_id in _care_owners(item) for item in s13),
+        any(owner_id in _rights_owners(item) for item in s13),
     ])
+
+
+# ── "Загальна" вкладка ────────────────────────────────────────────────────────
+
+def _summary_row(label: str, value_str: str, cls: str = "") -> str:
+    cls_attr = f' class="{cls}"' if cls else ""
+    return (
+        f'<div{cls_attr} style="display:flex;justify-content:space-between;'
+        f'border-bottom:1px solid #eee">'
+        f'<span>{label}</span><strong>{value_str}</strong></div>'
+    )
+
+
+def _general_numeric_html(
+    title: str,
+    items: list,
+    fids: set[str],
+    owners: dict[str, str],
+    year: int,
+    amount_fn,          # (item, member_id) -> float
+    fmt_fn,             # (member_total) -> str
+    currency_fn=None,   # (item) -> str | None, для деталі без конвертації
+) -> str:
+    """Агрегат числового активу: загальна сума + деталізація по члену родини."""
+    member_totals: dict[str, float] = {mid: 0.0 for mid in owners}
+    has_data = False
+    for item in items:
+        rights = item.get("rights", [])
+        for mid in owners:
+            share = _member_share(rights, mid)
+            if share > 0:
+                val = amount_fn(item, mid, share)
+                member_totals[mid] += val
+                has_data = True
+    if not has_data:
+        return ""
+    total = sum(member_totals.values())
+    rows = [
+        (owners[mid], fmt_fn(member_totals[mid]))
+        for mid in owners
+        if member_totals[mid] > 0
+    ]
+    return _expandable(title, fmt_fn(total), rows)
+
+
+def _general_income_html(items: list, fids: set[str], owners: dict[str, str]) -> str:
+    def amount(item, mid, share):
+        raw = item.get("sizeIncome", 0)
+        try:
+            return float(raw) * share
+        except (TypeError, ValueError):
+            return 0.0
+
+    return _general_numeric_html(
+        "Доходи:", items, fids, owners, 0,
+        amount_fn=amount,
+        fmt_fn=lambda v: f"{_fmt(v)} грн",
+    )
+
+
+def _general_cash_html(items: list, fids: set[str], owners: dict[str, str], year: int) -> str:
+    def amount(item, mid, share):
+        rate = _nbu_rate(item.get("assetsCurrency", "UAH"), year)
+        if rate is None:
+            rate = 1.0
+        try:
+            return float(item.get("sizeAssets", 0)) * rate * share
+        except (TypeError, ValueError):
+            return 0.0
+
+    return _general_numeric_html(
+        "Грошові активи:", items, fids, owners, year,
+        amount_fn=amount,
+        fmt_fn=lambda v: f"{_fmt(v)} грн",
+    )
+
+
+def _general_corporate_html(items: list, fids: set[str], owners: dict[str, str]) -> str:
+    def amount(item, mid, share):
+        try:
+            return float(item.get("cost", 0)) * share
+        except (TypeError, ValueError):
+            return 0.0
+
+    return _general_numeric_html(
+        "Корпоративні права:", items, fids, owners, 0,
+        amount_fn=amount,
+        fmt_fn=lambda v: f"{_fmt(v)} грн",
+    )
+
+
+def _general_obligations_html(items: list, fids: set[str], owners: dict[str, str], year: int) -> str:
+    def amount(item, mid, share):
+        rate = _nbu_rate(item.get("currency", "UAH"), year)
+        if rate is None:
+            rate = 1.0
+        try:
+            return float(item.get("credit_rest", 0)) * rate * share
+        except (TypeError, ValueError):
+            return 0.0
+
+    return _general_numeric_html(
+        "Фінансові зобов'язання:", items, fids, owners, year,
+        amount_fn=amount,
+        fmt_fn=lambda v: f"{_fmt(v)} грн",
+    )
+
+
+def general_tab_html(
+    doc: dict,
+    savings: float,
+    owners: dict[str, str],
+) -> str:
+    """HTML-вміст вкладки 'Загальна'."""
+    steps = doc.get("data", {})
+    year: int = doc.get("declaration_year", 0)
+    s1 = steps.get("step_1", {})
+    s2 = _step_data(steps.get("step_2"))
+    s3 = _step_data(steps.get("step_3"))
+    s6 = _step_data(steps.get("step_6"))
+    s8 = _step_data(steps.get("step_8"))
+    s11 = _step_data(steps.get("step_11"))
+    s12 = _step_data(steps.get("step_12"))
+    s13 = _step_data(steps.get("step_13"))
+
+    fids = _family_ids(s1, s2)
+
+    total_income = sum(
+        (lambda raw: float(raw) if _try_float(raw) else 0.0)(i.get("sizeIncome", 0))
+        for i in s11
+        if _family_share(i.get("rights", []), fids) > 0
+    )
+    delta = total_income - savings
+
+    parts: list[str] = []
+
+    # ── метрики першими ───────────────────────────────────────────────────────
+    parts.append(_summary_row("Заощадження за останній рік:", f"{_fmt(savings)} грн", "general row savings"))
+    parts.append(_summary_row("Фінансова дельта:", f"{_fmt(delta)} грн", "general row delta"))
+    parts.append('<div style="margin-top:10px"></div>')
+
+    # ── нерухомість (всі об'єкти родини, дедублікація не потрібна — кожен унікальний) ──
+    realty_rows = []
+    for item in s3:
+        rights = item.get("rights", [])
+        if _family_share(rights, fids) == 0.0:
+            continue
+        label, area = _area_str(item)
+        region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
+        district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+        city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
+        prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
+        if not city:
+            city = district
+            district = ""
+        date = item.get("owningDate", "")
+        otype = item.get("objectType", "")
+        family_rights = [r for r in rights if str(r.get("rightBelongs", "")) in fids]
+        non_family = len(rights) - len(family_rights)
+        share_note = f", частка родини {int(_family_share(rights, fids)*100)}%" if non_family > 0 else ""
+        region_ex = f" {region} обл.," if region else ""
+        district_ex = "" if not district else f" {district} р-н,"
+        city_ex = f"{'  ' if not prefix else f' {prefix}'} {city}," if city else ""
+        realty_rows.append(f"<li>{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}{share_note}</li>")
+    if realty_rows:
+        parts.append(_details_html("Об'єкти нерухомості", realty_rows))
+
+    # ── транспорт ─────────────────────────────────────────────────────────────
+    vehicle_rows = []
+    for item in s6:
+        if _family_share(item.get("rights", []), fids) == 0.0:
+            continue
+        otype = item.get("objectType", "")
+        brand = item.get("brand", "")
+        model = item.get("model", "")
+        yr = item.get("graduationYear", "")
+        date = item.get("owningDate", "")
+        vehicle_rows.append(f"<li>{otype} {brand} {model} {yr} р.в., у власності з {date}</li>")
+    if vehicle_rows:
+        parts.append(_details_html("Транспортні засоби", vehicle_rows))
+
+    # ── числові агрегати по членам родини ─────────────────────────────────────
+    income_h = _general_income_html(s11, fids, owners)
+    if income_h:
+        parts.append(income_h)
+
+    cash_h = _general_cash_html(s12, fids, owners, year)
+    if cash_h:
+        parts.append(cash_h)
+
+    corp_h = _general_corporate_html(s8, fids, owners)
+    if corp_h:
+        parts.append(corp_h)
+
+    obl_h = _general_obligations_html(s13, fids, owners, year)
+    if obl_h:
+        parts.append(obl_h)
+
+    if not any([realty_rows, vehicle_rows, income_h, cash_h, corp_h, obl_h]):
+        parts.append('<p>Немає активів</p>')
+
+    return "".join(parts)
+
+
+def _try_float(val) -> bool:
+    try:
+        float(val)
+        return True
+    except (TypeError, ValueError):
+        return False

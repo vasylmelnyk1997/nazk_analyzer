@@ -29,10 +29,13 @@ def map_document(raw: dict) -> dict:
         return []
 
     def _rights(items: list) -> list:
-        return [{"rightBelongs": str(r.get("rightBelongs", ""))} for r in items]
-
-    def _care(items: list) -> list:
-        return [{"person": str(p.get("person", ""))} for p in items]
+        return [
+            {
+                "rightBelongs": str(r.get("rightBelongs", "")),
+                "percentOwnership": r.get("percent-ownership"),
+            }
+            for r in items
+        ]
 
     s1_data = steps.get("step_1", {}).get("data", {})
 
@@ -90,7 +93,7 @@ def map_document(raw: dict) -> dict:
         {
             "objectType": i.get("objectType", ""),
             "sizeIncome": i.get("sizeIncome", 0),
-            "person_who_care": _care(i.get("person_who_care", [])),
+            "rights": _rights(i.get("rights", [])),
         }
         for i in _get_list("step_11")
     ]
@@ -110,7 +113,7 @@ def map_document(raw: dict) -> dict:
             "objectType": i.get("objectType", ""),
             "credit_rest": i.get("credit_rest", 0),
             "currency": i.get("currency", "UAH"),
-            "person_who_care": _care(i.get("person_who_care", [])),
+            "rights": _rights(i.get("rights", [])),
         }
         for i in _get_list("step_13")
     ]

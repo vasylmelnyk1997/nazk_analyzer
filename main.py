@@ -70,7 +70,7 @@ def main() -> None:
         user_declarant_id = args.u
     else:
         # step 2: fetch doc → extract user_declarant_id → go to step 1.1
-        doc = _get_or_fetch_document(args.d, storage, api, force_reload=args.r)
+        doc = _get_or_fetch_document(args.d, storage, api, force_reload=args.rd)
         meta = extract_meta(doc)
         user_declarant_id = meta["user_declarant_id"]
         if not user_declarant_id:
@@ -91,7 +91,8 @@ def main() -> None:
             return
 
     # step 1.2: get list of doc_ids
-    doc_ids: list[str] | None = None if args.rd else storage.find_doc_ids(user_declarant_id)
+    # пріоритет: list-cache → API → storage-файли (fallback)
+    doc_ids: list[str] | None = None if args.rd else storage.find_list_cache(user_declarant_id)
     if doc_ids is None:
         try:
             raw_list = api.fetch_list_raw(user_declarant_id)
@@ -100,6 +101,8 @@ def main() -> None:
             sys.exit(1)
         storage.save_cache_list(user_declarant_id, raw_list)
         doc_ids = [item["id"] for item in raw_list.get("data", [])]
+    if not doc_ids:
+        doc_ids = storage.find_doc_ids_in_storage(user_declarant_id)
 
     if not doc_ids:
         print("Помилка: список декларацій порожній.", file=sys.stderr)

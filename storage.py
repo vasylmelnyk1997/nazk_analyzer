@@ -33,18 +33,23 @@ class Storage:
 
     # ── doc-id lists ───────────────────────────────────────────────────────────
 
-    def find_doc_ids(self, user_declarant_id: int) -> list[str] | None:
-        pattern = os.path.join(self._dir, f"*_{user_declarant_id}.json")
-        matches = glob.glob(pattern)
-        if matches:
-            suffix = f"_{user_declarant_id}.json"
-            return [os.path.basename(p)[: -len(suffix)] for p in matches]
+    def find_list_cache(self, user_declarant_id: int) -> list[str] | None:
+        """Список doc_id з cache/{user_declarant_id}.json (відповідь URI-2)."""
         cache_path = os.path.join(self._cache_dir, f"{user_declarant_id}.json")
         if os.path.exists(cache_path):
             with open(cache_path, encoding="utf-8") as f:
                 raw = json.load(f)
             return [item["id"] for item in raw.get("data", [])]
         return None
+
+    def find_doc_ids_in_storage(self, user_declarant_id: int) -> list[str]:
+        """doc_id усіх вже збережених декларацій за маскою *_{uid}.json."""
+        pattern = os.path.join(self._dir, f"*_{user_declarant_id}.json")
+        suffix = f"_{user_declarant_id}.json"
+        return [
+            os.path.basename(p)[: -len(suffix)]
+            for p in glob.glob(pattern)
+        ]
 
     # ── cache ──────────────────────────────────────────────────────────────────
 

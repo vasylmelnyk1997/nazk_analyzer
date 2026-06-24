@@ -4,13 +4,16 @@ from nazk_renderer import (
     _build_owners,
     _cash_html,
     _corporate_html,
+    _family_ids,
     _has_any_owner_assets,
     _income_html,
     _obligations_html,
     _proper_name,
     _realty_html,
     _step_data,
+    _total_cash_uah,
     _vehicles_html,
+    general_tab_html,
 )
 
 _CSS = """\
@@ -70,6 +73,12 @@ ol.cl:hover::after{content:'клікніть щоб скопіювати';positi
 @keyframes blink{0%{background-color: transparent}
 50%{background-color: #d1dee9}
 100%{background-color: transparent}}
+
+/* "Загальна" вкладка — метрики */
+.general.row{width:33%;margin:4px 0;padding:6px 8px;border-radius:4px;font-size:13px}
+.general.row.savings{background:#f0f7ff}
+.general.row.delta{background:#f5fff0}
+
 </style>"""
 
 _JS = """\
@@ -118,7 +127,30 @@ def _sort_owners(
     return sorted(owners.items(), key=rank)
 
 
-def _render_owner_assets(doc: dict, year_tab_id: str) -> str:
+def _compute_savings(sorted_docs: list[dict]) -> dict[int, float]:
+    """Заощадження = грошові активи поточного року - попереднього.
+    Обхід від найстарішого до найновішого; пропуск у роках → prev = 0.
+    sorted_docs відсортовані від більшого до меншого."""
+    result: dict[int, float] = {}
+    prev_cash = 0.0
+    prev_year = 0
+    for doc in reversed(sorted_docs):
+        year: int = doc.get("declaration_year", 0)
+        steps = doc.get("data", {})
+        s1 = steps.get("step_1", {})
+        s2 = _step_data(steps.get("step_2"))
+        s12 = _step_data(steps.get("step_12"))
+        fids = _family_ids(s1, s2)
+        cash = _total_cash_uah(s12, year, fids)
+        if prev_year != 0 and year != prev_year + 1:
+            prev_cash = 0.0
+        result[year] = cash - prev_cash
+        prev_cash = cash
+        prev_year = year
+    return result
+
+
+def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
     steps = doc.get("data", {})
     year: int = doc.get("declaration_year", 0)
     s1 = steps.get("step_1", {})
@@ -138,16 +170,28 @@ def _render_owner_assets(doc: dict, year_tab_id: str) -> str:
         if _has_any_owner_assets(oid, s3, s6, s11, s12, s8, s13)
     ]
 
-    if not filtered:
-        return '<div class="owner-panels"><p>Немає активів</p></div>'
-
     buttons: list[str] = []
     panels: list[str] = []
+
+    # ── "Загальна" — завжди перша ─────────────────────────────────────────────
+    gen_tid = f"o-{year_tab_id}-general"
+    # "Загальна" активна, якщо власники відсутні; інакше — не активна
+    buttons.append(
+        f'<button class="owner-btn active" data-tab="{gen_tid}"'
+        f' onclick="showOwnerTab(\'{year_tab_id}\',\'{gen_tid}\')">Загальна</button>'
+    )
+    # Для general_tab_html потрібен впорядкований dict власників
+    ordered_owners: dict[str, str] = {oid: oname for oid, oname in sorted_owners}
+    gen_content = general_tab_html(doc, savings, ordered_owners)
+    panels.append(
+        f'<div id="{gen_tid}" class="owner-panel active">{gen_content}</div>'
+    )
+
+    # ── вкладки по власникам ──────────────────────────────────────────────────
     for i, (oid, oname) in enumerate(filtered):
         tid = f"o-{year_tab_id}-{oid}"
-        active = " active" if i == 0 else ""
         buttons.append(
-            f'<button class="owner-btn{active}" data-tab="{tid}"'
+            f'<button class="owner-btn" data-tab="{tid}"'
             f' onclick="showOwnerTab(\'{year_tab_id}\',\'{tid}\')">{oname}</button>'
         )
         parts = [
@@ -156,15 +200,18 @@ def _render_owner_assets(doc: dict, year_tab_id: str) -> str:
             _income_html(s11, oid),
             _cash_html(s12, oid, year),
             _corporate_html(s8, oid),
-            _obligations_html(s13, oid),
+            _obligations_html(s13, oid, year),
             '<p class="stub">Цінні папери: не застосовується</p>',
             '<p class="stub">Видатки: не застосовується</p>',
         ]
         content = "".join(p for p in parts if p)
         panels.append(
-            f'<div id="{tid}" class="owner-panel{active}">'
+            f'<div id="{tid}" class="owner-panel">'
             f'{content or "<p>Немає активів</p>"}</div>'
         )
+
+    if not filtered and not gen_content.strip():
+        return '<div class="owner-panels"><p>Немає активів</p></div>'
 
     return (
         f'<div class="owner-tab-btns">{"".join(buttons)}</div>'
@@ -212,7 +259,10 @@ def render_all_declarations(docs: list[dict]) -> str:
     )
     b2 = f"<section><h2>Склад сім'ї</h2>{family_body}</section>"
 
-    # ── assets: year tabs (outer) + owner tabs (inner, vertical) ──────────────
+    # ── попереднє обчислення заощаджень ───────────────────────────────────────
+    savings_by_year = _compute_savings(sorted_docs)
+
+    # ── assets: year tabs (outer) + owner tabs (inner) ─────────────────────────
     year_btns: list[str] = []
     year_panels: list[str] = []
 
@@ -224,7 +274,8 @@ def render_all_declarations(docs: list[dict]) -> str:
             f'<button class="year-btn{active}" data-year="{ytid}"'
             f' onclick="showYearTab(\'{ytid}\')">{year}</button>'
         )
-        owner_content = _render_owner_assets(doc, ytid)
+        savings = savings_by_year.get(year, 0.0)
+        owner_content = _render_owner_assets(doc, ytid, savings)
         year_panels.append(
             f'<div id="{ytid}" class="year-panel{active}">{owner_content}</div>'
         )
