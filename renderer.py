@@ -259,7 +259,7 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
             "<h3>Послужний список</h3>"
             "<table>"
             "<colgroup class='tab-career'><col class='col-1'><col class='col-2'><col></colgroup>"
-            "<thead><tr><th>Рік / Період</th><th>Місце роботи</th><th>Посада</th></tr></thead>"
+            "<thead><tr><th>Роки</th><th>Місце роботи</th><th>Посада</th></tr></thead>"
             f"<tbody>{''.join(career_rows)}</tbody></table>"
         )
     else:
