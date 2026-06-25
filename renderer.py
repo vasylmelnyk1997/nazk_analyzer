@@ -3,6 +3,8 @@ from __future__ import annotations
 from nazk_renderer import (
     _build_owners,
     _cash_html,
+    _collect_career_history,
+    _collect_family_history,
     _corporate_html,
     _family_ids,
     _has_any_owner_assets,
@@ -28,6 +30,10 @@ p{margin:4px 0}
 table{border-collapse:collapse;width:100%}
 th,td{border:1px solid #ccc;padding:5px 10px;text-align:left}
 th{background:#f0f0f0}
+.tab-career .col-1{width:10%}
+.tab-career .col-2{width:70%}
+.tab-family .col-1{width:10%}
+.tab-family .col-2{width:20%}
 
 /* year tabs (outer, vertical — left column) */
 .year-tabs{display:flex;border:1px solid #ccc;min-height:200px}
@@ -231,34 +237,55 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
     )
     latest = sorted_docs[0]
 
-    # ── header: declarant info (from latest year) ──────────────────────────────
+    # ── header: declarant info + career history ────────────────────────────────
     s1 = latest.get("data", {}).get("step_1", {})
     d1 = s1.get("data", {})
     full_name = _proper_name(
         f"{d1.get('lastname','')} {d1.get('firstname','')} {d1.get('middlename','')}"
     )
+    career = _collect_career_history(sorted_docs)
+    if career:
+        career_rows = []
+        for entry in career:
+            period = (
+                f"{entry['start_year']}–{entry['end_year']}"
+                if entry["start_year"] != entry["end_year"]
+                else str(entry["start_year"])
+            )
+            career_rows.append(
+                f"<tr><td>{period}</td><td>{entry['workPlace']}</td><td>{entry['workPost']}</td></tr>"
+            )
+        career_section = (
+            "<h3>Послужний список</h3>"
+            "<table>"
+            "<colgroup class='tab-career'><col class='col-1'><col class='col-2'><col></colgroup>"
+            "<thead><tr><th>Рік / Період</th><th>Місце роботи</th><th>Посада</th></tr></thead>"
+            f"<tbody>{''.join(career_rows)}</tbody></table>"
+        )
+    else:
+        career_section = (
+            f"<p><b>Місце роботи:</b> {d1.get('workPlace','')}</p>"
+            f"<p><b>Посада:</b> {d1.get('workPost','')}</p>"
+        )
     b1 = (
         "<section>"
         f"<h2>Інформація про декларанта <span class='user-declarant-id'>[id: {user_declarant_id}]</span></h2>"
         f"<p><b>ПІБ:</b> {full_name}</p>"
-        f"<p><b>Місце роботи:</b> {d1.get('workPlace','')}</p>"
-        f"<p><b>Посада:</b> {d1.get('workPost','')}</p>"
+        f"{career_section}"
         "</section>"
     )
 
-    # ── family (from latest year) ──────────────────────────────────────────────
-    s2 = _step_data(latest.get("data", {}).get("step_2"))
-    family_rows = []
-    for m in s2:
-        mname = _proper_name(
-            f"{m.get('lastname','')} {m.get('firstname','')} {m.get('middlename','')}"
-        )
-        family_rows.append(
-            f"<tr><td>{m.get('subjectRelation','')}</td><td>{mname}</td></tr>"
-        )
-    frows = "".join(family_rows)
+    # ── family (across all years) ──────────────────────────────────────────────
+    family_history = _collect_family_history(sorted_docs)
+    frows = "".join(
+        f"<tr><td>{yrange}</td><td>{rel}</td><td>{name}</td></tr>"
+        for rel, name, yrange in family_history
+    )
     family_body = (
-        f"<table><thead><tr><th>Родинний зв'язок</th><th>ПІБ</th></tr></thead>"
+        "<table>"
+        "<colgroup class='tab-family'><col class='col-1'><col class='col-2'><col></colgroup>"
+        "<thead><tr><th>Роки</th><th>Родинний зв'язок</th><th>ПІБ</th></tr>"
+        "</thead>"
         f"<tbody>{frows}</tbody></table>"
         if frows
         else "<p>Немає відомостей</p>"

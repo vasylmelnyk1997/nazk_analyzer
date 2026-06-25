@@ -15,27 +15,33 @@ def _get_or_fetch_document(
     doc_id: str,
     storage: Storage,
     api: ApiSource,
-    force_reload: bool,
+    reload_data: bool,
 ) -> dict | None:
-    if not force_reload:
-        cached = storage.find_document(doc_id)
-        if cached:
-            return cached
+    if not reload_data:
+        # Fast path: mapped JSON already in storage
+        mapped = storage.find_mapped_document(doc_id)
+        if mapped:
+            return mapped
 
-    try:
-        doc = api.get_document(doc_id)
-    except RuntimeError as e:
-        if getattr(e, "http_code", None) == 404:
-            print(f"Попередження: документ {doc_id} не знайдено в API — пропущено.", file=sys.stderr)
-            return None
-        print(f"Помилка: {e}", file=sys.stderr)
-        sys.exit(1)
+    # Need raw: use cache if available (never re-download existing cache in -rd mode)
+    raw = storage.find_cache_document(doc_id)
+    if raw is None:
+        try:
+            raw = api.get_document(doc_id)
+        except RuntimeError as e:
+            if getattr(e, "http_code", None) == 404:
+                print(f"Попередження: документ {doc_id} не знайдено в API — пропущено.", file=sys.stderr)
+                return None
+            print(f"Помилка: {e}", file=sys.stderr)
+            sys.exit(1)
+        storage.save_cache_document(doc_id, raw)
 
-    storage.save_cache_document(doc_id, doc)
-    meta = extract_meta(doc)
+    meta = extract_meta(raw)
     if meta["user_declarant_id"]:
-        storage.save_document(doc_id, meta["user_declarant_id"], map_document(doc))
-    return doc
+        mapped = map_document(raw)
+        storage.save_document(doc_id, meta["user_declarant_id"], mapped)
+        return mapped
+    return raw
 
 
 def main() -> None:
@@ -70,7 +76,7 @@ def main() -> None:
         user_declarant_id = args.u
     else:
         # step 2: fetch doc → extract user_declarant_id → go to step 1.1
-        doc = _get_or_fetch_document(args.d, storage, api, force_reload=args.rd)
+        doc = _get_or_fetch_document(args.d, storage, api, reload_data=args.rd)
         meta = extract_meta(doc)
         user_declarant_id = meta["user_declarant_id"]
         if not user_declarant_id:
@@ -111,7 +117,7 @@ def main() -> None:
     # step 1.3: fetch all documents
     docs: list[dict] = []
     for doc_id in doc_ids:
-        doc = _get_or_fetch_document(doc_id, storage, api, force_reload=args.rd)
+        doc = _get_or_fetch_document(doc_id, storage, api, reload_data=args.rd)
         if doc is not None:
             docs.append(doc)
 

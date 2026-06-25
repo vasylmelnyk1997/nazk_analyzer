@@ -15,16 +15,22 @@ class Storage:
 
     # ── documents ──────────────────────────────────────────────────────────────
 
-    def find_document(self, doc_id: str) -> dict | None:
+    def find_mapped_document(self, doc_id: str) -> dict | None:
         matches = glob.glob(os.path.join(self._dir, f"{doc_id}_*.json"))
         if matches:
             with open(matches[0], encoding="utf-8") as f:
                 return json.load(f)
-        cache_path = os.path.join(self._cache_dir, f"{doc_id}.json")
-        if os.path.exists(cache_path):
-            with open(cache_path, encoding="utf-8") as f:
+        return None
+
+    def find_cache_document(self, doc_id: str) -> dict | None:
+        path = os.path.join(self._cache_dir, f"{doc_id}.json")
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
                 return json.load(f)
         return None
+
+    def find_document(self, doc_id: str) -> dict | None:
+        return self.find_mapped_document(doc_id) or self.find_cache_document(doc_id)
 
     def save_document(self, doc_id: str, user_declarant_id: int, data: dict) -> None:
         path = os.path.join(self._dir, f"{doc_id}_{user_declarant_id}.json")

@@ -571,3 +571,90 @@ def _try_float(val) -> bool:
         return True
     except (TypeError, ValueError):
         return False
+
+
+def _years_to_ranges(years: list[int]) -> str:
+    sorted_years = sorted(set(y for y in years if y))
+    if not sorted_years:
+        return ""
+    ranges: list[str] = []
+    start = sorted_years[0]
+    prev = sorted_years[0]
+    for y in sorted_years[1:]:
+        if y == prev + 1:
+            prev = y
+        else:
+            ranges.append(f"{start}–{prev}" if start != prev else str(start))
+            start = y
+            prev = y
+    ranges.append(f"{start}–{prev}" if start != prev else str(start))
+    return ", ".join(ranges)
+
+
+def _collect_family_history(sorted_docs: list[dict]) -> list[tuple[str, str, str]]:
+    """Unique family members across all years → (relation, fullname, year_range).
+    sorted_docs is newest-first; order in result mirrors first-appearance (newest first)."""
+    members: dict[str, dict] = {}
+    for doc in sorted_docs:
+        year = doc.get("declaration_year", 0)
+        if not year:
+            continue
+        s2 = _step_data(doc.get("data", {}).get("step_2"))
+        for m in s2:
+            key = "|".join([
+                m.get("lastname", "").lower().strip(),
+                m.get("firstname", "").lower().strip(),
+                m.get("middlename", "").lower().strip(),
+            ])
+            if not any(k for k in key.split("|")):
+                continue
+            if key not in members:
+                members[key] = {
+                    "lastname": m.get("lastname", ""),
+                    "firstname": m.get("firstname", ""),
+                    "middlename": m.get("middlename", ""),
+                    "subjectRelation": m.get("subjectRelation", ""),
+                    "years": [],
+                }
+            members[key]["years"].append(year)
+
+    return [
+        (
+            info["subjectRelation"],
+            _proper_name(f"{info['lastname']} {info['firstname']} {info['middlename']}"),
+            _years_to_ranges(info["years"]),
+        )
+        for info in members.values()
+    ]
+
+
+def _collect_career_history(sorted_docs: list[dict]) -> list[dict]:
+    """Career history merged by consecutive same workplace+position; output oldest-first."""
+    raw_entries = []
+    for doc in reversed(sorted_docs):
+        year = doc.get("declaration_year", 0)
+        if not year:
+            continue
+        d1 = doc.get("data", {}).get("step_1", {}).get("data", {})
+        wp = d1.get("workPlace", "").strip()
+        wpost = d1.get("workPost", "").strip()
+        if wp or wpost:
+            raw_entries.append({"year": year, "workPlace": wp, "workPost": wpost})
+
+    merged: list[dict] = []
+    for entry in raw_entries:
+        if (
+            merged
+            and merged[-1]["workPlace"] == entry["workPlace"]
+            and merged[-1]["workPost"] == entry["workPost"]
+            and entry["year"] == merged[-1]["end_year"] + 1
+        ):
+            merged[-1]["end_year"] = entry["year"]
+        else:
+            merged.append({
+                "start_year": entry["year"],
+                "end_year": entry["year"],
+                "workPlace": entry["workPlace"],
+                "workPost": entry["workPost"],
+            })
+    return merged
