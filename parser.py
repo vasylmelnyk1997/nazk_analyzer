@@ -56,6 +56,7 @@ def map_document(raw: dict) -> dict:
             "firstname": m.get("firstname", ""),
             "middlename": m.get("middlename", ""),
             "subjectRelation": m.get("subjectRelation", ""),
+            "previous_lastname": m.get("previous_lastname", ""),
         }
         for m in _get_list("step_2")
     ]

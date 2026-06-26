@@ -55,6 +55,14 @@ def _proper_name(raw: str) -> str:
     return " ".join(part.capitalize() for part in parts)
 
 
+def _format_member_name(lastname: str, firstname: str, middlename: str, previous_lastname: str = "") -> str:
+    last = _proper_name(lastname)
+    prev = previous_lastname.strip()
+    if prev and not prev.startswith("["):
+        last = f"{last} ({_proper_name(prev)})"
+    return " ".join(p for p in [last, _proper_name(firstname), _proper_name(middlename)] if p)
+
+
 def _build_owners(s1: dict, s2_items: list) -> dict[str, str]:
     d = s1.get("data", {})
     name = _proper_name(
@@ -616,14 +624,20 @@ def _collect_family_history(sorted_docs: list[dict]) -> list[tuple[str, str, str
                     "firstname": m.get("firstname", ""),
                     "middlename": m.get("middlename", ""),
                     "subjectRelation": m.get("subjectRelation", ""),
+                    "previous_lastname": m.get("previous_lastname", ""),
                     "years": [],
                 }
+            elif not members[key]["previous_lastname"]:
+                members[key]["previous_lastname"] = m.get("previous_lastname", "")
             members[key]["years"].append(year)
 
     return [
         (
             info["subjectRelation"],
-            _proper_name(f"{info['lastname']} {info['firstname']} {info['middlename']}"),
+            _format_member_name(
+                info["lastname"], info["firstname"], info["middlename"],
+                info["previous_lastname"],
+            ),
             _years_to_ranges(info["years"]),
         )
         for info in members.values()
