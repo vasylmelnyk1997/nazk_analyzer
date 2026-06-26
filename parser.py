@@ -32,7 +32,7 @@ def map_document(raw: dict) -> dict:
         return [
             {
                 "rightBelongs": str(r.get("rightBelongs", "")),
-                "percentOwnership": r.get("percent-ownership"),
+                "percentOwnership": str(r.get("percent-ownership")).replace(",", "."),
             }
             for r in items
         ]

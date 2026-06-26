@@ -26,6 +26,8 @@ _CASH_TYPE_LABEL: dict[str, str] = {
     "Кошти, розміщені на банківських рахунках": "кошти на рахунку",
 }
 
+def _safe_float(value: str) -> float:
+    return float(value) if value != "None" else 0.0
 
 def _step_data(step: Any) -> list:
     if isinstance(step, dict):
@@ -88,7 +90,7 @@ def _family_share(rights: list[dict], fids: set[str]) -> float:
     if not family:
         return 0.0
     if any(r.get("percentOwnership") is not None for r in family):
-        return sum(float(r["percentOwnership"]) for r in family if r.get("percentOwnership") is not None) / 100.0
+        return sum(_safe_float(r["percentOwnership"]) for r in family if r.get("percentOwnership") is not None) / 100.0
     return len(family) / len(rights) if rights else 1.0
 
 
@@ -97,7 +99,7 @@ def _member_share(rights: list[dict], member_id: str) -> float:
     for r in rights:
         if str(r.get("rightBelongs", "")) == member_id:
             if r.get("percentOwnership") is not None:
-                return float(r["percentOwnership"]) / 100.0
+                return _safe_float(r["percentOwnership"]) / 100.0
             family_count = sum(1 for x in rights if str(x.get("rightBelongs", "")) != "j")
             return 1.0 / family_count if family_count else 0.0
     return 0.0
