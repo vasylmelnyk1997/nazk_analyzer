@@ -31,7 +31,7 @@ table{border-collapse:collapse;width:100%}
 th,td{border:1px solid #ccc;padding:5px 10px;text-align:left}
 th{background:#f0f0f0}
 .tab-career .col-1{width:10%}
-.tab-career .col-2{width:70%}
+.tab-career .col-2{width:60%}
 .tab-family .col-1{width:10%}
 .tab-family .col-2{width:20%}
 

@@ -92,13 +92,18 @@ def _family_ids(s1: dict, s2_items: list) -> set[str]:
     return ids
 
 
+def _has_pct(r: dict) -> bool:
+    pct = r.get("percentOwnership")
+    return pct is not None and pct != "None"
+
+
 def _family_share(rights: list[dict], fids: set[str]) -> float:
     """Частка сумарної власності родини в активі (0.0–1.0)."""
     family = [r for r in rights if str(r.get("rightBelongs", "")) in fids]
     if not family:
         return 0.0
-    if any(r.get("percentOwnership") is not None for r in family):
-        return sum(_safe_float(r["percentOwnership"]) for r in family if r.get("percentOwnership") is not None) / 100.0
+    if any(_has_pct(r) for r in family):
+        return sum(_safe_float(r["percentOwnership"]) for r in family if _has_pct(r)) / 100.0
     return len(family) / len(rights) if rights else 1.0
 
 
@@ -106,7 +111,7 @@ def _member_share(rights: list[dict], member_id: str) -> float:
     """Частка конкретного члена родини в активі (0.0–1.0)."""
     for r in rights:
         if str(r.get("rightBelongs", "")) == member_id:
-            if r.get("percentOwnership") is not None:
+            if _has_pct(r):
                 return _safe_float(r["percentOwnership"]) / 100.0
             family_count = sum(1 for x in rights if str(x.get("rightBelongs", "")) != "j")
             return 1.0 / family_count if family_count else 0.0

@@ -29,13 +29,15 @@ def map_document(raw: dict) -> dict:
         return []
 
     def _rights(items: list) -> list:
-        return [
-            {
+        result = []
+        for r in items:
+            pct_raw = r.get("percent-ownership")
+            pct = str(pct_raw).replace(",", ".") if pct_raw is not None else None
+            result.append({
                 "rightBelongs": str(r.get("rightBelongs", "")),
-                "percentOwnership": str(r.get("percent-ownership")).replace(",", "."),
-            }
-            for r in items
-        ]
+                "percentOwnership": pct,
+            })
+        return result
 
     def _income_rights(item: dict) -> list:
         """Підтримка двох форматів: 'rights' (старіші декларації) і 'person_who_care' (реальний API)."""
