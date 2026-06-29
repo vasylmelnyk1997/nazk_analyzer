@@ -200,27 +200,28 @@ def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
     )
 
     # ── вкладки по власникам ──────────────────────────────────────────────────
-    for i, (oid, oname) in enumerate(filtered):
-        tid = f"o-{year_tab_id}-{oid}"
-        buttons.append(
-            f'<button class="owner-btn" data-tab="{tid}"'
-            f' onclick="showOwnerTab(\'{year_tab_id}\',\'{tid}\')">{oname}</button>'
-        )
-        parts = [
-            _realty_html(s3, oid),
-            _vehicles_html(s6, oid),
-            _income_html(s11, oid),
-            _cash_html(s12, oid, year),
-            _corporate_html(s8, oid),
-            _obligations_html(s13, oid, year),
-            '<p class="stub">Цінні папери: не застосовується</p>',
-            '<p class="stub">Видатки: не застосовується</p>',
-        ]
-        content = "".join(p for p in parts if p)
-        panels.append(
-            f'<div id="{tid}" class="owner-panel">'
-            f'{content or "<p>Немає активів</p>"}</div>'
-        )
+    if len(filtered) > 1:
+        for (oid, oname) in filtered:
+            tid = f"o-{year_tab_id}-{oid}"
+            buttons.append(
+                f'<button class="owner-btn" data-tab="{tid}"'
+                f' onclick="showOwnerTab(\'{year_tab_id}\',\'{tid}\')">{oname}</button>'
+            )
+            parts = [
+                _realty_html(s3, oid),
+                _vehicles_html(s6, oid),
+                _income_html(s11, oid),
+                _cash_html(s12, oid, year),
+                _corporate_html(s8, oid),
+                _obligations_html(s13, oid, year),
+                '<p class="stub">Цінні папери: не застосовується</p>',
+                '<p class="stub">Видатки: не застосовується</p>',
+            ]
+            content = "".join(p for p in parts if p)
+            panels.append(
+                f'<div id="{tid}" class="owner-panel">'
+                f'{content or "<p>Немає активів</p>"}</div>'
+            )
 
     if not filtered and not gen_content.strip():
         return '<div class="owner-panels"><p>Немає активів</p></div>'

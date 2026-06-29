@@ -517,19 +517,10 @@ def general_tab_html(
             district = ""
         date = item.get("owningDate", "")
         otype = item.get("objectType", "")
-        family_rights = [r for r in rights if str(r.get("rightBelongs", "")) in fids]
-        non_family = len(rights) - len(family_rights)
-        share_note = f", частка родини {int(_family_share(rights, fids)*100)}%" if non_family > 0 else ""
-        if len(family_rights) == 1:
-            oname = owners.get(str(family_rights[0].get("rightBelongs", "")), "")
-            owner_suffix = f", власник: {oname}" if oname else ""
-        else:
-            onames = [n for r in family_rights if (n := owners.get(str(r.get("rightBelongs", "")), ""))]
-            owner_suffix = f", власники: {', '.join(onames)}" if onames else ""
         region_ex = f" {region} обл.," if region else ""
         district_ex = "" if not district else f" {district} р-н,"
         city_ex = f"{'  ' if not prefix else f' {prefix}'} {city}," if city else ""
-        realty_rows.append(f"<li>{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}{share_note}{owner_suffix}</li>")
+        realty_rows.append(f"<li>{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}</li>")
     if realty_rows:
         parts.append(_details_html("Об'єкти нерухомості", realty_rows))
 
