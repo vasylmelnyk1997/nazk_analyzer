@@ -535,14 +535,7 @@ def general_tab_html(
         model = item.get("model", "")
         yr = item.get("graduationYear", "")
         date = item.get("owningDate", "")
-        family_v_rights = [r for r in v_rights if str(r.get("rightBelongs", "")) in fids]
-        if len(family_v_rights) == 1:
-            oname = owners.get(str(family_v_rights[0].get("rightBelongs", "")), "")
-            v_owner_suffix = f", власник: {oname}" if oname else ""
-        else:
-            onames = [n for r in family_v_rights if (n := owners.get(str(r.get("rightBelongs", "")), ""))]
-            v_owner_suffix = f", власники: {', '.join(onames)}" if onames else ""
-        vehicle_rows.append(f"<li>{otype} {brand} {model} {yr} р.в., у власності з {date}{v_owner_suffix}</li>")
+        vehicle_rows.append(f"<li>{otype} {brand} {model} {yr} р.в., у власності з {date}</li>")
     if vehicle_rows:
         parts.append(_details_html("Транспортні засоби", vehicle_rows))
 
