@@ -1,5 +1,31 @@
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
+_NOTIFICATION_TYPE = 2  # 'Повідомлення про суттєві зміни в майновому стані'
+
+
+def _parse_date(date_str: str) -> datetime:
+    try:
+        return datetime.fromisoformat(date_str)
+    except (TypeError, ValueError):
+        return datetime.min.replace(tzinfo=timezone.utc)
+
+
+def select_latest_doc_ids(list_items: list[dict]) -> list[str]:
+    """Серед сирих елементів списку декларацій (URI-2) залишити по одному doc_id
+    на кожен звітний рік (`declaration_year`) — той, що поданий останнім (`date`),
+    ігноруючи 'Повідомлення про суттєві зміни...' (`type`=2)."""
+    latest_by_year: dict[int, dict] = {}
+    for item in list_items:
+        if item.get("type") == _NOTIFICATION_TYPE:
+            continue
+        year = item.get("declaration_year")
+        current = latest_by_year.get(year)
+        if current is None or _parse_date(item.get("date", "")) > _parse_date(current.get("date", "")):
+            latest_by_year[year] = item
+    return [item["id"] for item in latest_by_year.values()]
+
 
 def extract_meta(raw: dict) -> dict:
     s1_data = raw.get("data", {}).get("step_1", {}).get("data", {})
@@ -49,6 +75,7 @@ def map_document(raw: dict) -> dict:
             if p.get("person")
         ]
 
+    s0_data = steps.get("step_0", {}).get("data", {})
     s1_data = steps.get("step_1", {}).get("data", {})
 
     step2 = [
@@ -135,7 +162,10 @@ def map_document(raw: dict) -> dict:
         "id": raw.get("id", ""),
         "user_declarant_id": raw.get("user_declarant_id", 0),
         "declaration_year": raw.get("declaration_year", 0),
+        "declaration_type": raw.get("declaration_type", 0),
+        "type": raw.get("type", 0),
         "data": {
+            "step_0": {"data": {"declaration_type": s0_data.get("declaration_type", "")}},
             "step_1": {
                 "data": {
                     k: s1_data.get(k, "")

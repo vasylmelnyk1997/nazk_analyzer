@@ -6,7 +6,7 @@ import webbrowser
 
 from api_client import ApiSource
 from config import API_ROOT, STORAGE_DIR
-from parser import extract_meta, map_document
+from parser import extract_meta, map_document, select_latest_doc_ids
 from renderer import render_all_declarations
 from storage import Storage
 
@@ -98,15 +98,19 @@ def main() -> None:
 
     # step 1.2: get list of doc_ids
     # пріоритет: list-cache → API → storage-файли (fallback)
-    doc_ids: list[str] | None = None if args.rd else storage.find_list_cache(user_declarant_id)
-    if doc_ids is None:
+    list_items: list[dict] | None = None if args.rd else storage.find_list_cache(user_declarant_id)
+    if list_items is None:
         try:
             raw_list = api.fetch_list_raw(user_declarant_id)
         except RuntimeError as e:
             print(f"Помилка: {e}", file=sys.stderr)
             sys.exit(1)
         storage.save_cache_list(user_declarant_id, raw_list)
-        doc_ids = [item["id"] for item in raw_list.get("data", [])]
+        list_items = raw_list.get("data", [])
+
+    # враховуємо лише останню подану декларацію за кожен звітний рік,
+    # ігноруючи 'Повідомлення про суттєві зміни...' (v.2.10)
+    doc_ids = select_latest_doc_ids(list_items)
     if not doc_ids:
         doc_ids = storage.find_doc_ids_in_storage(user_declarant_id)
 

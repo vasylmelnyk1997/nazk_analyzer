@@ -57,6 +57,7 @@ th{background:#f0f0f0}
 .owner-panel{display:none;position:relative}
 .owner-panel.active{display:block}
 .doc-id{font-size:75%;color:#999;width:100%;text-align:right;position:absolute;bottom:0;right:0}
+.doc-label{padding:8px}
 
 /* assets */
 details{margin:16px 0;border:1px solid #eee;padding:8px;border-radius:4px}

@@ -39,13 +39,13 @@ class Storage:
 
     # ── doc-id lists ───────────────────────────────────────────────────────────
 
-    def find_list_cache(self, user_declarant_id: int) -> list[str] | None:
-        """Список doc_id з cache/{user_declarant_id}.json (відповідь URI-2)."""
+    def find_list_cache(self, user_declarant_id: int) -> list[dict] | None:
+        """Елементи (сирі) з cache/{user_declarant_id}.json (відповідь URI-2)."""
         cache_path = os.path.join(self._cache_dir, f"{user_declarant_id}.json")
         if os.path.exists(cache_path):
             with open(cache_path, encoding="utf-8") as f:
                 raw = json.load(f)
-            return [item["id"] for item in raw.get("data", [])]
+            return raw.get("data", [])
         return None
 
     def find_doc_ids_in_storage(self, user_declarant_id: int) -> list[str]:

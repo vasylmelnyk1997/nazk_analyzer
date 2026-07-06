@@ -361,6 +361,23 @@ def _has_any_owner_assets(
 
 # ── "Загальна" вкладка ────────────────────────────────────────────────────────
 
+_DOC_TYPE_LABELS: dict[int, str] = {
+    1: "Декларація",
+    2: "Повідомлення про суттєві зміни в майновому стані",
+    3: "Виправлена декларація",
+}
+
+
+def _doc_kind_label(doc: dict) -> str:
+    """Текстовий лейбл виду декларації: 'data.step_0.data.declaration_type' + doc_type."""
+    s0_data = doc.get("data", {}).get("step_0", {}).get("data", {})
+    kind = s0_data.get("declaration_type", "")
+    doc_type = _DOC_TYPE_LABELS.get(doc.get("type"), "")
+    if kind and doc_type:
+        return f"{kind} — {doc_type}"
+    return kind or doc_type
+
+
 def _summary_row(label: str, value_str: str, cls: str = "") -> str:
     cls_attr = f' class="{cls}"' if cls else ""
     return (
@@ -495,6 +512,11 @@ def general_tab_html(
     delta = total_income - savings
 
     parts: list[str] = []
+
+    # ── вид/тип декларації першим рядком ──────────────────────────────────────
+    kind_label = _doc_kind_label(doc)
+    if kind_label:
+        parts.append(f"<div class='doc-label'><b>{kind_label}</b></div>")
 
     # ── метрики першими ───────────────────────────────────────────────────────
     parts.append(_summary_row("Заощадження за останній рік:", f"{_fmt(savings)} грн", "general row savings"))

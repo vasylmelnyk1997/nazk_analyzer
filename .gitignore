@@ -27,3 +27,6 @@ Thumbs.db
 
 # Storage folder and files
 storage/
+
+# Excel files
+*.xlsx
