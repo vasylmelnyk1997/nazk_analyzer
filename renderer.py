@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+
 from nazk_renderer import (
     _build_owners,
     _cash_html,
@@ -13,11 +15,19 @@ from nazk_renderer import (
     _obligations_html,
     _proper_name,
     _realty_html,
+    _realty_keys_for_family,
     _step_data,
     _total_cash_uah,
+    _vehicle_keys_for_family,
     _vehicles_html,
     general_tab_html,
 )
+
+with open(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "icons.svg.xml"),
+    encoding="utf-8",
+) as _f:
+    _ICONS_SVG = _f.read()
 
 _CSS = """\
 <style>
@@ -39,10 +49,14 @@ th{background:#f0f0f0}
 .year-tabs{display:flex;border:1px solid #ccc;min-height:200px}
 .year-tab-btns{display:flex;flex-direction:column;min-width:72px;border-right:1px solid #ccc;
                background:#fafafa;flex-shrink:0}
-.year-btn{padding:10px 14px;border:none;background:transparent;cursor:pointer;text-align:center;
+.year-btn{padding:10px 14px;border:none;background:transparent;cursor:pointer;text-align:left;
           font-size:14px;font-weight:bold;border-left:3px solid transparent;white-space:nowrap}
 .year-btn:hover{background:#f0f0f0}
 .year-btn.active{background:#fff;border-left-color:#0066cc}
+.year-change-marker{display:inline-flex;align-items:center;gap:1px;margin-left:4px;vertical-align:middle}
+.chg-icon{width:14px;height:14px;stroke-width:2.5;vertical-align:middle}
+.chg-plus{color:#1a9d43}
+.chg-minus{color:#d43c3c}
 .year-panel{display:none;flex:1;flex-direction:column}
 .year-panel.active{display:flex}
 
@@ -79,7 +93,7 @@ ol.cl:hover::after{content:'клікніть щоб скопіювати';positi
   background:#333;color:#fff;font-size:11px;padding:2px 7px;border-radius:3px;
   white-space:nowrap;pointer-events:none}
 .cl-box-blinking{background-color: transparent}
-.cl-box-blinking.animate-blink{animation: blink 0.5s ease-in-out}
+.animate-blink{animation: blink 0.5s ease-in-out}
 @keyframes blink{0%{background-color: transparent}
 50%{background-color: #d1dee9}
 100%{background-color: transparent}}
@@ -106,13 +120,19 @@ function showOwnerTab(yearId, ownerId) {
   document.getElementById(ownerId).classList.add('active');
   yp.querySelector('[data-tab="'+ownerId+'"]').classList.add('active');
 }
-function copyList(ol){
-  var text=Array.from(ol.querySelectorAll('li')).map(function(li,i){
+function getListText(ol){
+  return Array.from(ol.querySelectorAll('li')).map(function(li,i){
     return (i+1)+'. '+li.textContent.trim();
   }).join('\\n');
-  navigator.clipboard.writeText(text);
-  ol.addEventListener('animationend', () => ol.classList.remove('animate-blink'), {once: true});
-  ol.classList.add('animate-blink');
+}
+function getElemText(elem){
+  return elem.innerText.trim();
+}
+function copyText(elem, fGetText){
+  if(typeof fGetText !== 'function') fGetText = getElemText;
+  navigator.clipboard.writeText(fGetText(elem));
+  elem.addEventListener('animationend',()=>elem.classList.remove('animate-blink'),{once:true});
+  elem.classList.add('animate-blink');
 }
 </script>"""
 
@@ -158,6 +178,54 @@ def _compute_savings(sorted_docs: list[dict]) -> dict[int, float]:
         prev_cash = cash
         prev_year = year
     return result
+
+
+def _asset_family_keys(doc: dict) -> tuple[set[tuple], set[tuple]]:
+    steps = doc.get("data", {})
+    s1 = steps.get("step_1", {})
+    s2 = _step_data(steps.get("step_2"))
+    fids = _family_ids(s1, s2)
+    s3 = _step_data(steps.get("step_3"))
+    s6 = _step_data(steps.get("step_6"))
+    return _realty_keys_for_family(s3, fids), _vehicle_keys_for_family(s6, fids)
+
+
+def _compute_asset_changes(sorted_docs: list[dict]) -> dict[int, dict[str, bool]]:
+    """Позначки змін майнового стану (v.2.11): порівняння між сусідніми фактично поданими
+    роками (сусідні елементи sorted_docs), агреговано по всій родині. Найстарший
+    (і єдиний) рік порівнювати нема з чим — маркер не формується."""
+    changes: dict[int, dict[str, bool]] = {}
+    for i in range(len(sorted_docs) - 1):
+        newer, older = sorted_docs[i], sorted_docs[i + 1]
+        newer_year = newer.get("declaration_year", 0)
+        newer_realty, newer_vehicle = _asset_family_keys(newer)
+        older_realty, older_vehicle = _asset_family_keys(older)
+        changes[newer_year] = {
+            "realty_added": bool(newer_realty - older_realty),
+            "realty_removed": bool(older_realty - newer_realty),
+            "vehicle_added": bool(newer_vehicle - older_vehicle),
+            "vehicle_removed": bool(older_vehicle - newer_vehicle),
+        }
+    return changes
+
+
+def _change_marker_html(flags: dict[str, bool] | None) -> str:
+    if not flags or not any(flags.values()):
+        return ""
+    parts: list[str] = []
+    if flags["realty_added"] or flags["realty_removed"]:
+        parts.append('<svg class="chg-icon"><use href="#house"/></svg>')
+        if flags["realty_added"]:
+            parts.append('<svg class="chg-icon chg-plus"><use href="#plus"/></svg>')
+        if flags["realty_removed"]:
+            parts.append('<svg class="chg-icon chg-minus"><use href="#minus"/></svg>')
+    if flags["vehicle_added"] or flags["vehicle_removed"]:
+        parts.append('<svg class="chg-icon"><use href="#car"/></svg>')
+        if flags["vehicle_added"]:
+            parts.append('<svg class="chg-icon chg-plus"><use href="#plus"/></svg>')
+        if flags["vehicle_removed"]:
+            parts.append('<svg class="chg-icon chg-minus"><use href="#minus"/></svg>')
+    return f'<span class="year-change-marker">{"".join(parts)}</span>'
 
 
 def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
@@ -271,7 +339,7 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
         )
     b1 = (
         "<section>"
-        f"<h2>Інформація про декларанта <span class='user-declarant-id'>[id: {user_declarant_id}]</span></h2>"
+        f"<h2>Інформація про декларанта <span class='user-declarant-id'>[id: <span onclick='copyText(this)'>{user_declarant_id}</span>]</span></h2>"
         f"<p><b>ПІБ:</b> {full_name}</p>"
         f"{career_section}"
         "</section>"
@@ -294,8 +362,9 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
     )
     b2 = f"<section><h2>Склад сім'ї</h2>{family_body}</section>"
 
-    # ── попереднє обчислення заощаджень ───────────────────────────────────────
+    # ── попереднє обчислення заощаджень та змін майнового стану ────────────────
     savings_by_year = _compute_savings(sorted_docs)
+    changes_by_year = _compute_asset_changes(sorted_docs)
 
     # ── assets: year tabs (outer) + owner tabs (inner) ─────────────────────────
     year_btns: list[str] = []
@@ -305,9 +374,10 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
         year = doc.get("declaration_year", "?")
         ytid = f"y{year}"
         active = " active" if i == 0 else ""
+        marker_html = _change_marker_html(changes_by_year.get(year))
         year_btns.append(
             f'<button class="year-btn{active}" data-year="{ytid}"'
-            f' onclick="showYearTab(\'{ytid}\')">{year}</button>'
+            f' onclick="showYearTab(\'{ytid}\')">{year}{marker_html}</button>'
         )
         savings = savings_by_year.get(year, 0.0)
         owner_content = _render_owner_assets(doc, ytid, savings)
@@ -329,6 +399,6 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
         "<!DOCTYPE html>"
         "<html lang='uk'>"
         f"<head><meta charset='utf-8'><title>Декларації — {full_name}</title>{_CSS}</head>"
-        f"<body>{b1}{b2}{b3}{_JS}</body>"
+        f"<body>{_ICONS_SVG}{b1}{b2}{b3}{_JS}</body>"
         "</html>"
     )

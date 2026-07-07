@@ -183,7 +183,7 @@ def _addr_field(primary: str, txt: str, strip: str = "") -> str:
 
 
 def _details_html(title: str, rows: list[str]) -> str:
-    inner = '<ol class="cl cl-box-blinking" onclick="copyList(this)">' + "".join(rows) + "</ol>"
+    inner = '<ol class="cl cl-box-blinking" onclick="copyText(this, getListText)">' + "".join(rows) + "</ol>"
     return (
         f'<details>'
         f'<summary class="summary-toggle"><span class="asum">'
@@ -338,6 +338,44 @@ def _normalize_income_item(item: dict) -> dict:
             for p in item["person_who_care"] if p.get("person")
         ]}
     return item
+
+
+def _realty_address_key(item: dict) -> str:
+    region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
+    district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+    city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
+    if not city:
+        city = district
+        district = ""
+    return "|".join([region, district, city])
+
+
+def _realty_key(item: dict) -> tuple:
+    """Ключ порівняння об'єкта нерухомості (v.2.11): тип + площа + адреса + дата набуття права."""
+    return (
+        item.get("objectType", ""),
+        str(item.get("totalArea", "")).strip(),
+        _realty_address_key(item),
+        item.get("owningDate", ""),
+    )
+
+
+def _vehicle_key(item: dict) -> tuple:
+    """Ключ порівняння транспортного засобу (v.2.11): марка + модель + рік виробництва + дата набуття права."""
+    return (
+        item.get("brand", ""),
+        item.get("model", ""),
+        item.get("graduationYear", ""),
+        item.get("owningDate", ""),
+    )
+
+
+def _realty_keys_for_family(items: list, fids: set[str]) -> set[tuple]:
+    return {_realty_key(i) for i in items if _family_share(i.get("rights", []), fids) > 0}
+
+
+def _vehicle_keys_for_family(items: list, fids: set[str]) -> set[tuple]:
+    return {_vehicle_key(i) for i in items if _family_share(i.get("rights", []), fids) > 0}
 
 
 def _has_any_owner_assets(
@@ -581,7 +619,7 @@ def general_tab_html(
     if not any([realty_rows, vehicle_rows, income_h, cash_h, corp_h, obl_h]):
         parts.append('<p>Немає активів</p>')
 
-    parts.append(f"<div class='doc-id'>[ doc-id: {doc_id} ]</div>")
+    parts.append(f"<div class='doc-id'>[ doc-id: <span onclick='copyText(this)'>{doc_id}</span> ]</div>")
 
     return "".join(parts)
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons</title>
+    <link rel="icon" type="image/svg+xml" href="icons.svg.xml">
+</head>
+<style>
+    .icon{width:24px;height:24px;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .icon.red{color:red}
+    .icon.green{color:green}
+</style>
+<body>
+    <div><svg class="icon"><use href="icons.svg.xml#plus"></use></svg></div>
+    <div><svg class="icon"><use href="icons.svg.xml#minus"></use></svg></div>
+    <div><svg class="icon"><use href="icons.svg.xml#house"></use></svg></div>
+    <div><svg class="icon"><use href="icons.svg.xml#house-plus"></use></svg></div>
+    <div><svg class="icon"><use href="icons.svg.xml#car"></use></svg></div>
+    <div><svg class="icon"><use href="icons.svg.xml#car-front"></use></svg></div>
+
+    <div>
+        <svg class="icon green"><use href="icons.svg.xml#plus"></use></svg>
+        <svg class="icon green"><use href="icons.svg.xml#house"></use></svg>
+    </div>
+
+    <div>
+        <svg class="icon red"><use href="icons.svg.xml#minus"></use></svg>
+        <svg class="icon red"><use href="icons.svg.xml#house"></use></svg>
+    </div>
+
+    <div>
+        <svg class="icon green"><use href="icons.svg.xml#plus"></use></svg>
+        <svg class="icon green"><use href="icons.svg.xml#car"></use></svg>
+    </div>
+
+    <div>
+        <svg class="icon red"><use href="icons.svg.xml#minus"></use></svg>
+        <svg class="icon red"><use href="icons.svg.xml#car"></use></svg>
+    </div>
+</body>
+</html>
