@@ -378,6 +378,37 @@ def _vehicle_keys_for_family(items: list, fids: set[str]) -> set[tuple]:
     return {_vehicle_key(i) for i in items if _family_share(i.get("rights", []), fids) > 0}
 
 
+def _realty_keys_for_owner(items: list, owner_id: str) -> set[tuple]:
+    """Ключі об'єктів нерухомості, де конкретний власник має частку (v.2.12)."""
+    return {_realty_key(i) for i in items if _member_share(i.get("rights", []), owner_id) > 0}
+
+
+def _vehicle_keys_for_owner(items: list, owner_id: str) -> set[tuple]:
+    """Ключі транспортних засобів, де конкретний власник має частку (v.2.12)."""
+    return {_vehicle_key(i) for i in items if _member_share(i.get("rights", []), owner_id) > 0}
+
+
+def _name_key(lastname: str, firstname: str, middlename: str) -> str:
+    """Нормалізований ключ ПІБ для зіставлення особи між роками (без previous_lastname)."""
+    return "|".join([
+        lastname.lower().strip(),
+        firstname.lower().strip(),
+        middlename.lower().strip(),
+    ])
+
+
+def _owner_name_keys(doc: dict) -> dict[str, str]:
+    """owner_id → нормалізований ключ ПІБ для декларанта ("1") і членів сім'ї цього документа (v.2.12)."""
+    d1 = doc.get("data", {}).get("step_1", {}).get("data", {})
+    result = {"1": _name_key(d1.get("lastname", ""), d1.get("firstname", ""), d1.get("middlename", ""))}
+    s2 = _step_data(doc.get("data", {}).get("step_2"))
+    for m in s2:
+        mid = str(m.get("id", ""))
+        if mid:
+            result[mid] = _name_key(m.get("lastname", ""), m.get("firstname", ""), m.get("middlename", ""))
+    return result
+
+
 def _has_any_owner_assets(
     owner_id: str,
     s3: list,
@@ -660,11 +691,7 @@ def _collect_family_history(sorted_docs: list[dict]) -> list[tuple[str, str, str
             continue
         s2 = _step_data(doc.get("data", {}).get("step_2"))
         for m in s2:
-            key = "|".join([
-                m.get("lastname", "").lower().strip(),
-                m.get("firstname", "").lower().strip(),
-                m.get("middlename", "").lower().strip(),
-            ])
+            key = _name_key(m.get("lastname", ""), m.get("firstname", ""), m.get("middlename", ""))
             if not any(k for k in key.split("|")):
                 continue
             if key not in members:

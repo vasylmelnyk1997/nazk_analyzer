@@ -13,12 +13,15 @@ from nazk_renderer import (
     _income_html,
     _normalize_income_item,
     _obligations_html,
+    _owner_name_keys,
     _proper_name,
     _realty_html,
     _realty_keys_for_family,
+    _realty_keys_for_owner,
     _step_data,
     _total_cash_uah,
     _vehicle_keys_for_family,
+    _vehicle_keys_for_owner,
     _vehicles_html,
     general_tab_html,
 )
@@ -209,6 +212,47 @@ def _compute_asset_changes(sorted_docs: list[dict]) -> dict[int, dict[str, bool]
     return changes
 
 
+def _compute_owner_asset_changes(
+    sorted_docs: list[dict],
+) -> dict[int, dict[str, dict[str, bool]]]:
+    """Позначки змін майнового стану по власниках (v.2.12): так само як _compute_asset_changes,
+    але окремо для кожного власника. Власники зіставляються між суміжними роками за ПІБ
+    (без previous_lastname). Частка власника оцінюється як булева ознака (є/немає) —
+    зміна відсотка володіння без повної появи/зникнення частки не вважається зміною.
+    Власник, що вперше з'явився в родині цього року — порівнювати нема з чим."""
+    changes: dict[int, dict[str, dict[str, bool]]] = {}
+    for i in range(len(sorted_docs) - 1):
+        newer, older = sorted_docs[i], sorted_docs[i + 1]
+        newer_year = newer.get("declaration_year", 0)
+        newer_name_keys = _owner_name_keys(newer)
+        older_by_name = {v: k for k, v in _owner_name_keys(older).items()}
+
+        n_s3 = _step_data(newer.get("data", {}).get("step_3"))
+        n_s6 = _step_data(newer.get("data", {}).get("step_6"))
+        o_s3 = _step_data(older.get("data", {}).get("step_3"))
+        o_s6 = _step_data(older.get("data", {}).get("step_6"))
+
+        owner_changes: dict[str, dict[str, bool]] = {}
+        for oid, name_key in newer_name_keys.items():
+            older_oid = older_by_name.get(name_key)
+            if older_oid is None:
+                continue
+            newer_realty = _realty_keys_for_owner(n_s3, oid)
+            older_realty = _realty_keys_for_owner(o_s3, older_oid)
+            newer_vehicle = _vehicle_keys_for_owner(n_s6, oid)
+            older_vehicle = _vehicle_keys_for_owner(o_s6, older_oid)
+            flags = {
+                "realty_added": bool(newer_realty - older_realty),
+                "realty_removed": bool(older_realty - newer_realty),
+                "vehicle_added": bool(newer_vehicle - older_vehicle),
+                "vehicle_removed": bool(older_vehicle - newer_vehicle),
+            }
+            if any(flags.values()):
+                owner_changes[oid] = flags
+        changes[newer_year] = owner_changes
+    return changes
+
+
 def _change_marker_html(flags: dict[str, bool] | None) -> str:
     if not flags or not any(flags.values()):
         return ""
@@ -228,7 +272,12 @@ def _change_marker_html(flags: dict[str, bool] | None) -> str:
     return f'<span class="year-change-marker">{"".join(parts)}</span>'
 
 
-def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
+def _render_owner_assets(
+    doc: dict,
+    year_tab_id: str,
+    savings: float,
+    owner_changes: dict[str, dict[str, bool]] | None = None,
+) -> str:
     steps = doc.get("data", {})
     year: int = doc.get("declaration_year", 0)
     s1 = steps.get("step_1", {})
@@ -272,9 +321,12 @@ def _render_owner_assets(doc: dict, year_tab_id: str, savings: float) -> str:
     if len(filtered) > 1:
         for (oid, oname) in filtered:
             tid = f"o-{year_tab_id}-{oid}"
+            marker_html = _change_marker_html(
+                (owner_changes or {}).get(oid)
+            )
             buttons.append(
                 f'<button class="owner-btn" data-tab="{tid}"'
-                f' onclick="showOwnerTab(\'{year_tab_id}\',\'{tid}\')">{oname}</button>'
+                f' onclick="showOwnerTab(\'{year_tab_id}\',\'{tid}\')">{oname}{marker_html}</button>'
             )
             parts = [
                 _realty_html(s3, oid),
@@ -365,6 +417,7 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
     # ── попереднє обчислення заощаджень та змін майнового стану ────────────────
     savings_by_year = _compute_savings(sorted_docs)
     changes_by_year = _compute_asset_changes(sorted_docs)
+    owner_changes_by_year = _compute_owner_asset_changes(sorted_docs)
 
     # ── assets: year tabs (outer) + owner tabs (inner) ─────────────────────────
     year_btns: list[str] = []
@@ -380,7 +433,9 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
             f' onclick="showYearTab(\'{ytid}\')">{year}{marker_html}</button>'
         )
         savings = savings_by_year.get(year, 0.0)
-        owner_content = _render_owner_assets(doc, ytid, savings)
+        owner_content = _render_owner_assets(
+            doc, ytid, savings, owner_changes_by_year.get(year, {})
+        )
         year_panels.append(
             f'<div id="{ytid}" class="year-panel{active}">{owner_content}</div>'
         )
