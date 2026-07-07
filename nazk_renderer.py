@@ -182,62 +182,160 @@ def _addr_field(primary: str, txt: str, strip: str = "") -> str:
     return val
 
 
-def _details_html(title: str, rows: list[str]) -> str:
-    inner = '<ol class="cl cl-box-blinking" onclick="copyText(this, getListText)">' + "".join(rows) + "</ol>"
+def _details_html(title: str, rows: list[str], count: int | None = None) -> str:
+    n = count if count is not None else len(rows)
+    inner = '<div class="cl-list cl cl-box-blinking" onclick="copyText(this, getListText)">' + "".join(rows) + "</div>"
     return (
         f'<details>'
         f'<summary class="summary-toggle"><span class="asum">'
         f'<span class="asum-arrow">&#9658;</span>'
-        f"<span>{title} <strong>[&nbsp;{len(rows)}&nbsp;]</strong></span>"
+        f"<span>{title} <strong>[&nbsp;{n}&nbsp;]</strong></span>"
         f'</span></summary>'
         f'{inner}</details>'
     )
 
 
-def _realty_html(items: list, owner_id: str) -> str:
-    rows = []
+def _asset_changes(
+    now_items: list,
+    prev_items: list | None,
+    share_now,
+    share_prev,
+    key_fn,
+) -> tuple[list[dict], set[tuple]]:
+    """Порівняння активу із суміжним попереднім роком (v.2.13):
+    (зниклі_обʼєкти_попереднього_року, ключі_обʼєктів_доданих_цього_року).
+    Відсутність prev_items означає "нема з чим порівнювати" — обидва списки порожні."""
+    if prev_items is None:
+        return [], set()
+    now_keyed = {key_fn(i): i for i in now_items if share_now(i) > 0}
+    prev_keyed = {key_fn(i): i for i in prev_items if share_prev(i) > 0}
+    removed = [prev_keyed[k] for k in prev_keyed.keys() - now_keyed.keys()]
+    added_keys = now_keyed.keys() - prev_keyed.keys()
+    return removed, set(added_keys)
+
+
+def _change_rows_html(
+    current_rows: list[tuple[tuple, str]],
+    removed_rows: list[tuple[tuple, str]],
+    added_keys: set[tuple],
+) -> list[str]:
+    """<div>-рядки для детального списку з позначками змін (v.2.13/v.2.14): зниклі —
+    першими, замість номера "#." (червоні); додані цього року — останніми, зеленим.
+    Нумерація рахується вручну (без <ol>), щоб "#." виглядав так само, як "1.", "2.", ..."""
+    divs = [
+        f'<div class="row-item chg-removed">#.&nbsp;{text}</div>'
+        for _key, text in removed_rows
+    ]
+    kept = [text for key, text in current_rows if key not in added_keys]
+    added = [text for key, text in current_rows if key in added_keys]
+    ordered = [(text, "") for text in kept] + [(text, "chg-added") for text in added]
+    for n, (text, cls) in enumerate(ordered, 1):
+        cls_attr = f" {cls}" if cls else ""
+        divs.append(f'<div class="row-item{cls_attr}">{n}.&nbsp;{text}</div>')
+    return divs
+
+
+def _realty_row_text(item: dict, owners_list: list[str]) -> str:
+    label, area = _area_str(item)
+    region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
+    district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+    city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
+    prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
+    if not city:
+        city = district
+        district = ""
+    date = item.get("owningDate", "")
+    otype = item.get("objectType", "")
+    share = f", частка 1/{len(owners_list)}" if len(owners_list) > 1 else ""
+    region_ex = f" {region} обл.,"
+    district_ex = "" if district == "" else f" {district} р-н,"
+    city_ex = f"{"" if prefix == "" else f" {prefix}"} {city},"
+    return f"{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}{share}"
+
+
+def _realty_row_text_family(item: dict) -> str:
+    label, area = _area_str(item)
+    region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
+    district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+    city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
+    prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
+    if not city:
+        city = district
+        district = ""
+    date = item.get("owningDate", "")
+    otype = item.get("objectType", "")
+    region_ex = f" {region} обл.," if region else ""
+    district_ex = "" if not district else f" {district} р-н,"
+    city_ex = f"{'  ' if not prefix else f' {prefix}'} {city}," if city else ""
+    return f"{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}"
+
+
+def _vehicle_row_text(item: dict) -> str:
+    otype = item.get("objectType", "")
+    brand = item.get("brand", "")
+    model = item.get("model", "")
+    year = item.get("graduationYear", "")
+    date = item.get("owningDate", "")
+    return f"{otype} {brand} {model} {year} р.в., у власності з {date}"
+
+
+def _realty_html(
+    items: list,
+    owner_id: str,
+    prev_items: list | None = None,
+    prev_owner_id: str | None = None,
+) -> str:
+    current_rows: list[tuple[tuple, str]] = []
     for item in items:
         owners_list = _rights_owners(item)
         if owner_id not in owners_list:
             continue
-        label, area = _area_str(item)
-        region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
-        district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
-        city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
-        prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
-        if not city:
-            city = district
-            district = ""
-        date = item.get("owningDate", "")
-        otype = item.get("objectType", "")
-        share = f", частка 1/{len(owners_list)}" if len(owners_list) > 1 else ""
-        region_ex = f" {region} обл.,"
-        district_ex = "" if district == "" else f" {district} р-н,"
-        city_ex = f"{"" if prefix == "" else f" {prefix}"} {city},"
-        rows.append(
-            f"<li>{otype}, {label}: {area}, "
-            f"за адресою{region_ex}{district_ex}"
-            f"{city_ex} у власності з {date}{share}</li>"
+        current_rows.append((_realty_key(item), _realty_row_text(item, owners_list)))
+
+    removed_items: list[dict] = []
+    added_keys: set[tuple] = set()
+    if prev_items is not None and prev_owner_id is not None:
+        removed_items, added_keys = _asset_changes(
+            items, prev_items,
+            share_now=lambda i: 1.0 if owner_id in _rights_owners(i) else 0.0,
+            share_prev=lambda i: 1.0 if prev_owner_id in _rights_owners(i) else 0.0,
+            key_fn=_realty_key,
         )
-    if not rows:
+    removed_rows = [(_realty_key(i), _realty_row_text(i, _rights_owners(i))) for i in removed_items]
+
+    lis = _change_rows_html(current_rows, removed_rows, added_keys)
+    if not lis:
         return ""
-    return _details_html("Об'єкти нерухомості", rows)
+    return _details_html("Об'єкти нерухомості", lis, count=len(current_rows))
 
 
-def _vehicles_html(items: list, owner_id: str) -> str:
-    rows = []
+def _vehicles_html(
+    items: list,
+    owner_id: str,
+    prev_items: list | None = None,
+    prev_owner_id: str | None = None,
+) -> str:
+    current_rows: list[tuple[tuple, str]] = []
     for item in items:
         if owner_id not in _rights_owners(item):
             continue
-        otype = item.get("objectType", "")
-        brand = item.get("brand", "")
-        model = item.get("model", "")
-        year = item.get("graduationYear", "")
-        date = item.get("owningDate", "")
-        rows.append(f"<li>{otype} {brand} {model} {year} р.в., у власності з {date}</li>")
-    if not rows:
+        current_rows.append((_vehicle_key(item), _vehicle_row_text(item)))
+
+    removed_items: list[dict] = []
+    added_keys: set[tuple] = set()
+    if prev_items is not None and prev_owner_id is not None:
+        removed_items, added_keys = _asset_changes(
+            items, prev_items,
+            share_now=lambda i: 1.0 if owner_id in _rights_owners(i) else 0.0,
+            share_prev=lambda i: 1.0 if prev_owner_id in _rights_owners(i) else 0.0,
+            key_fn=_vehicle_key,
+        )
+    removed_rows = [(_vehicle_key(i), _vehicle_row_text(i)) for i in removed_items]
+
+    lis = _change_rows_html(current_rows, removed_rows, added_keys)
+    if not lis:
         return ""
-    return _details_html("Транспортні засоби", rows)
+    return _details_html("Транспортні засоби", lis, count=len(current_rows))
 
 
 def _income_html(items: list, owner_id: str) -> str:
@@ -340,22 +438,34 @@ def _normalize_income_item(item: dict) -> dict:
     return item
 
 
-def _realty_address_key(item: dict) -> str:
-    region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
-    district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+def _realty_settlement_key(item: dict) -> str:
+    """Назва населеного пункту (без області/району) — для порівняння об'єктів
+    нерухомості між роками (v.2.14). Область/район не враховуються, оскільки їх
+    наявність/формат у джерельних даних може відрізнятися рік від року для того самого
+    об'єкта (наприклад, район присутній в одному поданні й відсутній в іншому)."""
     city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
-    if not city:
-        city = district
-        district = ""
-    return "|".join([region, district, city])
+    if city:
+        return city
+    return _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
+
+
+def _realty_area_key(item: dict) -> str:
+    """Нормалізована площа для порівняння (v.2.14): "58,90" і "58,9" — те саме значення,
+    хоча рядкове представлення різниться рік від року."""
+    raw = str(item.get("totalArea", "")).strip().replace(",", ".")
+    try:
+        return f"{float(raw):.4f}"
+    except ValueError:
+        return raw
 
 
 def _realty_key(item: dict) -> tuple:
-    """Ключ порівняння об'єкта нерухомості (v.2.11): тип + площа + адреса + дата набуття права."""
+    """Ключ порівняння об'єкта нерухомості (v.2.11, уточнено v.2.14): тип + площа +
+    населений пункт + дата набуття права."""
     return (
         item.get("objectType", ""),
-        str(item.get("totalArea", "")).strip(),
-        _realty_address_key(item),
+        _realty_area_key(item),
+        _realty_settlement_key(item),
         item.get("owningDate", ""),
     )
 
@@ -553,6 +663,7 @@ def _general_obligations_html(items: list, fids: set[str], owners: dict[str, str
 
 def general_tab_html(
     doc: dict,
+    prev_doc: dict | None,
     savings: float,
     owners: dict[str, str],
 ) -> str:
@@ -572,6 +683,18 @@ def general_tab_html(
     fids = _family_ids(s1, s2)
     s11 = [_normalize_income_item(i) for i in s11]
     s13 = [_normalize_income_item(i) for i in s13]
+
+    # ── v.2.13: дані попереднього суміжного року для порівняння на рівні родини ──
+    prev_s3: list = []
+    prev_s6: list = []
+    prev_fids: set[str] = set()
+    if prev_doc is not None:
+        prev_steps = prev_doc.get("data", {})
+        prev_s1 = prev_steps.get("step_1", {})
+        prev_s2 = _step_data(prev_steps.get("step_2"))
+        prev_fids = _family_ids(prev_s1, prev_s2)
+        prev_s3 = _step_data(prev_steps.get("step_3"))
+        prev_s6 = _step_data(prev_steps.get("step_6"))
 
     total_income = sum(
         (lambda raw: float(raw) if _try_float(raw) else 0.0)(i.get("sizeIncome", 0))
@@ -593,42 +716,40 @@ def general_tab_html(
     parts.append('<div style="margin-top:10px"></div>')
 
     # ── нерухомість (всі об'єкти родини, дедублікація не потрібна — кожен унікальний) ──
-    realty_rows = []
+    current_realty_rows: list[tuple[tuple, str]] = []
     for item in s3:
-        rights = item.get("rights", [])
-        if _family_share(rights, fids) == 0.0:
+        if _family_share(item.get("rights", []), fids) == 0.0:
             continue
-        label, area = _area_str(item)
-        region = _addr_field(item.get("region", ""), item.get("region_txt", ""), " область")
-        district = _addr_field(item.get("district", ""), item.get("district_txt", ""), " район")
-        city = _addr_field(item.get("city", ""), item.get("city_txt", ""))
-        prefix = _CITY_TYPE_PREFIX.get(item.get("cityType", ""), "")
-        if not city:
-            city = district
-            district = ""
-        date = item.get("owningDate", "")
-        otype = item.get("objectType", "")
-        region_ex = f" {region} обл.," if region else ""
-        district_ex = "" if not district else f" {district} р-н,"
-        city_ex = f"{'  ' if not prefix else f' {prefix}'} {city}," if city else ""
-        realty_rows.append(f"<li>{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}</li>")
-    if realty_rows:
-        parts.append(_details_html("Об'єкти нерухомості", realty_rows))
+        current_realty_rows.append((_realty_key(item), _realty_row_text_family(item)))
+
+    removed_realty, added_realty_keys = _asset_changes(
+        s3, prev_s3 if prev_doc is not None else None,
+        share_now=lambda i: _family_share(i.get("rights", []), fids),
+        share_prev=lambda i: _family_share(i.get("rights", []), prev_fids),
+        key_fn=_realty_key,
+    )
+    removed_realty_rows = [(_realty_key(i), _realty_row_text_family(i)) for i in removed_realty]
+    realty_lis = _change_rows_html(current_realty_rows, removed_realty_rows, added_realty_keys)
+    if realty_lis:
+        parts.append(_details_html("Об'єкти нерухомості", realty_lis, count=len(current_realty_rows)))
 
     # ── транспорт ─────────────────────────────────────────────────────────────
-    vehicle_rows = []
+    current_vehicle_rows: list[tuple[tuple, str]] = []
     for item in s6:
-        v_rights = item.get("rights", [])
-        if _family_share(v_rights, fids) == 0.0:
+        if _family_share(item.get("rights", []), fids) == 0.0:
             continue
-        otype = item.get("objectType", "")
-        brand = item.get("brand", "")
-        model = item.get("model", "")
-        yr = item.get("graduationYear", "")
-        date = item.get("owningDate", "")
-        vehicle_rows.append(f"<li>{otype} {brand} {model} {yr} р.в., у власності з {date}</li>")
-    if vehicle_rows:
-        parts.append(_details_html("Транспортні засоби", vehicle_rows))
+        current_vehicle_rows.append((_vehicle_key(item), _vehicle_row_text(item)))
+
+    removed_vehicle, added_vehicle_keys = _asset_changes(
+        s6, prev_s6 if prev_doc is not None else None,
+        share_now=lambda i: _family_share(i.get("rights", []), fids),
+        share_prev=lambda i: _family_share(i.get("rights", []), prev_fids),
+        key_fn=_vehicle_key,
+    )
+    removed_vehicle_rows = [(_vehicle_key(i), _vehicle_row_text(i)) for i in removed_vehicle]
+    vehicle_lis = _change_rows_html(current_vehicle_rows, removed_vehicle_rows, added_vehicle_keys)
+    if vehicle_lis:
+        parts.append(_details_html("Транспортні засоби", vehicle_lis, count=len(current_vehicle_rows)))
 
     # ── числові агрегати по членам родини ─────────────────────────────────────
     income_h = _general_income_html(s11, fids, owners)
@@ -647,7 +768,7 @@ def general_tab_html(
     if obl_h:
         parts.append(obl_h)
 
-    if not any([realty_rows, vehicle_rows, income_h, cash_h, corp_h, obl_h]):
+    if not any([realty_lis, vehicle_lis, income_h, cash_h, corp_h, obl_h]):
         parts.append('<p>Немає активів</p>')
 
     parts.append(f"<div class='doc-id'>[ doc-id: <span onclick='copyText(this)'>{doc_id}</span> ]</div>")

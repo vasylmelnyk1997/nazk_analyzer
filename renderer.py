@@ -89,13 +89,15 @@ table.dt .dl{white-space:nowrap;text-align:left}
 table.dt .ds{width:15px}
 table.dt .da{white-space:nowrap;text-align:right}
 .stub{color:#999;font-style:italic;margin:6px 0}
-ol{margin:6px 0 4px 18px;padding-left:20px}
-ol li{margin:3px 0}
-ol.cl{cursor:pointer;position:relative}
-ol.cl:hover::after{content:'клікніть щоб скопіювати';position:absolute;top:-22px;left:0;
+.cl-list{margin:6px 0 4px 18px}
+.cl-list .row-item{margin:3px 0}
+.cl-list.cl{cursor:pointer;position:relative}
+.cl-list.cl:hover::after{content:'клікніть щоб скопіювати';position:absolute;top:-22px;left:0;
   background:#333;color:#fff;font-size:11px;padding:2px 7px;border-radius:3px;
   white-space:nowrap;pointer-events:none}
 .cl-box-blinking{background-color: transparent}
+.chg-removed{color:#d43c3c}
+.chg-added{color:#1a9d43}
 .animate-blink{animation: blink 0.5s ease-in-out}
 @keyframes blink{0%{background-color: transparent}
 50%{background-color: #d1dee9}
@@ -124,8 +126,8 @@ function showOwnerTab(yearId, ownerId) {
   yp.querySelector('[data-tab="'+ownerId+'"]').classList.add('active');
 }
 function getListText(ol){
-  return Array.from(ol.querySelectorAll('li')).map(function(li,i){
-    return (i+1)+'. '+li.textContent.trim();
+  return Array.from(ol.querySelectorAll('.row-item:not(.chg-removed)')).map(function(li){
+    return li.textContent.trim();
   }).join('\\n');
 }
 function getElemText(elem){
@@ -274,6 +276,7 @@ def _change_marker_html(flags: dict[str, bool] | None) -> str:
 
 def _render_owner_assets(
     doc: dict,
+    prev_doc: dict | None,
     year_tab_id: str,
     savings: float,
     owner_changes: dict[str, dict[str, bool]] | None = None,
@@ -300,6 +303,16 @@ def _render_owner_assets(
         if _has_any_owner_assets(oid, s3, s6, s11, s12, s8, s13)
     ]
 
+    # ── v.2.13: дані попереднього суміжного року для порівняння по власниках ──
+    prev_s3: list | None = None
+    prev_s6: list | None = None
+    prev_owner_by_name: dict[str, str] = {}
+    if prev_doc is not None:
+        prev_s3 = _step_data(prev_doc.get("data", {}).get("step_3"))
+        prev_s6 = _step_data(prev_doc.get("data", {}).get("step_6"))
+        prev_owner_by_name = {v: k for k, v in _owner_name_keys(prev_doc).items()}
+    name_keys_now = _owner_name_keys(doc)
+
     buttons: list[str] = []
     panels: list[str] = []
 
@@ -312,7 +325,7 @@ def _render_owner_assets(
     )
     # Для general_tab_html потрібен впорядкований dict власників
     ordered_owners: dict[str, str] = {oid: oname for oid, oname in sorted_owners}
-    gen_content = general_tab_html(doc, savings, ordered_owners)
+    gen_content = general_tab_html(doc, prev_doc, savings, ordered_owners)
     panels.append(
         f'<div id="{gen_tid}" class="owner-panel active">{gen_content}</div>'
     )
@@ -328,9 +341,10 @@ def _render_owner_assets(
                 f'<button class="owner-btn" data-tab="{tid}"'
                 f' onclick="showOwnerTab(\'{year_tab_id}\',\'{tid}\')">{oname}{marker_html}</button>'
             )
+            prev_oid = prev_owner_by_name.get(name_keys_now.get(oid))
             parts = [
-                _realty_html(s3, oid),
-                _vehicles_html(s6, oid),
+                _realty_html(s3, oid, prev_s3, prev_oid),
+                _vehicles_html(s6, oid, prev_s6, prev_oid),
                 _income_html(s11, oid),
                 _cash_html(s12, oid, year),
                 _corporate_html(s8, oid),
@@ -433,8 +447,9 @@ def render_all_declarations(user_declarant_id: int, docs: list[dict]) -> str:
             f' onclick="showYearTab(\'{ytid}\')">{year}{marker_html}</button>'
         )
         savings = savings_by_year.get(year, 0.0)
+        prev_doc = sorted_docs[i + 1] if i + 1 < len(sorted_docs) else None
         owner_content = _render_owner_assets(
-            doc, ytid, savings, owner_changes_by_year.get(year, {})
+            doc, prev_doc, ytid, savings, owner_changes_by_year.get(year, {})
         )
         year_panels.append(
             f'<div id="{ytid}" class="year-panel{active}">{owner_content}</div>'
