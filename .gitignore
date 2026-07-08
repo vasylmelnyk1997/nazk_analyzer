@@ -30,3 +30,6 @@ storage/
 
 # Excel files
 *.xlsx
+
+# Temporary files
+context.txt

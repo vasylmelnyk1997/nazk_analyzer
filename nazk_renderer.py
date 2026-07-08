@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from currency_rate_archive import RATES_ARCHIVE
@@ -841,6 +842,32 @@ def _collect_family_history(sorted_docs: list[dict]) -> list[tuple[str, str, str
     ]
 
 
+_WORD_RE = re.compile(r"\w+", re.UNICODE)
+
+
+def _workplace_tokens(wp: str) -> frozenset[str]:
+    return frozenset(w.lower() for w in _WORD_RE.findall(wp))
+
+
+def _same_workplace(anchor_tokens: frozenset[str], entry_tokens: frozenset[str]) -> bool:
+    """Whether entry_tokens is "the same workplace" as the group's established anchor.
+
+    Declarants reword the same employer across years (short name, full legal name,
+    extra suffixes like "НГУ"), so exact string match misses that they're the same.
+    A number in the name (unit/registration number etc.) is treated as the strong,
+    load-bearing identifier: if the anchor has one, the entry must repeat that same
+    number — the rest of the anchor's words (generic legal/organizational filler) may
+    be dropped or reworded freely. Without a number, fall back to plain word-set
+    containment: the entry must contain *every* anchor word, so a shorter, more
+    generic name (missing a word the anchor has) is kept separate rather than
+    shrinking the established match.
+    """
+    anchor_numbers = {t for t in anchor_tokens if t.isdigit()}
+    if anchor_numbers:
+        return anchor_numbers <= entry_tokens
+    return len(anchor_tokens) >= 2 and anchor_tokens <= entry_tokens
+
+
 def _collect_career_history(sorted_docs: list[dict]) -> list[dict]:
     """Career history merged by consecutive same workplace+position; output oldest-first."""
     raw_entries = []
@@ -852,13 +879,13 @@ def _collect_career_history(sorted_docs: list[dict]) -> list[dict]:
         wp = d1.get("workPlace", "").strip()
         wpost = d1.get("workPost", "").strip()
         if wp or wpost:
-            raw_entries.append({"year": year, "workPlace": wp, "workPost": wpost})
+            raw_entries.append({"year": year, "workPlace": wp, "workPlace_tokens": _workplace_tokens(wp), "workPost": wpost})
 
     merged: list[dict] = []
     for entry in raw_entries:
         if (
             merged
-            and merged[-1]["workPlace"] == entry["workPlace"]
+            and _same_workplace(merged[-1]["workPlace_tokens"], entry["workPlace_tokens"])
             and merged[-1]["workPost"] == entry["workPost"]
             and entry["year"] == merged[-1]["end_year"] + 1
         ):
@@ -868,6 +895,7 @@ def _collect_career_history(sorted_docs: list[dict]) -> list[dict]:
                 "start_year": entry["year"],
                 "end_year": entry["year"],
                 "workPlace": entry["workPlace"],
+                "workPlace_tokens": entry["workPlace_tokens"],
                 "workPost": entry["workPost"],
             })
     return merged
