@@ -56,12 +56,14 @@ th{background:#f0f0f0}
           font-size:14px;font-weight:bold;border-left:3px solid transparent;white-space:nowrap}
 .year-btn:hover{background:#f0f0f0}
 .year-btn.active{background:#fff;border-left-color:#0066cc}
-.year-change-marker{display:inline-flex;align-items:center;gap:1px;margin-left:4px;vertical-align:middle}
-.chg-icon{width:14px;height:14px;stroke-width:2.5;vertical-align:middle}
-.chg-plus{color:#1a9d43}
-.chg-minus{color:#d43c3c}
+.year-change-marker{display:inline-flex;align-items:center;gap:4px;margin-left:2px;vertical-align:middle}
+.chg-icon{width:14px;height:14px;fill:currentColor;stroke-width:2.5;vertical-align:middle}
 .year-panel{display:none;flex:1;flex-direction:column}
 .year-panel.active{display:flex}
+
+.badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50px;padding:2px}
+.badge-plus{background-color:#e6f4ea;color:#137333}
+.badge-minus{background-color:#fce8e6;color:#c5221f;}
 
 /* owner tabs (inner, horizontal — top of panel) */
 .owner-tab-btns{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 0;border-bottom:1px solid #ccc;
@@ -258,19 +260,22 @@ def _compute_owner_asset_changes(
 def _change_marker_html(flags: dict[str, bool] | None) -> str:
     if not flags or not any(flags.values()):
         return ""
+    html_map = {
+        "realty_added": ["house", "plus", "Придбання нерухомості"],
+        "realty_removed": ["house", "minus", "Втрати нерухомості"],
+        "vehicle_added": ["car", "plus", "Придбання транспортних засобів"],
+        "vehicle_removed": ["car", "minus", "Втрати транспортних засобів"],
+    }
+    def _get_icon_html(state_key: str) -> str:
+        return (
+            f'<span class="badge badge-{html_map[state_key][1]}" title="{html_map[state_key][2]}">'
+            f'<svg class="chg-icon"><use href="#{html_map[state_key][0]}"></use></svg>'
+            f'</span>'
+        )
     parts: list[str] = []
-    if flags["realty_added"] or flags["realty_removed"]:
-        parts.append('<svg class="chg-icon"><use href="#house"/></svg>')
-        if flags["realty_added"]:
-            parts.append('<svg class="chg-icon chg-plus"><use href="#plus"/></svg>')
-        if flags["realty_removed"]:
-            parts.append('<svg class="chg-icon chg-minus"><use href="#minus"/></svg>')
-    if flags["vehicle_added"] or flags["vehicle_removed"]:
-        parts.append('<svg class="chg-icon"><use href="#car"/></svg>')
-        if flags["vehicle_added"]:
-            parts.append('<svg class="chg-icon chg-plus"><use href="#plus"/></svg>')
-        if flags["vehicle_removed"]:
-            parts.append('<svg class="chg-icon chg-minus"><use href="#minus"/></svg>')
+    for state_key in html_map.keys():
+        if flags.get(state_key):
+            parts.append(_get_icon_html(state_key))
     return f'<span class="year-change-marker">{"".join(parts)}</span>'
 
 
