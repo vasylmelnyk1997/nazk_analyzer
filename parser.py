@@ -62,6 +62,7 @@ def map_document(raw: dict) -> dict:
             result.append({
                 "rightBelongs": str(r.get("rightBelongs", "")),
                 "percentOwnership": pct,
+                "ownershipType": r.get("ownershipType", ""),
             })
         return result
 
