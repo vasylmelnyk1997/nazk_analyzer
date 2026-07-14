@@ -101,6 +101,7 @@ table.dt .da{white-space:nowrap;text-align:right}
 .chg-removed{color:#d43c3c}
 .chg-added{color:#1a9d43}
 .chg-rented{color:#1a73e8}
+.chg-other{color:#8b5a2b}
 .animate-blink{animation: blink 0.5s ease-in-out}
 @keyframes blink{0%{background-color: transparent}
 50%{background-color: #d1dee9}
@@ -129,7 +130,7 @@ function showOwnerTab(yearId, ownerId) {
   yp.querySelector('[data-tab="'+ownerId+'"]').classList.add('active');
 }
 function getListText(ol){
-  return Array.from(ol.querySelectorAll('.row-item:not(.chg-removed):not(.chg-rented)')).map(function(li){
+  return Array.from(ol.querySelectorAll('.row-item:not(.chg-removed):not(.chg-rented):not(.chg-other)')).map(function(li){
     return li.textContent.trim();
   }).join('\\n');
 }

@@ -223,12 +223,14 @@ def _change_rows_html(
     removed_rows: list[tuple[tuple, str]],
     added_keys: set[tuple],
     rented_rows: list[str] | None = None,
+    other_rows: list[str] | None = None,
 ) -> list[str]:
     """<div>-рядки для детального списку з позначками змін (v.2.13/v.2.14): зниклі —
     першими, замість номера "#." (червоні); додані цього року — останніми, зеленим.
     Нумерація рахується вручну (без <ol>), щоб "#." виглядав так само, як "1.", "2.", ...
-    Орендовані об'єкти (v.2.15) — одразу після зниклих, замість номера "$." (сині),
-    поза лічильником і поза логікою "з'явився/зник"."""
+    Об'єкти в користуванні — поза лічильником і поза логікою "з'явився/зник":
+    орендовані (v.2.15) — одразу після зниклих, замість номера "$." (сині);
+    інше право користування (v.2.16) — після орендованих, замість номера "*." (коричневі)."""
     divs = [
         f'<div class="row-item chg-removed">#.&nbsp;{text}</div>'
         for _key, text in removed_rows
@@ -236,6 +238,10 @@ def _change_rows_html(
     divs.extend(
         f'<div class="row-item chg-rented">$.&nbsp;{text}</div>'
         for text in (rented_rows or [])
+    )
+    divs.extend(
+        f'<div class="row-item chg-other">*.&nbsp;{text}</div>'
+        for text in (other_rows or [])
     )
     kept = [text for key, text in current_rows if key not in added_keys]
     added = [text for key, text in current_rows if key in added_keys]
@@ -246,10 +252,20 @@ def _change_rows_html(
     return divs
 
 
-def _is_rented(item: dict) -> bool:
-    """Об'єкт нерухомості в оренді (v.2.15): не власність, а користування на правах оренди.
-    Ознака зберігається в `rights[].ownershipType`, а не на самому об'єкті."""
-    return any(r.get("ownershipType") == "Оренда" for r in item.get("rights", []))
+_USAGE_LABELS: dict[str, str] = {"rented": "оренда", "other": "інше право"}
+
+
+def _usage_kind(item: dict) -> str | None:
+    """Об'єкт нерухомості в користуванні, а не у власності: "Оренда" (v.2.15) → "rented",
+    "Інше право користування" (v.2.16) → "other", інакше None. При змішаних правах
+    пріоритет за орендою. Ознака зберігається в `rights[].ownershipType`, а не на самому
+    об'єкті. Такі об'єкти враховуються лише для декларанта (rightBelongs="1")."""
+    types = {r.get("ownershipType") for r in item.get("rights", [])}
+    if "Оренда" in types:
+        return "rented"
+    if "Інше право користування" in types:
+        return "other"
+    return None
 
 
 def _realty_row_text(item: dict, owners_list: list[str]) -> str:
@@ -263,8 +279,9 @@ def _realty_row_text(item: dict, owners_list: list[str]) -> str:
         district = ""
     date = item.get("owningDate", "")
     otype = item.get("objectType", "")
-    if _is_rented(item):
-        otype = f"{otype} (оренда)"
+    kind = _usage_kind(item)
+    if kind:
+        otype = f"{otype} ({_USAGE_LABELS[kind]})"
     share = f", частка 1/{len(owners_list)}" if len(owners_list) > 1 else ""
     region_ex = f" {region} обл.,"
     district_ex = "" if district == "" else f" {district} р-н,"
@@ -283,11 +300,16 @@ def _realty_row_text_family(item: dict) -> str:
         district = ""
     date = item.get("owningDate", "")
     otype = item.get("objectType", "")
-    if _is_rented(item):
-        otype = f"{otype} (оренда)"
+    kind = _usage_kind(item)
+    if kind:
+        otype = f"{otype} ({_USAGE_LABELS[kind]})"
     region_ex = f" {region} обл.," if region else ""
     district_ex = "" if not district else f" {district} р-н,"
     city_ex = f"{'  ' if not prefix else f' {prefix}'} {city}," if city else ""
+    if kind:
+        # v.2.16: на вкладці "Загальна" для об'єктів у користуванні дату
+        # "у власності з" і частку не вказуємо
+        return f"{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex}".rstrip(",")
     return f"{otype}, {label}: {area}, за адресою{region_ex}{district_ex}{city_ex} у власності з {date}"
 
 
@@ -308,20 +330,26 @@ def _realty_html(
 ) -> str:
     current_rows: list[tuple[tuple, str]] = []
     rented_rows: list[str] = []
+    other_rows: list[str] = []
     for item in items:
         owners_list = _rights_owners(item)
-        if owner_id not in owners_list:
+        kind = _usage_kind(item)
+        if kind is not None:
+            # об'єкти в користуванні враховуємо лише для декларанта
+            if owner_id == "1" and "1" in owners_list:
+                (rented_rows if kind == "rented" else other_rows).append(
+                    _realty_row_text(item, owners_list)
+                )
             continue
-        if _is_rented(item):
-            rented_rows.append(_realty_row_text(item, owners_list))
+        if owner_id not in owners_list:
             continue
         current_rows.append((_realty_key(item), _realty_row_text(item, owners_list)))
 
-    owned_items = [i for i in items if not _is_rented(i)]
+    owned_items = [i for i in items if _usage_kind(i) is None]
     removed_items: list[dict] = []
     added_keys: set[tuple] = set()
     if prev_items is not None and prev_owner_id is not None:
-        prev_owned_items = [i for i in prev_items if not _is_rented(i)]
+        prev_owned_items = [i for i in prev_items if _usage_kind(i) is None]
         removed_items, added_keys = _asset_changes(
             owned_items, prev_owned_items,
             share_now=lambda i: 1.0 if owner_id in _rights_owners(i) else 0.0,
@@ -330,7 +358,7 @@ def _realty_html(
         )
     removed_rows = [(_realty_key(i), _realty_row_text(i, _rights_owners(i))) for i in removed_items]
 
-    lis = _change_rows_html(current_rows, removed_rows, added_keys, rented_rows)
+    lis = _change_rows_html(current_rows, removed_rows, added_keys, rented_rows, other_rows)
     if not lis:
         return ""
     return _details_html("Об'єкти нерухомості", lis, count=len(current_rows))
@@ -510,7 +538,7 @@ def _vehicle_key(item: dict) -> tuple:
 def _realty_keys_for_family(items: list, fids: set[str]) -> set[tuple]:
     return {
         _realty_key(i) for i in items
-        if not _is_rented(i) and _family_share(i.get("rights", []), fids) > 0
+        if _usage_kind(i) is None and _family_share(i.get("rights", []), fids) > 0
     }
 
 
@@ -522,7 +550,7 @@ def _realty_keys_for_owner(items: list, owner_id: str) -> set[tuple]:
     """Ключі об'єктів нерухомості, де конкретний власник має частку (v.2.12)."""
     return {
         _realty_key(i) for i in items
-        if not _is_rented(i) and _member_share(i.get("rights", []), owner_id) > 0
+        if _usage_kind(i) is None and _member_share(i.get("rights", []), owner_id) > 0
     }
 
 
@@ -562,7 +590,11 @@ def _has_any_owner_assets(
     s13: list,
 ) -> bool:
     return any([
-        any(owner_id in _rights_owners(item) for item in s3),
+        any(
+            owner_id in _rights_owners(item)
+            and (_usage_kind(item) is None or owner_id == "1")
+            for item in s3
+        ),
         any(owner_id in _rights_owners(item) for item in s6),
         any(owner_id in _rights_owners(item) for item in s11),
         any(owner_id in _rights_owners(item) for item in s12),
@@ -751,16 +783,22 @@ def general_tab_html(
     # ── нерухомість (всі об'єкти родини, дедублікація не потрібна — кожен унікальний) ──
     current_realty_rows: list[tuple[tuple, str]] = []
     rented_realty_rows: list[str] = []
+    other_realty_rows: list[str] = []
     for item in s3:
-        if _family_share(item.get("rights", []), fids) == 0.0:
+        kind = _usage_kind(item)
+        if kind is not None:
+            # об'єкти в користуванні враховуємо лише для декларанта
+            if "1" in _rights_owners(item):
+                (rented_realty_rows if kind == "rented" else other_realty_rows).append(
+                    _realty_row_text_family(item)
+                )
             continue
-        if _is_rented(item):
-            rented_realty_rows.append(_realty_row_text_family(item))
+        if _family_share(item.get("rights", []), fids) == 0.0:
             continue
         current_realty_rows.append((_realty_key(item), _realty_row_text_family(item)))
 
-    owned_s3 = [i for i in s3 if not _is_rented(i)]
-    prev_owned_s3 = [i for i in prev_s3 if not _is_rented(i)] if prev_doc is not None else None
+    owned_s3 = [i for i in s3 if _usage_kind(i) is None]
+    prev_owned_s3 = [i for i in prev_s3 if _usage_kind(i) is None] if prev_doc is not None else None
     removed_realty, added_realty_keys = _asset_changes(
         owned_s3, prev_owned_s3,
         share_now=lambda i: _family_share(i.get("rights", []), fids),
@@ -768,7 +806,10 @@ def general_tab_html(
         key_fn=_realty_key,
     )
     removed_realty_rows = [(_realty_key(i), _realty_row_text_family(i)) for i in removed_realty]
-    realty_lis = _change_rows_html(current_realty_rows, removed_realty_rows, added_realty_keys, rented_realty_rows)
+    realty_lis = _change_rows_html(
+        current_realty_rows, removed_realty_rows, added_realty_keys,
+        rented_realty_rows, other_realty_rows,
+    )
     if realty_lis:
         parts.append(_details_html("Об'єкти нерухомості", realty_lis, count=len(current_realty_rows)))
 
