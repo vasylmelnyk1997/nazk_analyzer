@@ -159,6 +159,31 @@ def map_document(raw: dict) -> dict:
         for i in _get_list("step_13")
     ]
 
+    def _nested_expenses(item: dict) -> list:
+        """Вкладені суми правочину: в raw це dict {iteration: {...costAmount...}}."""
+        nested = item.get("expenses")
+        if not isinstance(nested, dict):
+            return []
+        return [
+            {"costAmount": e.get("costAmount", "")}
+            for e in nested.values()
+            if isinstance(e, dict)
+        ]
+
+    step14 = [
+        {
+            "specExpensesSubject": i.get("specExpensesSubject", ""),
+            "specOtherExpensesSubject": i.get("specOtherExpensesSubject", ""),
+            "specExpenses": i.get("specExpenses", ""),
+            "specOtherExpenses": i.get("specOtherExpenses", ""),
+            "specConsequencesSubject": i.get("specConsequencesSubject", ""),
+            "specOtherConsequencesSubject": i.get("specOtherConsequencesSubject", ""),
+            "costAmount": i.get("costAmount", ""),
+            "expenses": _nested_expenses(i),
+        }
+        for i in _get_list("step_14")
+    ]
+
     return {
         "id": raw.get("id", ""),
         "user_declarant_id": raw.get("user_declarant_id", 0),
@@ -180,5 +205,6 @@ def map_document(raw: dict) -> dict:
             "step_11": {"data": step11},
             "step_12": {"data": step12},
             "step_13": {"data": step13},
+            "step_14": {"data": step14},
         },
     }

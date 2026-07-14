@@ -726,6 +726,93 @@ def _general_obligations_html(items: list, fids: set[str], owners: dict[str, str
     )
 
 
+# ── Видатки (v.2.17) ──────────────────────────────────────────────────────────
+
+# надходження коштів — не видаток
+_EXPENSE_INFLOW_MARKERS = (
+    "повернення депозиту",
+    "повернення позики",
+    "повернення банком",
+    "спадщина",
+)
+
+# переміщення власних коштів (депозити, рахунки) — не видаток
+_EXPENSE_MOVEMENT_MARKERS = (
+    "розміщення коштів на депозитному рахунку",
+    "розміщення депозиту",
+    "відкриття банківського рахунку",
+    "договір банківського вкладу",
+)
+
+
+def _is_expense_outflow(item: dict) -> bool:
+    """Чи є запис step_14 видатком — відтоком коштів (v.2.17). Виключаються
+    надходження: продаж/відчуження/погашення ("право ... припинено", окрім дарування,
+    яке навпаки є відтоком), повернення депозиту/позики, спадщина; та переміщення
+    власних коштів: розміщення депозиту, відкриття рахунку."""
+    cons = item.get("specConsequencesSubject", "") or ""
+    exp = (item.get("specExpenses", "") or "").strip()
+    if "припинено" in cons and exp != "Дарування":
+        return False
+    texts = [
+        (item.get("specOtherConsequencesSubject", "") or "").strip().lower(),
+        (item.get("specOtherExpenses", "") or "").strip().lower(),
+    ]
+    for text in texts:
+        if any(m in text for m in _EXPENSE_INFLOW_MARKERS):
+            return False
+        if any(m in text for m in _EXPENSE_MOVEMENT_MARKERS):
+            return False
+    return True
+
+
+def _expense_amount(item: dict) -> float:
+    """Сума запису step_14 у грн: `costAmount` на рівні запису має пріоритет над
+    вкладеними expenses[].costAmount; записи без суми → 0."""
+    top = str(item.get("costAmount", "") or "").replace(",", ".").strip()
+    if top:
+        return _safe_float(top)
+    nested = item.get("expenses") or []
+    if isinstance(nested, dict):
+        nested = list(nested.values())
+    return sum(
+        _safe_float(str(e.get("costAmount", "") or "").replace(",", ".").strip())
+        for e in nested
+        if isinstance(e, dict)
+    )
+
+
+def _expense_subject(item: dict) -> str:
+    subj = (item.get("specExpensesSubject", "") or "").strip()
+    if subj == "Інше":
+        return (item.get("specOtherExpensesSubject", "") or "").strip() or subj
+    return subj or "(предмет не вказано)"
+
+
+def _total_expenses_uah(items: list) -> float:
+    """Загальна сума видатків (відтоку коштів) за рік — для "Фінансової дельти"."""
+    return sum(_expense_amount(i) for i in items if _is_expense_outflow(i))
+
+
+def _general_expenses_html(items: list) -> str:
+    totals: dict[str, float] = {}
+    for item in items:
+        if not _is_expense_outflow(item):
+            continue
+        amount = _expense_amount(item)
+        if amount <= 0:
+            continue
+        subj = _expense_subject(item)
+        totals[subj] = totals.get(subj, 0.0) + amount
+    if not totals:
+        return ""
+    rows = [
+        (subj, f"{_fmt(v)} грн")
+        for subj, v in sorted(totals.items(), key=lambda kv: -kv[1])
+    ]
+    return _expandable("Видатки:", f"{_fmt(sum(totals.values()))} грн", rows)
+
+
 def general_tab_html(
     doc: dict,
     prev_doc: dict | None,
@@ -744,6 +831,7 @@ def general_tab_html(
     s11 = _step_data(steps.get("step_11"))
     s12 = _step_data(steps.get("step_12"))
     s13 = _step_data(steps.get("step_13"))
+    s14 = _step_data(steps.get("step_14"))
 
     fids = _family_ids(s1, s2)
     s11 = [_normalize_income_item(i) for i in s11]
@@ -766,7 +854,9 @@ def general_tab_html(
         for i in s11
         if _family_share(i.get("rights", []), fids) > 0
     )
-    delta = total_income - savings
+    # v.2.17: "Загальні витрати" = сума блоку "Видатки"
+    total_expenses = _total_expenses_uah(s14)
+    delta = total_income - savings - total_expenses
 
     parts: list[str] = []
 
@@ -848,7 +938,11 @@ def general_tab_html(
     if obl_h:
         parts.append(obl_h)
 
-    if not any([realty_lis, vehicle_lis, income_h, cash_h, corp_h, obl_h]):
+    exp_h = _general_expenses_html(s14)
+    if exp_h:
+        parts.append(exp_h)
+
+    if not any([realty_lis, vehicle_lis, income_h, cash_h, corp_h, obl_h, exp_h]):
         parts.append('<p>Немає активів</p>')
 
     parts.append(f"<div class='doc-id'>[ doc-id: <span onclick='copyText(this)'>{doc_id}</span> ]</div>")
