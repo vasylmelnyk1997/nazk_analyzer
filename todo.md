@@ -66,9 +66,11 @@
 
 ## *v.1.5:*
 - **підготовка до API**: абстрагувати джерело даних (файл vs API) через інтерфейс  
-   * class DeclarationSource(Protocol):  
+```
+   class DeclarationSource(Protocol):  
      ├── def get_document(self, doc_id: str) -> dict: ...  
      └── def get_document_list(self, user_declarant_id: int) -> list[str]: ...  
+```
 - **конвертація валют**: при помилці отримання курсу — показувати суму без конвертації з позначкою (курс недоступний)
 
 ## *v.2.0:*
@@ -76,22 +78,26 @@
 # Аналіз декларацій НАЗК
 
 ### Структура проекту:  
-* nazk_analyzer/  
-├── config.py                 *// API URLs, налаштування*  
-├── api_client.py             *// HTTP запити до НАЗК*  
-├── parser.py                 *// маппінг JSON → моделі*  
-├── renderer.py               *// моделі → HTML*  
-├── storage.py                *// сховище*  
-├── currency_rate_archive.py  *// архів курсів валют*  
-└── main.py                   *// CLI entry point*  
+```
+nazk_analyzer/  
+├── config.py                 // API URLs, налаштування
+├── api_client.py             // HTTP запити до НАЗК
+├── parser.py                 // маппінг JSON → моделі
+├── renderer.py               // моделі → HTML
+├── storage.py                // сховище
+├── currency_rate_archive.py  // архів курсів валют
+└── main.py                   // CLI entry point
+```
 ---
 ### Організація сховища:  
-* nazk_analyzer/storage/  
-├── {doc_id}\_{user_declarant_id}.json             *//збережений документ/декларація*  
-├── {user_declarant_id}_{declarant_fullname}.html  *//результат аналізу*  
-└── cache/  *// API responses*  
-    ├── {doc_id}.json  
-    └── {user_declarant_id}.json  
+```
+nazk_analyzer/storage/  
+├── {doc_id}\_{user_declarant_id}.json             // збережений документ/декларація
+├── {user_declarant_id}_{declarant_fullname}.html  // результат аналізу
+└── cache/                                         // API responses
+    ├── {doc_id}.json                              // список декларацій
+    └── {user_declarant_id}.json                   // декларація
+```
 * Пошук декларації за `doc_id` за маскою `{doc_id}_(*).json`, де (*) - `user_declarant_id`, результатом є json  
 * Пошук списку декларацій за `user_declarant_id` за маскою `*_{user_declarant_id}.json`, результатом є масив UUID  
 * `declarant_fullname` береться після завантаження хоча б одного документа  
