@@ -33,3 +33,5 @@ storage/
 
 # Temporary files
 context.txt
+
+.claude/
